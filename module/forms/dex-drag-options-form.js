@@ -1,5 +1,5 @@
 import { log, debug } from "../ptu.js";
-import { getRandomIntInclusive } from '../utils/generic-helpers.js';
+import { getRandomNormIntInclusive } from '../utils/generic-helpers.js';
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
