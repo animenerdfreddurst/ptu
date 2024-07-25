@@ -1,5 +1,5 @@
 import { log, debug } from "../ptu.js";
-import { getRandomIntInclusive } from '../utils/generic-helpers.js';
+import { getRandomNormIntInclusive } from '../utils/generic-helpers.js';
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -41,7 +41,7 @@ export class PTUDexDragOptions extends FormApplication {
     /** @override */
     async _updateObject(event, formData) {
 
-        formData["data.level"] = getRandomIntInclusive(parseInt(formData["data.level_min"]), parseInt(formData["data.level_max"]));
+        formData["data.level"] = getRandomNormIntInclusive(parseInt(formData["data.level_min"]), parseInt(formData["data.level_max"]));
 
         game.ptu.utils.generator.FinishDexDragPokemonCreation(formData, this.object);
     }
