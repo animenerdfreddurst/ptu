@@ -44,7 +44,7 @@ a.item {
   flex: unset;
 }
 #chat-log .message .message-header .message-metadata {
-  font-size: 11px;
+  font-size: 12px;
 }
 .hgss-box {
   border: black solid 1px;
@@ -597,16 +597,16 @@ span.readable {
   font-size: 13px;
 }
 .readable.p8 {
-  font-size: 11px;
+  font-size: 12px;
 }
 .readable.p9 {
-  font-size: 11px;
+  font-size: 12px;
 }
 .readable.p10 {
-  font-size: 11px;
+  font-size: 12px;
 }
 .readable.p11 {
-  font-size: 11px;
+  font-size: 12px;
 }
 .readable.p12 {
   font-size: 12px;
@@ -1770,7 +1770,7 @@ h3 {
   height: 100%;
   border: none;
   text-align: center;
-  font-size: 11px;
+  font-size: 12px;
   background-color: transparent;
 }
 .move-sheet .sheet-body .avatar {
@@ -2776,16 +2776,16 @@ button.dialog-button {
   margin-left: auto !important;
 }
 .fs-8 {
-  font-size: 11px;
+  font-size: 12px;
 }
 .fs-9 {
-  font-size: 11px;
+  font-size: 12px;
 }
 .fs-10 {
-  font-size: 11px;
+  font-size: 12px;
 }
 .fs-11 {
-  font-size: 11px;
+  font-size: 12px;
 }
 .fs-12 {
   font-size: 12px;
@@ -5335,7 +5335,7 @@ body {
   -webkit-font-smoothing: none;
   background: #F8F3F8;
   color: #181010;
-  font-size: 11px;
+  font-size: 12px;
   -ms-interpolation-mode: nearest-neighbor;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: -moz-crisp-edges;
