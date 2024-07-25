@@ -20,7 +20,7 @@ function randn_bm() {        //Box–Muller transform from Stack Overflow
     return num
 }
 
-function getRandomNormIntInclusive(min, max) {        //Made seperate to not break anything else calling RandIntInclusive
+function getRandomNormIntInclusive(min, max) {        //Made separate to not break anything else calling RandIntInclusive
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(randn_bm() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive
