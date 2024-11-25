@@ -15,12 +15,12 @@ function randn_bm() {        //Box–Muller transform from Stack Overflow
     while(u === 0) u = Math.random(); //Converting [0,1) to (0,1)
     while(v === 0) v = Math.random();
     let num = Math.sqrt( -2.0 * Math.log( u ) ) * Math.cos( 2.0 * Math.PI * v );
-    num = num / 10.0 + 0.5; // Translate to 0 -> 1
+    num = num / 6.5 + 0.5; // Translate to 0 -> 1
     if (num > 1 || num < 0) return randn_bm() // resample between 0 and 1
     return num
 }
 
-function getRandomNormIntInclusive(min, max) {        //Made separate to not break anything else calling RandIntInclusive
+export function getRandomNormIntInclusive(min, max) {        //Made separate to not break anything else calling RandIntInclusive
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(randn_bm() * (max - min + 1) + min); //The maximum is inclusive and the minimum is inclusive

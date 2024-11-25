@@ -309,7 +309,7 @@ export async function FinishDexDragPokemonCreation(formData, update)
     let drop_coordinates_y = update["y"];
     
     let level = parseInt(formData["data.level"]);
-    // .replace(",", ".") for comman notation, as parseFloat expects a decimal point
+    // .replace(",", ".") for common notation, as parseFloat expects a decimal point
     let shiny_chance = parseFloat(formData["data.shiny_chance"].replace(",", "."));
     let stat_randomness = parseInt(formData["data.stat_randomness"]);
     let prevent_evolution = Number(formData["data.prevent_evolution"]);
