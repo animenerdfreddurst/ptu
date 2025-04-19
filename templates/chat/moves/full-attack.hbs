@@ -3,7 +3,7 @@
     <div class="swsh-box">
         <div class="swsh-header p-0" style="border-bottom: 0px solid #272727; text-align: center; background-color: #ffffff;">
             <div class="d-flex w-100 mt-0 mb-0 justify-content-center" style=";background-color: #272727 ;">
-                <span style="padding: 1px;font-family:Modesto Condensed;font-size:40px; color: white; overflow-wrap: normal ! important; word-break: keep-all ! important;">{{moveName}}</span>
+                <span style="padding: 1px;font-family:FTY SKORZHEN NCV;font-size:28px; color: white; overflow-wrap: normal ! important; word-break: keep-all ! important;">{{moveName}}</span>
             </div>
         </div>
 
@@ -49,8 +49,8 @@
         </div>
 
         <div class="swsh-body" style="background-color: #ffffff; ">  
-            <div class="dice-roll w-100" style="padding: 0px 0px; font-size: 10px ! important;">
-                <div class="dice-result" style="padding: 0px 0px; font-size: 10px ! important;">
+            <div class="dice-roll w-100" style="padding: 0px 0px; font-size: 14px ! important;">
+                <div class="dice-result" style="padding: 0px 0px; font-size: 14px ! important;">
                     {{#if hasAC}}
                         <div class="dice-formula" style="padding: 0px 0px; margin: 0px; font-size: 14px ! important;">  
                             {{#each acRoll.terms as | term |}}
@@ -60,7 +60,7 @@
                             {{/each}}
                         </div>
                         {{#if acRoll2}}
-                            <div class="dice-formula" style="padding: 0px 0px; margin: 0px; font-size: 10px ! important;">  
+                            <div class="dice-formula" style="padding: 0px 0px; margin: 0px; font-size: 14px ! important;">  
                                 {{#each acRoll2.terms as | term |}}
                                     {{#if term.faces}}
                                         {{#each term.results as |result|}}<span class="roll die d{{term.faces}} {{minMaxDiceCheck result.result term.faces}}" style="padding: 0px; margin: 0px; font-size: 14px ! important;">{{result.result}}</span>{{#if @last}}{{else}}+{{/if}}{{/each}}
@@ -162,22 +162,22 @@
                                 </span>
                             {{/each}}
                         {{else}}
-                            <span class="dice-total p-1" style="display: inline-flex;justify-content: space-evenly; align-items: center;width:100%;font-family:Modesto Condensed;font-size:38px; color: rgb(0, 0, 0);">
+                            <span class="dice-total p-1" style="display: inline-flex;justify-content: space-evenly; align-items: center;width:100%;font-family:FTY SKORZHEN NCV;font-size:28px; color: rgb(0, 0, 0);">
                                 <h3 class="num-total">{{acRoll.total}}</h3>
                                 <h6>vs. {{move.category}} Evasion</h6>
                             </span>
                             {{#if acRoll2}}
-                                <span class="dice-total p-1" style="display: inline-flex;justify-content: space-evenly; align-items: center;width:100%;font-family:Modesto Condensed;font-size:38px; color: rgb(0, 0, 0);">
+                                <span class="dice-total p-1" style="display: inline-flex;justify-content: space-evenly; align-items: center;width:100%;font-family:FTY SKORZHEN NCV;font-size:28px; color: rgb(0, 0, 0);">
                                     <h3 class="num-total">{{acRoll2.total}}</h3>
                                     <h6>vs. {{move.category}} Evasion</h6>
                                 </span>
                             {{/if}}
                         {{/if}}
                     {{else}}
-                        <div class="dice-formula" style="padding: 0px 0px; margin: 0px; font-size: 10px ! important;">
+                        <div class="dice-formula" style="padding: 0px 0px; margin: 0px; font-size: 14px ! important;">
                             <span
                                 class="roll die d{{acRoll.terms.0.faces}} {{minMaxDiceCheck acRoll.terms.0.results.0.result acRoll.terms.0.faces}}"
-                                style="padding: 0px; margin: 0px; font-size: 8px ! important;">
+                                style="padding: 0px; margin: 0px; font-size: 14px ! important;">
                                     {{acRoll.terms.0.results.0.result}}
                             </span>
                         </div>
@@ -302,16 +302,16 @@
         <div class="swsh-body col-sm-12 pt-0" style="background-color: #ffffff;">
             <div class="d-flex w-100 mt-0 mb-0 fs-11" style="align-items: center;text-align: center; background-color: #ffffff; border: 1px solid #999; box-shadow: 0 0 2px #FFF inset; border-radius: 3px; background: rgba(0, 0, 0, 0.1);">
                 <div class="p-1 readable pokemon p8 tight"
-                    style="word-break: break-word;text-align: start;line-height: 16px;font-family:Modesto Condensed;font-size:20px;">Frequency: {{{move.frequency}}}</div>
+                    style="word-break: break-word;text-align: start;line-height: 16px;font-family:FTY SKORZHEN NCV;font-size:20px;">Frequency: {{{move.frequency}}}</div>
             </div>
             <div class="d-flex w-100 mt-0 mb-0 fs-11" style="align-items: center;text-align: center; background-color: #ffffff; border: 1px solid #999; box-shadow: 0 0 2px #FFF inset; border-radius: 3px; background: rgba(0, 0, 0, 0.1);">
                 <div class="p-1 readable pokemon p8 tight"
-                    style="word-break: break-word;text-align: start;line-height: 16px;font-family:Modesto Condensed;font-size:20px;">Range: {{{move.range}}}</div>
+                    style="word-break: break-word;text-align: start;line-height: 16px;font-family:FTY SKORZHEN NCV;font-size:20px;">Range: {{{move.range}}}</div>
             </div>
             {{#if modifiers}}
                 <div class="d-flex w-100 mt-0 mb-0 fs-11" style="align-items: left;text-align: left; background-color: #ffffff; border: 1px solid #999; box-shadow: 0 0 2px #FFF inset; border-radius: 3px; background: rgba(0, 0, 0, 0.1);">
                     <div class="p-1 readable pokemon p8 tight"
-                        style="word-break: break-word;text-align: left;line-height: 16px;font-family:Modesto Condensed;font-size:20px;"> 
+                        style="word-break: break-word;text-align: left;line-height: 16px;font-family:FTY SKORZHEN NCV;font-size:20px;"> 
                         {{#each modifiers as | mod | }}
                             {{{mod}}}{{#unless @last}}<br>{{/unless}}
                         {{/each}}    

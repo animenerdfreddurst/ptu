@@ -49,7 +49,18 @@
                     <div class="move-info-col">
                         <div class="move-other-info mt-2">
                             <span style="flex: 0 0 100%;">
-                                COST 
+                                Prerequisites 
+                                <input
+                                    class="ml-2"
+                                    name="system.prerequisites"
+                                    type="text"
+                                    value="{{item.system.prerequisites}}"
+                                    placeholder=""
+                                    {{#if editLocked}}disabled{{/if}}
+                                />
+                            </span>
+							<span style="flex: 0 0 100%;">
+                                Cost 
                                 <input
                                     class="ml-2"
                                     name="system.cost"

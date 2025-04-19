@@ -5,11 +5,11 @@ export function CalculateTrainerCapabilities(trainerSkills, items, speedCombatSt
         "Traveler": false,
         "Deep Diver": false,
         "Overland": 0,
-        "Throwing Range": 0,
+        "Throw": 0,
         "High Jump": 0,
         "Long Jump": 0,
         "Swim": 0,
-        "Power": 0
+        "Might": 0
     }
 
     let calcOverlandSpeed = function () {
@@ -34,7 +34,7 @@ export function CalculateTrainerCapabilities(trainerSkills, items, speedCombatSt
         return Math.trunc(trainerSkills.acrobatics.value.total / 2)
     }
 
-    let calcPower = function () {
+    let calcMight = function () {
         if (trainerSkills.survival.value.total > trainerSkills.athletics.value.total && mods["Traveler"]) {
             return (trainerSkills.survival.value.total >= 3 ? 1 : 0) + (trainerSkills.combat.value.total >= 4 ? 1 : 0);
         }
@@ -63,7 +63,7 @@ export function CalculateTrainerCapabilities(trainerSkills, items, speedCombatSt
             continue;
         }
         if (item.name == "Power Boost" && item.type == "edge") {
-            mods["Power"] += 2;
+            mods["Might"] += 2;
             continue;
         }
 
@@ -83,7 +83,7 @@ export function CalculateTrainerCapabilities(trainerSkills, items, speedCombatSt
         if (item.name == "Synthetic Muscle" || item.name == "Upgraded Synthetic Muscle") {
             mods["High Jump"] += 1;
             mods["Long Jump"] += 1;
-            mods["Power"] += 2;
+            mods["Might"] += 2;
             continue;
         }
 
@@ -101,17 +101,17 @@ export function CalculateTrainerCapabilities(trainerSkills, items, speedCombatSt
             continue;
         }
         if (item.name == "Strength" && item.type == "move") {
-            mods["Power"] += 1;
+            mods["Might"] += 1;
             continue;
         }
     }
 
     let capabilities = {
         "Overland": Math.max(2, calcOverlandSpeed() + 3) + mods["Overland"],
-        "Throwing Range": trainerSkills.athletics.value.total + 4 + mods["Throwing Range"],
+        "Throw": trainerSkills.athletics.value.total + 4 + mods["Throw"],
         "High Jump": calcHighJump() + mods["High Jump"],
         "Long Jump": calcLongJump() + mods["Long Jump"],
-        "Power": calcPower() + 4 + mods["Power"]
+        "Might": calcMight() + 4 + mods["Might"]
     }
 
     let spcsChanges = speedCombatStages > 0 ? Math.floor(speedCombatStages / 2) : speedCombatStages < 0 ? Math.ceil(speedCombatStages / 2) : 0;
@@ -148,7 +148,7 @@ export function CalculatePokemonCapabilities(speciesData, items, speedCombatStag
         // Moves
         if (item.name == "Bounce" && item.type == "move") speciesData.Capabilities["High Jump"] += 1;
         if (item.name == "Splash" && item.type == "move") speciesData.Capabilities["Long Jump"] += 1;
-        if (item.name == "Strength" && item.type == "move") speciesData.Capabilities["Power"] += 1;
+        if (item.name == "Strength" && item.type == "move") speciesData.Capabilities["Might"] += 1;
         if (item.name == "Teleport" && item.type == "move") {
             if (speciesData.Capabilities["Teleporter"]) speciesData.Capabilities["Teleporter"] += 4;
             else speciesData.Capabilities["Teleporter"] = 4;
@@ -181,7 +181,7 @@ export function CalculatePokemonCapabilities(speciesData, items, speedCombatStag
                 // If High & Long Jump should be halved by slowed move continue statement to end of this if statement.
                 if(isSlowed) speciesData.Capabilities[key] = Math.max(1, Math.floor(speciesData.Capabilities[key] * 0.5));
             };
-            if (key == "Power" || key == "Weight Class" || key == "Naturewalk" || key == "Other") continue;
+            if (key == "Might" || key == "Weight Class" || key == "Naturewalk" || key == "Other") continue;
             if (speciesData.Capabilities[key] > 0) {
                 speciesData.Capabilities[key] = Math.max(speciesData.Capabilities[key] + spcsChanges + capabilityMod ?? 0, speciesData.Capabilities[key] > 1 ? 2 : 1)
                 if(isSlowed) speciesData.Capabilities[key] = Math.max(1, Math.floor(speciesData.Capabilities[key] * 0.5));

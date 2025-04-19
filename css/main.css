@@ -11,20 +11,20 @@ h6 {
   padding: 6px 0px;
 }
 button {
-  font-size: 12px;
+  font-size: 14px;
 }
 #client-settings section.content .submenu > button {
-  font-size: 10px;
+  font-size: 14px;
 }
 p.notes {
-  font-size: 10px;
+  font-size: 14px;
   margin: unset;
 }
 #sidebar-tabs > .collapse {
   display: unset !important;
 }
 form .form-group > label {
-  font-size: 12px;
+  font-size: 14px;
 }
 div#module-management,
 div#controls-reference {
@@ -33,7 +33,7 @@ div#controls-reference {
   font-variant: normal;
 }
 a.item {
-  font-size: 10px;
+  font-size: 14px;
   font-weight: bold;
 }
 #chat-controls .control-buttons a {
@@ -44,7 +44,7 @@ a.item {
   flex: unset;
 }
 #chat-log .message .message-header .message-metadata {
-  font-size: 12px;
+  font-size: 14px;
 }
 .hgss-box {
   border: black solid 1px;
@@ -102,7 +102,7 @@ a.item {
   position: relative;
   left: 3px;
   bottom: -4px;
-  font-size: 8px;
+  font-size: 14px;
   min-width: 32px;
 }
 .options .temp-hp label[for="temp-hp"] {
@@ -247,7 +247,7 @@ a.item {
   white-space: nowrap;
 }
 .skill-block .row .skill.bgcolor {
-  padding: 12px 5px;
+  padding: 6px 5px;
 }
 .skill-block .row .type--body {
   background-color: #e06666aa;
@@ -351,7 +351,7 @@ a.item {
 }
 .stats.header.levelUp {
   grid-area: levelUp-header;
-  font-size: 10px;
+  font-size: 14px;
 }
 .stats.header.stage {
   grid-area: stage-header;
@@ -496,7 +496,7 @@ input[name="data.money"] {
   line-height: 23px;
   margin-right: unset;
   background-size: cover;
-  font-size: 12px;
+  font-size: 14px;
 }
 .skill.col-sm-2 {
   padding-left: 15px !important;
@@ -594,22 +594,22 @@ span.readable {
 .readable {
   font-family: sans-serif;
   font-variant: normal;
-  font-size: 13px;
+  font-size: 14px;
 }
 .readable.p8 {
-  font-size: 12px;
+  font-size: 14px;
 }
 .readable.p9 {
-  font-size: 12px;
+  font-size: 14px;
 }
 .readable.p10 {
-  font-size: 12px;
+  font-size: 14px;
 }
 .readable.p11 {
-  font-size: 12px;
+  font-size: 14px;
 }
 .readable.p12 {
-  font-size: 12px;
+  font-size: 14px;
 }
 .readable.p14 {
   font-size: 14px;
@@ -621,7 +621,7 @@ span.readable {
   font-size: 16px;
 }
 .readable.pokemon {
-  font-family: var(--pkmnFontStyle);
+  font-family: var(--font-primary);
 }
 .item-effect {
   display: -webkit-box;
@@ -702,7 +702,7 @@ span.readable {
 }
 .actor .inventory-list .item-controls a {
   flex: 0 0 18px;
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
 }
 .actor .inventory-list .item-list {
@@ -762,7 +762,7 @@ span.readable {
   align-self: center;
 }
 .effect-header .item-controls a {
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
 }
 .actor .inventory-list .item-controls a.item-create:hover {
@@ -813,8 +813,8 @@ span.readable {
 .actor.gen8 .container-fluid > .sheet-footer {
   position: absolute;
   left: 0;
-  top: 27px;
-  padding: 0px 20px;
+  top: 31px;
+  padding: 0px 12px;
   width: fit-content;
   z-index: 20;
   height: fit-content;
@@ -826,7 +826,7 @@ span.readable {
   float: left;
 }
 .actor.gen8 .container-fluid > .sheet-footer .tabs li button {
-  font-size: 9px;
+  font-size: 14px;
   background: #ffffff22;
 }
 .actor.gen8 .container-fluid > .sheet-footer .tabs ul {
@@ -972,10 +972,10 @@ span.readable {
   margin: 2px;
   align-items: center;
   text-align: center;
-  flex: 0 0 32%;
+  flex: 0 0 31.5%;
 }
 .gen8 ul.effectiveness-table .ml-1 {
-  font-size: 9px;
+  font-size: 14px;
 }
 .ptu header.sheet-header {
   align-items: unset;
@@ -1031,7 +1031,7 @@ div.hover-button {
 }
 a.hover-button {
   flex: 1 1 30%;
-  font-size: 7px;
+  font-size: 14px;
   word-break: break-word;
   background: #999;
   border: 1px solid #777;
@@ -1041,7 +1041,7 @@ a.hover-button {
   font-weight: 100;
 }
 a.hover-button.resist-damage-button {
-  font-size: 6px;
+  font-size: 14px;
 }
 /* ----------------------------------------- */
 /*  Dice Tooltip
@@ -1093,7 +1093,7 @@ a.hover-button.resist-damage-button {
   filter: sepia(0.5) contrast(0.75) opacity(0.75);
 }
 .dice-formula .roll.exploded:before {
-  font-size: 8px;
+  font-size: 14px;
   font-family: "Font Awesome 5 Free";
   content: "\f666";
   position: absolute;
@@ -1152,7 +1152,7 @@ a.hover-button.resist-damage-button {
 .settings-list p.notes {
   font-family: sans-serif;
   font-variant: normal;
-  font-size: 12px;
+  font-size: 14px;
 }
 .settings-list .form-group {
   padding: 6px 0;
@@ -1165,7 +1165,7 @@ a.hover-button.resist-damage-button {
   font-family: sans-serif;
   font-variant: normal;
   font-weight: bolder;
-  font-size: 13px;
+  font-size: 14px;
   line-height: 16px;
 }
 .charactermancer .window-content {
@@ -1361,7 +1361,7 @@ header.effect-change.effects-header.flexrow > div {
 .mod-input .mod-tooltip ol {
   padding-inline-start: 0;
   text-align: start;
-  font-size: 12px;
+  font-size: 14px;
   font-family: sans-serif;
 }
 .mod-input .mod-tooltip ol ul {
@@ -1439,7 +1439,7 @@ h4.message-sender {
 }
 /* System name styling */
 li.system {
-  font-size: 9px;
+  font-size: 14px;
 }
 /* Custom Species/Typing Editor */
 .cse .window-content,
@@ -1499,7 +1499,7 @@ li.system {
 }
 .sheet .editor-content {
   font-family: sans-serif;
-  font-size: 0.75rem;
+  font-size: 0.875rem;
   font-variant: normal;
 }
 .pokedex .quick-info .col {
@@ -1519,7 +1519,7 @@ li.system {
   color: var(--color-text-light-heading);
 }
 li.folder > .folder-header h3 {
-  font-size: 13px;
+  font-size: 16px;
 }
 h3 {
   border-bottom: unset !important;
@@ -1680,7 +1680,7 @@ h3 {
 }
 #combat li.combatant .token-name h4 {
   line-height: 18px;
-  font-size: 13px;
+  font-size: 14px;
 }
 #combat h3,
 #combat h4 {
@@ -1697,7 +1697,7 @@ h3 {
 /*  CSE Chat Notification                       */
 /* -------------------------------------------- */
 .cse-notification {
-  font-family: 'Modesto Condensed';
+  font-family: 'FTY SKORZHEN NCV';
   font-weight: 400;
   line-height: 24px;
   word-break: break-word;
@@ -1770,7 +1770,7 @@ h3 {
   height: 100%;
   border: none;
   text-align: center;
-  font-size: 12px;
+  font-size: 14px;
   background-color: transparent;
 }
 .move-sheet .sheet-body .avatar {
@@ -2007,7 +2007,7 @@ h3 {
 }
 .ptu.automation .content .tabbed-content #targets-component .target-bar .target-select {
   flex: 0 0 85%;
-  font-size: 10px;
+  font-size: 14px;
   max-width: 150px;
 }
 .ptu.automation .content .tabbed-content #targets-component .target-bar a.item-delete {
@@ -2058,7 +2058,7 @@ h3 {
 }
 .ptu.automation .content .tabbed-content #effects-component .effect-bar .effect-select {
   flex: 0 0 50%;
-  font-size: 10px;
+  font-size: 14px;
   max-width: 200px;
 }
 .ptu.automation .content .tabbed-content #effects-component .effect-bar .effect-value {
@@ -2113,12 +2113,12 @@ h3 {
 }
 .ptu.automation .content .tabbed-content #conditions-component .condition-bar .condition-select {
   flex: 0 0 30%;
-  font-size: 10px;
+  font-size: 14px;
   max-width: 160px;
 }
 .ptu.automation .content .tabbed-content #conditions-component .condition-bar .condition-operator-select {
   flex: 0 0 30%;
-  font-size: 10px;
+  font-size: 14px;
   max-width: 150px;
 }
 .ptu.automation .content .tabbed-content #conditions-component .condition-bar .condition-value {
@@ -2127,7 +2127,7 @@ h3 {
 }
 .ptu.automation .content .tabbed-content #conditions-component .condition-bar .condition-rangeIncreases-select {
   flex: 0 0 25%;
-  font-size: 10px;
+  font-size: 14px;
   max-width: 150px;
 }
 .ptu.automation .content .tabbed-content #conditions-component .condition-bar a.item-delete {
@@ -2263,7 +2263,7 @@ h3 {
 .level-up #mon-evolving-component .box .button {
   flex: 0 0 35%;
   align-self: center;
-  font-size: 10px;
+  font-size: 14px;
   padding: unset;
 }
 .level-up #mon-evolving-component .box .button select {
@@ -2346,7 +2346,7 @@ h3 {
 .level-up .content .bar.points {
   background: linear-gradient(45deg, #00000000 0%, #00000000 70%, #862c2c 100%);
   padding: 0.1rem;
-  font-size: 9px;
+  font-size: 14px;
 }
 .level-up .content input,
 .level-up .content select {
@@ -2465,7 +2465,7 @@ h3 {
 }
 .level-up .content #mon-abilities-component .ability.gained,
 .level-up .content #mon-abilities-component .ability.removed {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: bold;
 }
 /*****************
@@ -2776,22 +2776,22 @@ button.dialog-button {
   margin-left: auto !important;
 }
 .fs-8 {
-  font-size: 12px;
+  font-size: 14px;
 }
 .fs-9 {
-  font-size: 12px;
+  font-size: 14px;
 }
 .fs-10 {
-  font-size: 12px;
+  font-size: 14px;
 }
 .fs-11 {
-  font-size: 12px;
+  font-size: 14px;
 }
 .fs-12 {
-  font-size: 12px;
+  font-size: 14px;
 }
 .fs-13 {
-  font-size: 13px;
+  font-size: 14px;
 }
 .fs-14 {
   font-size: 14px;
@@ -2956,7 +2956,7 @@ body.messages-dark-theme .message {
     border-width: 0px !important;
   } */
 /* body {
-    font-family: var(--pkmnFontStyle);
+    font-family: var(--font-primary);
     font-variant: small-caps;
     font-smooth: never;
     -webkit-font-smoothing: none;
@@ -2989,25 +2989,25 @@ body.messages-dark-theme .content-flexrow {
   padding-right: 0px !important;
 }
 body.messages-dark-theme .message-sender {
-  font-family: "Segoe UI";
+  font-family: "Signika", sans-serif;
   font-size: 14px;
 }
 body.messages-dark-theme .flavor-text {
-  font-family: "Segoe UI";
+  font-family: "Signika", sans-serif;
   font-size: 14px;
 }
 body.messages-dark-theme .message-metadata {
   padding-top: 6px;
 }
 body.messages-dark-theme .message-timestamp {
-  font-family: "Segoe UI";
+  font-family: "Signika", sans-serif;
   font-size: 14px;
 }
 body.messages-dark-theme .message-content {
   padding-left: 5px;
   padding-right: 5px;
   padding-bottom: 10px;
-  font-family: "Segoe UI";
+  font-family: "Signika", sans-serif;
 }
 body.messages-dark-theme .chat-form textarea {
   /* position: relative !important;
@@ -3270,7 +3270,7 @@ body.messages-dark-theme .chat-controls .roll-type-select {
   margin: 0.2rem 0;
   height: 25px;
   font-size: 22px;
-  font-family: "Modesto Condensed";
+  font-family: "FTY SKORZHEN NCV";
   display: flex;
   justify-content: center;
   align-items: center;
@@ -3299,7 +3299,7 @@ body.messages-dark-theme .chat-controls .roll-type-select {
 }
 #ptu-sidebar .ptu-sidebar #menu-component #menu-buttons .menu-item {
   margin-top: 5px;
-  font-size: 9px;
+  font-size: 14px;
   max-width: 48%;
   flex: 0 0 48%;
 }
@@ -3325,7 +3325,7 @@ body.messages-dark-theme .chat-controls .roll-type-select {
   margin: 0.2rem 0;
   height: 25px;
   font-size: 22px;
-  font-family: "Modesto Condensed";
+  font-family: "FTY SKORZHEN NCV";
   display: flex;
   justify-content: left;
   align-items: center;
@@ -3448,12 +3448,12 @@ body.messages-dark-theme .chat-controls .roll-type-select {
   width: 200px;
   height: auto;
   font-size: 24px;
-  font-family: "Modesto Condensed";
+  font-family: "FTY SKORZHEN NCV";
   line-height: 0.6;
 }
 #ptu-sidebar .ptu-sidebar #abilities-list .movemaster-button .btn-body h3 {
   padding: 0px;
-  font-family: "Modesto Condensed";
+  font-family: "FTY SKORZHEN NCV";
   font-size: 24px;
   color: white;
   background-color: #272727;
@@ -3490,13 +3490,13 @@ body.messages-dark-theme .chat-controls .roll-type-select {
   width: 200px;
   min-height: 100px;
   font-size: 24px;
-  font-family: "Modesto Condensed";
+  font-family: "FTY SKORZHEN NCV";
   line-height: 0.6;
 }
 #ptu-sidebar .ptu-sidebar #moves-list .movemaster-button .btn-body h3,
 #ptu-sidebar .ptu-sidebar .struggle-row .movemaster-button .btn-body h3 {
   padding: 0px;
-  font-family: "Modesto Condensed";
+  font-family: "FTY SKORZHEN NCV";
   font-size: 24px;
   color: white;
   background-color: #272727;
@@ -3639,8 +3639,8 @@ body.messages-dark-theme .chat-controls .roll-type-select {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  font-family: "Modesto Condensed";
-  font-size: 30px;
+  font-family: "FTY SKORZHEN NCV";
+  font-size: 24px;
   color: black;
   flex-wrap: wrap;
 }
@@ -3676,11 +3676,11 @@ body.messages-dark-theme .chat-controls .roll-type-select {
 }
 .mm-move .dice-roll .dice-result .dice-formula,
 .mm-damage-application .dice-roll .dice-result .dice-formula {
-  font-size: 14px;
+  font-size: 16px;
 }
 .mm-move .dice-roll .dice-result .dice-formula .roll.die,
 .mm-damage-application .dice-roll .dice-result .dice-formula .roll.die {
-  font-size: 14px;
+  font-size: 16px;
 }
 .mm-move .dice-roll .dice-result .dice-formula .dice-total,
 .mm-damage-application .dice-roll .dice-result .dice-formula .dice-total {
@@ -3688,7 +3688,7 @@ body.messages-dark-theme .chat-controls .roll-type-select {
   justify-content: space-evenly;
   align-items: center;
   width: 100%;
-  font-family: "Modesto Condensed";
+  font-family: "FTY SKORZHEN NCV";
   font-size: 40px;
 }
 .mm-move .small-button-container,
@@ -3699,24 +3699,24 @@ body.messages-dark-theme .chat-controls .roll-type-select {
 .mm-move .automated-damage-button,
 .mm-damage-application .automated-damage-button {
   background-color: #800c0c00;
-  font-family: "Modesto Condensed";
-  font-size: 28px;
+  font-family: "FTY SKORZHEN NCV";
+  font-size: 24px;
   color: black;
 }
 .mm-move .automated-damage-button.small,
 .mm-damage-application .automated-damage-button.small {
   height: 12px;
   line-height: 0.8;
-  font-family: "Segoe UI";
-  font-size: 10px;
+  font-family: "Signika", sans-serif;
+  font-size: 9px;
   font-weight: 600;
   color: #000000;
   margin-left: 0.5px;
   margin-right: 0.5px;
   margin-top: 2px;
   margin-bottom: 2px;
-  padding-left: 1px;
-  padding-right: 1px;
+  padding-left: 4px;
+  padding-right: 4px;
 }
 .mm-damage-application .mon-col {
   flex-direction: column;
@@ -3800,7 +3800,7 @@ body.messages-dark-theme .chat-controls .roll-type-select {
   border-bottom: 1px solid #919191;
 }
 .mm-damage-application .mon-col .mon-list-header .mon-item-header {
-  font-size: 12px;
+  font-size: 14px;
   word-break: keep-all;
 }
 .tooltip {
@@ -3819,7 +3819,7 @@ body.messages-dark-theme .chat-controls .roll-type-select {
   bottom: 110%;
   left: 50%;
   margin-left: -60px;
-  font-size: 12px;
+  font-size: 14px;
 }
 .tooltip:hover .tooltip-content {
   visibility: visible;
@@ -3838,12 +3838,12 @@ body.messages-dark-theme .chat-controls .roll-type-select {
   width: 200px;
   height: auto;
   font-size: 24px;
-  font-family: "Modesto Condensed";
+  font-family: "FTY SKORZHEN NCV";
   line-height: 0.6;
 }
 #ptu-sidebar .ptu-sidebar #features-list .movemaster-button .btn-body h3 {
   padding: 0px;
-  font-family: "Modesto Condensed";
+  font-family: "FTY SKORZHEN NCV";
   font-size: 24px;
   color: white;
   background-color: #272727;
@@ -4220,7 +4220,7 @@ h6 {
   content: '';
   width: 2px;
   height: 2px;
-  font-size: 2px;
+  font-size: 14px;
   color: #181010;
   -webkit-box-shadow: 5em -1em 0 #181010, 4em -1em 0 #181010, 5em 0 0 #181010, 4em 0 0 #181010, 3em 0 0 #181010, 2em 0 0 #181010, -1em 2em 0 #181010, -2em 2em 0 #181010, 2em 2em 0 #181010, 2em 2em 0 #181010;
   box-shadow: 5em -1em 0 #181010, 4em -1em 0 #181010, 5em 0 0 #181010, 4em 0 0 #181010, 3em 0 0 #181010, 2em 0 0 #181010, -1em 2em 0 #181010, -2em 2em 0 #181010, 2em 2em 0 #181010, 2em 2em 0 #181010;
@@ -4240,10 +4240,10 @@ a.button:active {
 button,
 .button {
   position: relative;
-  font-family: var(--pkmnFontStyle);
+  font-family: var(--font-primary);
   background: none;
   border: none;
-  padding: 0 0 0 1em;
+  padding: 0 3px 0 5px;
   text-transform: uppercase;
   cursor: pointer;
 }
@@ -4278,7 +4278,7 @@ ul.buttons {
 }
 ul.buttons li {
   padding: 0;
-  margin: 0.5em;
+  margin: 0.25em;
 }
 ul.buttons.compact {
   -webkit-box-orient: horizontal;
@@ -5329,13 +5329,13 @@ h2 {
   background: #F8F3F8 !important;
 }
 body {
-  font-family: var(--pkmnFontStyle);
+  font-family: var(--font-primary);
   font-variant: small-caps;
   font-smooth: never;
   -webkit-font-smoothing: none;
   background: #F8F3F8;
   color: #181010;
-  font-size: 12px;
+  font-size: 14px;
   -ms-interpolation-mode: nearest-neighbor;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: -moz-crisp-edges;
@@ -5549,7 +5549,7 @@ input[name="totalwealth"] {
   font-weight: bold;
 }
 #client-settings .categories button label {
-  font-size: 9px;
+  font-size: 14px;
   font-weight: normal;
 }
 #client-settings .categories p.notes {
@@ -5560,5 +5560,5 @@ input[name="totalwealth"] {
 }
 
 .document-name {
-  font-size: 12px
+  font-size: 14px
 }

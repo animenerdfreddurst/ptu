@@ -122,7 +122,7 @@ export async function GetSpeciesArt(mon, imgDirectoryPath, type = ".webp", shiny
     const corsola_path = mon?._id.toLowerCase().includes("corsola") ? (mon?._id.toLowerCase().includes("galarian") ? "_f2" : "_f1")  : "";
     const zigzagoon_path = mon?._id.toLowerCase().includes("zigzagoon") ? (mon?._id.toLowerCase().includes("galarian") ? "_f2" : "_f1")  : "";
     const linoone_path = mon?._id.toLowerCase().includes("linoone") ? (mon?._id.toLowerCase().includes("galarian") ? "_f2" : "_f1")  : "";
-    const castform_path = mon?._id.toLowerCase().includes("castform") ? (mon?._id.toLowerCase().includes("sunny") ? "_f2" : (mon?._id.toLowerCase().includes("rainy") ? "_f3" : (mon?._id.toLowerCase().includes("snowy") ? "_f4" : "_f1"))) : "";
+    const castform_path = mon?._id.toLowerCase().includes("castform") ? (mon?._id.toLowerCase().includes("sunny") ? "_f2" : (mon?._id.toLowerCase().includes("rainy") ? "_f3" : (mon?._id.toLowerCase().includes("snowy") ? "_f4" : (mon?._id.toLowerCase().includes("sandy") ? "_f5" : "_f1")))) : "";
     const deoxys_path = mon?._id.toLowerCase().includes("deoxys") ? (mon?._id.toLowerCase().includes("attack") ? "_f2" : (mon?._id.toLowerCase().includes("defense") ? "_f3" : (mon?._id.toLowerCase().includes("speed") ? "_f4" : "_f1"))) : "";
     //temporary//const burmy_path = mon?._id.toLowerCase().includes("burmy") ? (mon?._id.toLowerCase().includes("sandy") ? "_f2" : (mon?._id.toLowerCase().includes("trash") ? "_f3" : "_f1")) : "";
     const wormadam_path = mon?._id.toLowerCase().includes("wormadam") ? (mon?._id.toLowerCase().includes("sandy") ? "_f2" : (mon?._id.toLowerCase().includes("trash") ? "_f3" : "_f1")) : "";
@@ -309,7 +309,7 @@ export async function FinishDexDragPokemonCreation(formData, update)
     let drop_coordinates_y = update["y"];
     
     let level = parseInt(formData["data.level"]);
-    // .replace(",", ".") for comman notation, as parseFloat expects a decimal point
+    // .replace(",", ".") for common notation, as parseFloat expects a decimal point
     let shiny_chance = parseFloat(formData["data.shiny_chance"].replace(",", "."));
     let stat_randomness = parseInt(formData["data.stat_randomness"]);
     let prevent_evolution = Number(formData["data.prevent_evolution"]);

@@ -22,12 +22,12 @@ export default class CseCapabilities extends Component{
             "Overland",
             "Sky",
             "Swim",
-            "Levitate",
+            "Hover",
             "Burrow",
             "Teleporter",
             "High Jump",
             "Long Jump",
-            "Power",
+            "Might",
             "Weight Class",
             "Naturewalk"
         ]

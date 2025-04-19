@@ -846,7 +846,7 @@ Hooks.on('renderTokenHUD', (app, html, data) => {
     Swim: "fas fa-swimmer",
     Burrow: "fas fa-mountain",
     Sky: "fas fa-feather",
-    Levitate: "fab fa-fly",
+    Hover: "fab fa-fly",
     Teleporter: "fas fa-people-arrows",
   }
 

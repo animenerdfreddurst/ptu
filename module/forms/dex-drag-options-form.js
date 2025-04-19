@@ -13,7 +13,7 @@ export class PTUDexDragOptions extends FormApplication {
         classes: ["ptu", "charactermancer", "pokemon", "dex_drag_in"],
         template: "systems/ptu/templates/forms/dex-drag-options-form.hbs",
         width: 250,
-        height: 450, //changed from 375 to 500 to accomodate the gender ratio setting
+        height: 450, //changed from 375 to 500 to accommodate the gender ratio setting
         title: "Dex Drag-In",
         tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "stats" }]
       });

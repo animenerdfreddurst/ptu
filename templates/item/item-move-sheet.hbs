@@ -70,7 +70,18 @@
                             </div>
                         </div>
                         <div class="move-other-info mt-2">
-                            <span>
+                            <span style="flex: 0 0 100%;">
+                                Frequency 
+                                <input
+                                    class="ml-2"
+                                    name="system.frequency"
+                                    type="text"
+                                    value="{{item.system.frequency}}"
+                                    placeholder=""
+                                    {{#if editLocked}}disabled{{/if}}
+                                />
+                            </span>
+                            <span style="flex: 0 0 33%;">
                                 AC 
                                 <input
                                     class="ml-2"
@@ -81,29 +92,7 @@
                                     {{#if editLocked}}disabled{{/if}}
                                 />
                             </span>
-                            <span>
-                                FREQ 
-                                <input
-                                    class="ml-2"
-                                    name="system.frequency"
-                                    type="text"
-                                    value="{{item.system.frequency}}"
-                                    placeholder=""
-                                    {{#if editLocked}}disabled{{/if}}
-                                />
-                            </span>
-                            <span style="flex: 0 0 100%;">
-                                RANGE 
-                                <input
-                                    class="ml-2"
-                                    name="system.range"
-                                    type="text"
-                                    value="{{item.system.range}}"
-                                    placeholder=""
-                                    {{#if editLocked}}disabled{{/if}}
-                                />
-                            </span>
-                            <span>
+                            <span style="flex: 0 0 33%;">
                                 DB 
                                 <input
                                     class="ml-2"
@@ -114,7 +103,7 @@
                                     {{#if editLocked}}disabled{{/if}}
                                 />
                             </span>
-                            <span>
+                            <span style="flex: 0 0 33%;">
                                 {{#if (bigger item.system.damageBase 0)}}
                                 <span>
                                     {{getDb (calcDb item.system)}}
@@ -130,6 +119,39 @@
                                 {{else}}
                                     
                                 {{/if}}
+                            </span>
+							<span style="flex: 0 0 100%;">
+                                Range 
+                                <input
+                                    class="ml-2"
+                                    name="system.range"
+                                    type="text"
+                                    value="{{item.system.range}}"
+                                    placeholder=""
+                                    {{#if editLocked}}disabled{{/if}}
+                                />
+                            </span>
+                            <span style="flex: 0 0 100%;">
+                                Keywords
+                                <input
+                                    class="ml-2"
+                                    name="system.keywords"
+                                    type="text"
+                                    value="{{item.system.keywords}}"
+                                    placeholder=""
+                                    {{#if editLocked}}disabled{{/if}}
+                                />
+                            </span>
+                            <span style="flex: 0 0 100%;">
+                                Contest&nbsp;type&nbsp;(effect)
+                                <input
+                                    class="ml-2"
+                                    name="system.contestType"
+                                    type="text"
+                                    value="{{item.system.contestType}}"
+                                    placeholder=""
+                                    {{#if editLocked}}disabled{{/if}}
+                                />
                             </span>
                         </div>
                     </div>
