@@ -66,7 +66,7 @@ export const BlankPTUSpecies = {
             "Dice": 0,
             "Mod": 0
         },
-        "Focus": {
+        "Willpower": {
             "Dice": 0,
             "Mod": 0
         }

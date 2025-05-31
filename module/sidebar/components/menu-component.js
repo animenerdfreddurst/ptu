@@ -305,7 +305,7 @@ export default class MenuComponent extends Component {
                 category: isPhysical ? "Physical" : "Special",
                 damageBase: isStrugglePlus ? "5" : "4",
                 type: type,
-                range: (isTelekinetic ? actor.system.skills.focus.value.total : "Melee") + ", 1 Target",
+                range: (isTelekinetic ? actor.system.skills.willpower.value.total : "Melee") + ", 1 Target",
                 frequency: "At-Will",
                 effect: "--",
             }

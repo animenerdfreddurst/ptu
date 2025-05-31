@@ -329,9 +329,9 @@ export class PTUCustomSpeciesEditor extends FormApplication {
             "Dice": parseInt(formData["Skills.Perception.Dice"]) ?? 0,
             "Mod": parseInt(formData["Skills.Perception.Mod"]) ?? 0
           },
-          "Focus": {
-            "Dice": parseInt(formData["Skills.Focus.Dice"]) ?? 0,
-            "Mod": parseInt(formData["Skills.Focus.Mod"]) ?? 0
+          "Willpower": {
+            "Dice": parseInt(formData["Skills.Willpower.Dice"]) ?? 0,
+            "Mod": parseInt(formData["Skills.Willpower.Mod"]) ?? 0
           }
         },
         "Level Up Move List": this.store.state.moves.filter(move => !move.egg && !move.tutor && !move.tm).map(move => {

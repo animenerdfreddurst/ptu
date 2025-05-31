@@ -47,7 +47,7 @@
                 <div class="move-info-row">
                     <div class="move-info-col">
                         <div class="move-other-info mt-2">
-                            <span style="flex: 0 0 100%">
+                            <span style="flex: 0 0 50%">
                                 Frequency
                                 <input
                                     class="ml-2"
@@ -58,24 +58,13 @@
                                     {{#if editLocked}}disabled{{/if}}
                                 />
                             </span>
-                            <span style="flex: 0 0 100%">
-                                Trigger 
+                            <span style="flex: 0 0 50%">
+                                Range
                                 <input
                                     class="ml-2"
-                                    name="system.trigger"
+                                    name="system.range"
                                     type="text"
-                                    value="{{item.system.trigger}}"
-                                    placeholder=""
-                                    {{#if editLocked}}disabled{{/if}}
-                                />
-                            </span>
-                            <span style="flex: 0 0 100%">
-                                Target
-                                <input
-                                    class="ml-2"
-                                    name="system.target"
-                                    type="text"
-                                    value="{{item.system.target}}"
+                                    value="{{item.system.range}}"
                                     placeholder=""
                                     {{#if editLocked}}disabled{{/if}}
                                 />
@@ -87,6 +76,17 @@
                                     name="system.keywords"
                                     type="text"
                                     value="{{item.system.keywords}}"
+                                    placeholder=""
+                                    {{#if editLocked}}disabled{{/if}}
+                                />
+                            </span>
+							<span style="flex: 0 0 100%">
+                                Trigger 
+                                <input
+                                    class="ml-2"
+                                    name="system.trigger"
+                                    type="text"
+                                    value="{{item.system.trigger}}"
                                     placeholder=""
                                     {{#if editLocked}}disabled{{/if}}
                                 />

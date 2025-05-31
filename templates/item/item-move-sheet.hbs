@@ -71,12 +71,34 @@
                         </div>
                         <div class="move-other-info mt-2">
                             <span style="flex: 0 0 100%;">
+                                Prerequisites
+                                <input
+                                    class="ml-2"
+                                    name="system.prerequisites"
+                                    type="text"
+                                    value="{{item.system.prerequisites}}"
+                                    placeholder=""
+                                    {{#if editLocked}}disabled{{/if}}
+                                />
+                            </span>
+							<span style="flex: 0 0 50%;">
                                 Frequency 
                                 <input
                                     class="ml-2"
                                     name="system.frequency"
                                     type="text"
                                     value="{{item.system.frequency}}"
+                                    placeholder=""
+                                    {{#if editLocked}}disabled{{/if}}
+                                />
+                            </span>
+							<span style="flex: 0 0 50%;">
+                                Range 
+                                <input
+                                    class="ml-2"
+                                    name="system.range"
+                                    type="text"
+                                    value="{{item.system.range}}"
                                     placeholder=""
                                     {{#if editLocked}}disabled{{/if}}
                                 />
@@ -120,17 +142,6 @@
                                     
                                 {{/if}}
                             </span>
-							<span style="flex: 0 0 100%;">
-                                Range 
-                                <input
-                                    class="ml-2"
-                                    name="system.range"
-                                    type="text"
-                                    value="{{item.system.range}}"
-                                    placeholder=""
-                                    {{#if editLocked}}disabled{{/if}}
-                                />
-                            </span>
                             <span style="flex: 0 0 100%;">
                                 Keywords
                                 <input
@@ -138,6 +149,17 @@
                                     name="system.keywords"
                                     type="text"
                                     value="{{item.system.keywords}}"
+                                    placeholder=""
+                                    {{#if editLocked}}disabled{{/if}}
+                                />
+                            </span>
+							<span style="flex: 0 0 100%">
+                                Trigger 
+                                <input
+                                    class="ml-2"
+                                    name="system.trigger"
+                                    type="text"
+                                    value="{{item.system.trigger}}"
                                     placeholder=""
                                     {{#if editLocked}}disabled{{/if}}
                                 />

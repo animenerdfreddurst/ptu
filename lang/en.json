@@ -114,12 +114,12 @@
     "PTU.ItemEffect": "Item Effect",
     "PTU.FoodBuff": "Food Buff",
     "PTU.HpGuidelines": "Health Guidelines",
-    "PTU.16th": "1/16th",
-    "PTU.10th": "Tick 1/10th",
-    "PTU.8th": "1/8th",
-    "PTU.6th": "1/6th",
-    "PTU.4th": "1/4th",
-    "PTU.2nd": "1/2nd",
+    "PTU.16th": "6.25%",
+    "PTU.10th": "10%",
+    "PTU.8th": "12.5%",
+    "PTU.6th": "16.7%",
+    "PTU.4th": "25%",
+    "PTU.2nd": "50%",
 
     "PTU.Species": "Species",
     "PTU.Gender": "Gender",
@@ -184,7 +184,7 @@
     "PTU.LevelMiscExp" : "Trainer Exp",
 
     "PTU.Money": "Money",
-    "PTU.ItemCategories": "Item Categories",
+    "PTU.ItemCategories": "Bag Pouches",
     "PTU.HeldItem": "Held Item",
 
     "PTU.Age": "Age",

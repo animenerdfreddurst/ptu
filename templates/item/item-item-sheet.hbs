@@ -47,7 +47,123 @@
                 <div class="move-info-row">
                     <div class="move-info-col">
                         <div class="move-other-info mt-2">
-                            <span style="flex: 0 0 45%;">
+                            <span style="flex: 0 0 100%;">
+                                Prerequisites
+                                <input
+                                    class="ml-2"
+                                    name="system.prerequisites"
+                                    type="text"
+                                    value="{{item.system.prerequisites}}"
+                                    placeholder=""
+                                    {{#if editLocked}}disabled{{/if}}
+                                />
+                            </span>
+                            <span style="flex: 0 0 100%;">
+                                Slots 
+                                <input
+                                    class="ml-2"
+                                    name="system.slots"
+                                    type="text"
+                                    value="{{item.system.slots}}"
+                                    placeholder=""
+                                    {{#if editLocked}}disabled{{/if}}
+                                />
+                            </span>	
+							<span style="flex: 0 0 50%;">
+                                Frequency 
+                                <input
+                                    class="ml-2"
+                                    name="system.frequency"
+                                    type="text"
+                                    value="{{item.system.frequency}}"
+                                    placeholder=""
+                                    {{#if editLocked}}disabled{{/if}}
+                                />
+                            </span>
+							<span style="flex: 0 0 50%;">
+                                Range 
+                                <input
+                                    class="ml-2"
+                                    name="system.range"
+                                    type="text"
+                                    value="{{item.system.range}}"
+                                    placeholder=""
+                                    {{#if editLocked}}disabled{{/if}}
+                                />
+                            </span>
+                            <span style="flex: 0 0 33%;">
+                                AC 
+                                <input
+                                    class="ml-2"
+                                    name="system.ac"
+                                    type="text"
+                                    value="{{item.system.ac}}"
+                                    placeholder=""
+                                    {{#if editLocked}}disabled{{/if}}
+                                />
+                            </span>
+                            <span style="flex: 0 0 33%;">
+                                DB 
+                                <input
+                                    class="ml-2"
+                                    name="system.damageBase"
+                                    type="text"
+                                    value="{{item.system.damageBase}}"
+                                    placeholder=""
+                                    {{#if editLocked}}disabled{{/if}}
+                                />
+                            </span>
+                            <span style="flex: 0 0 33%;">
+                                {{#if (bigger item.system.damageBase 0)}}
+                                <span>
+                                    {{getDb (calcDb item.system)}}
+                                </span>
+                                +
+                                <input
+                                    name="system.damageBonus"
+                                    type="number"
+                                    value="{{item.system.damageBonus}}"
+                                    placeholder=""
+                                    {{#if editLocked}}disabled{{/if}}
+                                />
+                                {{else}}
+                                    
+                                {{/if}}
+                            </span>
+                            <span style="flex: 0 0 100%;">
+                                Keywords
+                                <input
+                                    class="ml-2"
+                                    name="system.keywords"
+                                    type="text"
+                                    value="{{item.system.keywords}}"
+                                    placeholder=""
+                                    {{#if editLocked}}disabled{{/if}}
+                                />
+                            </span>
+							<span style="flex: 0 0 100%">
+                                Trigger 
+                                <input
+                                    class="ml-2"
+                                    name="system.trigger"
+                                    type="text"
+                                    value="{{item.system.trigger}}"
+                                    placeholder=""
+                                    {{#if editLocked}}disabled{{/if}}
+                                />
+                            </span>
+                            <span style="flex: 0 0 35%;">
+                                Bag 
+                                <input
+                                    class="ml-2"
+                                    name="system.category"
+                                    type="text"
+                                    value="{{item.system.category}}"
+                                    placeholder=""
+                                    {{#if editLocked}}disabled{{/if}}
+                                />
+                            </span>
+							<span style="flex: 0 0 25%;">
                                 Quantity 
                                 <input
                                     class="ml-2"
@@ -58,42 +174,20 @@
                                     {{#if editLocked}}disabled{{/if}}
                                 />
                             </span>
-                            <span style="flex: 0 0 45%">
-                                Cost 
-                                <input
-                                    class="ml-2"
-                                    name="system.cost"
-                                    type="text"
-                                    value="{{item.system.cost}}"
-                                    placeholder=""
-                                    {{#if editLocked}}disabled{{/if}}
-                                />
-                            </span>
-                            <span style="flex: 0 0 45%;">
-                                Category 
-                                <input
-                                    class="ml-2"
-                                    name="system.category"
-                                    type="text"
-                                    value="{{item.system.category}}"
-                                    placeholder=""
-                                    {{#if editLocked}}disabled{{/if}}
-                                />
-                            </span>                         
-<span style="flex: 0 0 45%">
-    Consumable
-    <select
-        class="ml-2"
-        name="system.consumable"
-        {{#if editLocked}}disabled{{/if}}
-    >
-        {{#select item.system.consumable}}
-        <option value="0">No</option>
-        <option value="1">Yes</option>
-        <option value="2">Yes (Snack)</option>
-        {{/select}}
-    </select>
-</span>
+							<span style="flex: 0 0 40%">
+								Consumable
+								<select
+									class="ml-2"
+									name="system.consumable"
+									{{#if editLocked}}disabled{{/if}}
+										>
+									{{#select item.system.consumable}}
+									<option value="0">No</option>
+									<option value="1">Yes</option>
+									<option value="2">Yes (Snack)</option>
+									{{/select}}
+								</select>
+							</span>
                         </div>
                     </div>
                 </div>

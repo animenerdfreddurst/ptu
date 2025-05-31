@@ -126,9 +126,9 @@ export class PTUCustomMonEditor extends FormApplication {
             "Dice": parseInt(formData["Skills.Perception.Dice"]),
             "Mod": parseInt(formData["Skills.Perception.Mod"])
           },
-          "Focus": {
-            "Dice": parseInt(formData["Skills.Focus.Dice"]),
-            "Mod": parseInt(formData["Skills.Focus.Mod"])
+          "Willpower": {
+            "Dice": parseInt(formData["Skills.Willpower.Dice"]),
+            "Mod": parseInt(formData["Skills.Willpower.Mod"])
           }
         }
       }
