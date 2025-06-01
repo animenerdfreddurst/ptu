@@ -542,7 +542,7 @@ export class PTUActor extends Actor {
     Hooks.call("updateInitiative", this);
 
     data.tp.max = (data.level.current > 0 ? Math.floor(data.level.current / 5) : 0) + 1;
-    data.tp.pep.value = actorData.items.filter(x => x.type == "pokeedge" && x.system.origin?.toLowerCase() != "pusher").length;
+    data.tp.pep.value = actorData.items.filter(x => x.type == "enhancement" && x.system.origin?.toLowerCase() != "pusher").length;
     data.tp.pep.max = data.level.current > 0 ? Math.floor(data.level.current / 10) + 1 : 1;
 
     data.evasion = CalculateEvasions(data, actorData.flags?.ptu, actorData.items);
@@ -552,7 +552,7 @@ export class PTUActor extends Actor {
     if (speciesData) data.egggroup = speciesData["Breeding Information"]["Egg Group"].join(" & ");
 
     //TODO: Add skill background
-    data.skills = CalculateSkills(data.skills, speciesData, actorData.items.filter(x => x.type == "pokeedge"), data.background, data.modifiers.skillBonus.total);
+    data.skills = CalculateSkills(data.skills, speciesData, actorData.items.filter(x => x.type == "enhancement"), data.background, data.modifiers.skillBonus.total);
 
     // Calc skill rank
     for (let [key, skill] of Object.entries(data.skills)) {

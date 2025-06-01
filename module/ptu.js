@@ -279,7 +279,7 @@ function registerSheets() {
   Actors.registerSheet("ptu", ptu.config.Actor.sheetClasses.character, { types: ["character"], makeDefault: true });
   Actors.registerSheet("ptu", ptu.config.Actor.sheetClasses.pokemon, { types: ["pokemon"], makeDefault: true });
   Items.unregisterSheet("core", ItemSheet);
-  Items.registerSheet("ptu", ptu.config.Item.sheetClasses.item, { types: ["item", "ability", "capability", "pokeedge", "dexentry"], makeDefault: true });
+  Items.registerSheet("ptu", ptu.config.Item.sheetClasses.item, { types: ["item", "ability", "capability", "enhancement", "dexentry"], makeDefault: true });
   Items.registerSheet("ptu", ptu.config.Item.sheetClasses.move, { types: ["move"], makeDefault: true });
   Items.registerSheet("ptu", ptu.config.Item.sheetClasses.edge, { types: ["edge"], makeDefault: true });
   Items.registerSheet("ptu", ptu.config.Item.sheetClasses.feat, { types: ["feat"], makeDefault: true });
@@ -986,8 +986,8 @@ async function updateItems(actors = []) {
           case "move":
             compendium = game.packs.get("ptu.moves");
             break;
-          case "pokeedge":
-            compendium = game.packs.get("ptu.poke-edges");
+          case "enhancement":
+            compendium = game.packs.get("ptu.enhancement");
             break;
         }
 

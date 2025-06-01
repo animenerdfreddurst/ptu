@@ -31,8 +31,8 @@ export function ActorHasItemWithName(actor, initial_item_name, item_category = "
 			}
 		}
 	}
-	else if (item_category == "pokeedge") {
-		for (let item of actor.itemTypes.pokeedge) {
+	else if (item_category == "enhancement") {
+		for (let item of actor.itemTypes.enhancement) {
 			if (item.data.name) {
 				if ((item.data.name.replace("é", "e") == item_name) || (!precise_naming && (item.data.name.replace("é", "e").toLowerCase().includes(item_name)))) {
 					return item;

@@ -94,7 +94,7 @@ export class PTUGen8PokemonSheet extends ActorSheet {
 		const abilities = [];
 		const capabilities = [];
 		const moves = [];
-		const edges = [];
+		const enhancements = [];
 
 		// Iterate through items, allocating to containers
 		// let totalWeight = 0;
@@ -111,8 +111,8 @@ export class PTUGen8PokemonSheet extends ActorSheet {
 				case 'capability':
 					capabilities.push(i);
 					break;
-				case 'pokeedge':
-					edges.push(i);
+				case 'enhancement':
+					enhancements.push(i);
 					break;
 			}
 		}
@@ -121,7 +121,7 @@ export class PTUGen8PokemonSheet extends ActorSheet {
 		actor.abilities = abilities;
 		actor.moves = moves;
 		actor.capabilities = capabilities;
-		actor.edges = edges;
+		actor.enhancements = enhancements;
 
 		for(let move of actor.moves) {
 			move.system = PrepareMoveData(actor.system, move.system)

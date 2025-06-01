@@ -420,7 +420,7 @@
 			  <!-- Inheritance List -->
             </div>
 
-			<!-- Training & Edges Tab -->
+			<!-- Training & Enhancements Tab -->
 			<div class="tab details feats" data-group="primary" data-tab="training">
 			  <div class="row">
 			    <div class="col">
@@ -478,10 +478,10 @@
 				  </div>
 				</div>
 				<div class="col">
-				  <!-- Edges-->
+				  <!-- Enhancements-->
 				  <div class="swsh-box mb-2 w-100">
 				    <div class="swsh-body w-100" style="display: block;">
-				      {{> "systems/ptu/templates/partials/item-display-partial.hbs" title=(localize "ITEM.TypeEdgePlural") type="edge" data=actor.edges}}
+				      {{> "systems/ptu/templates/partials/item-display-partial.hbs" title=(localize "ITEM.TypeEnhancementPlural") type="enhancement" data=actor.enhancements}}
 				    </div>
 				  </div>
 
@@ -502,7 +502,7 @@
 					{{else}}
 					<div class="swsh-box mt-2" style="text-align: center;">
 					  <div class="swsh-header">
-					    <h3 class="m-auto">{{localize "PTU.PokeedgePoints"}}</h3>
+					    <h3 class="m-auto">{{localize "PTU.EnhancementPoints"}}</h3>
 					  </div>
 					  <div class="swsh-body">
 					    <div class="resource-content flexrow flex-group-right hp-info w-100">

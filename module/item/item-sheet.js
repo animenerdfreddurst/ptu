@@ -49,7 +49,7 @@ export class PTUItemSheet extends ItemSheet {
 		if(this.object.img == "icons/svg/item-bag.svg" || this.object.img == "icons/svg/mystery-man.svg") {
 			if(this.object.type == "dexentry")
 				this.object.update({"img": `/systems/ptu/css/images/icons/dex_icon.png`});
-			else if(this.object.type == "pokeedge")
+			else if(this.object.type == "enhancement")
 				this.object.update({"img": `/systems/ptu/css/images/icons/poke_edge_icon.png`});
 			else if (this.object.type == "item")
 				GetItemArt(this.object.name).then((img) => {

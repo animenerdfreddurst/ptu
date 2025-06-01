@@ -157,17 +157,17 @@ export function CalculatePokemonCapabilities(speciesData, items, speedCombatStag
         if (item.name == "Fly" && item.type == "move") speciesData.Capabilities["Sky"] += 3;
         if (item.name == "Dig" && item.type == "move") speciesData.Capabilities["Burrow"] += 3;
 
-        // Poké Edges
-        if (item.name == "Advanced Mobility (Sky)" && item.type == "pokeedge") {
+        // Enhancements
+        if (item.name == "Advanced Mobility (Sky)" && item.type == "enhancement") {
             if (speciesData.Capabilities["Sky"] > 0) speciesData.Capabilities["Sky"] += 2;
         }
-        if (item.name == "Advanced Mobility (Burrow)" && item.type == "pokeedge") {
+        if (item.name == "Advanced Mobility (Burrow)" && item.type == "enhancement") {
             if (speciesData.Capabilities["Burrow"] > 0) speciesData.Capabilities["Burrow"] += 2;
         }
-        if (item.name == "Advanced Mobility (Levitate)" && item.type == "pokeedge") {
+        if (item.name == "Advanced Mobility (Levitate)" && item.type == "enhancement") {
             if (speciesData.Capabilities["Levitate"] > 0) speciesData.Capabilities["Levitate"] += 2;
         }
-        if (item.name == "Advanced Mobility (Teleporter)" && item.type == "pokeedge") {
+        if (item.name == "Advanced Mobility (Teleporter)" && item.type == "enhancement") {
             if (speciesData.Capabilities["Teleporter"] > 0) speciesData.Capabilities["Teleporter"] += 2;
         }
     }

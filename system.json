@@ -93,10 +93,10 @@
       "system": "ptu"
     },
     {
-      "label": "poke edges",
+      "label": "enhancements",
       "entity": "Item",
-      "name": "poke-edges",
-      "path": "packs/poke-edges.db",
+      "name": "enhancements",
+      "path": "packs/enhancements.db",
       "system": "ptu"
     },
     {

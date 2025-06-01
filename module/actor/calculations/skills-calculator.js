@@ -1,4 +1,4 @@
-export function CalculateSkills(skills, speciesData, pokeEdges, background, bonus = 0) {
+export function CalculateSkills(skills, speciesData, enhancements, background, bonus = 0) {
     if (speciesData == null) return skills;
     if (speciesData._id == "ARCEUS") {
         for (let [key, skill] of Object.entries(skills)) {

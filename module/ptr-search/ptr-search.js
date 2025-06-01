@@ -63,8 +63,8 @@ export class PTRSearch extends Application {
         feats: await game.ptu.utils.cache.GetOrCreateCachedItem("ptr-feat", async () => { 
             return JSON.parse(await $.get("https://raw.githubusercontent.com/pokemon-tabletop-reunited/PTR-Data/master/feats-data.json")).map(feat => { return { ...feat, compendium: "feats" }});
         }),
-        pokeEdges: await game.ptu.utils.cache.GetOrCreateCachedItem("ptr-poke-edge", async () => {
-            return JSON.parse(await $.get("https://raw.githubusercontent.com/pokemon-tabletop-reunited/PTR-Data/master/poke-edges-data.json")).map(pokeEdge => { return { ...pokeEdge, compendium: "poke-edges" }});
+        enhancements: await game.ptu.utils.cache.GetOrCreateCachedItem("ptr-poke-edge", async () => {
+            return JSON.parse(await $.get("https://raw.githubusercontent.com/pokemon-tabletop-reunited/PTR-Data/master/poke-edges-data.json")).map(enhancement => { return { ...enhancement, compendium: "poke-edges" }});
         }),
         tms: await game.ptu.utils.cache.GetOrCreateCachedItem("ptr-tm", async () => {
             return JSON.parse(await $.get("https://raw.githubusercontent.com/pokemon-tabletop-reunited/PTR-Data/master/tms-data.json")).map(tm => { return { name: tm.move + " (tm)", tmNumber: tm.number, compendium: "tms" }});
@@ -128,7 +128,7 @@ export class PTRSearch extends Application {
             ],
             threshold: 0.25,
           }),
-        pokeEdges: new Fuse(this.cachedData.pokeEdges, {
+        enhancements: new Fuse(this.cachedData.enhancements, {
             includeScore: true,
             keys: [
               { name: "name", weight: 5 },
@@ -172,7 +172,7 @@ export class PTRSearch extends Application {
       case "capabilities": return this.cachedData.capabilities;
       case "edges": return this.cachedData.edges;
       case "feats": return this.cachedData.feats;
-      case "poke-edges": return this.cachedData.pokeEdges;
+      case "poke-edges": return this.cachedData.enhancements;
       case "tms": return this.cachedData.tms;
     }
   }
@@ -204,7 +204,7 @@ export class PTRSearch extends Application {
             ...that.fuse.capabilities.search(input),
             ...that.fuse.edges.search(input),
             ...that.fuse.feats.search(input),
-            ...that.fuse.pokeEdges.search(input),
+            ...that.fuse.enhancement.search(input),
             ...that.fuse.tms.search(input),
             ].sort((a, b) => a.score - b.score);
 

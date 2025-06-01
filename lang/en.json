@@ -15,8 +15,8 @@
     "ITEM.TypeItemPlural": "Items",
     "ITEM.TypeCapability": "Capability",
     "ITEM.TypeCapabilityPlural": "Capabilities",
-    "ITEM.TypePokeedge": "Poké Edge",
-    "ITEM.TypePokeedgePlural": "Poké Edges",
+    "ITEM.TypeEnhancement": "Enhancement",
+    "ITEM.TypeEnhancementPlural": "Enhancements",
     "ITEM.TypeDexentry": "Dex Entry",
     "ITEM.TypeDexentryPlural": "Dex Entries",
     "ITEM.AddButton": "Add",
@@ -36,7 +36,7 @@
     "PTU.TabsDex": "Pokedex",
     "PTU.TabsPokemon": "Pokemon & Skills",
     "PTU.TabsMoves": "Moves",
-    "PTU.TabsTraining": "Training & Edges",
+    "PTU.TabsTraining": "Training & Enhancements",
     "PTU.TabsCombat": "Combat",
     "PTU.TabsModifiers": "Modifiers",
     "PTU.TabsEffects": "Effects",
@@ -81,7 +81,7 @@
     "PTU.CapabilityOther": "Other Capabilities",
 
     "PTU.TutorPoints": "Tutor Points",
-    "PTU.PokeedgePoints": "Poké Edge Points Used",
+    "PTU.EnhancementPoints": "TP Used",
 
     "PTU.EvasionPhysical": "Physical<br>Evasion",
     "PTU.EvasionSpecial": "Special<br>Evasion",

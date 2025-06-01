@@ -478,7 +478,7 @@
     }
   },
   "Item": {
-    "types": ["feat", "edge", "ability", "move", "item", "capability", "pokeedge","dexentry"],
+    "types": ["feat", "edge", "ability", "move", "item", "capability", "enhancement","dexentry"],
     "templates": {
       "base": {
         "name": "",
@@ -541,7 +541,7 @@
     "capability": {
       "templates": ["base"]
     },
-    "pokeedge": {
+    "enhancement": {
       "templates": ["base"],
       "prerequisites": "",
       "cost": 0
