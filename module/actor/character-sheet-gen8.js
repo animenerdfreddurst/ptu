@@ -1,6 +1,7 @@
 import { sendItemMessage } from '../item/item-sheet.js';
 import { debug, error, log, PrepareMoveData } from '../ptu.js'
 import { ui_sound_paths } from '../sidebar/components/menu-component.js';
+import { CSS } from '../utils/css-constants.js';
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -10,7 +11,7 @@ export class PTUGen8CharacterSheet extends ActorSheet {
 	/** @override */
 	static get defaultOptions() {
 		return mergeObject(super.defaultOptions, {
-			classes: ['ptu', 'sheet', 'actor', 'gen8'],
+			classes: CSS.CHARACTER_SHEET,
 			template: 'systems/ptu/templates/actor/character-sheet-gen8.hbs',
 			width: 1200,
 			height: 675,
