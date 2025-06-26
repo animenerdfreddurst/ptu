@@ -53,7 +53,7 @@ export class PTUItemSheet extends ItemSheet {
 				this.object.update({"img": `/systems/ptu/css/images/icons/poke_edge_icon.png`});
 			else if (this.object.type == "item")
 				GetItemArt(this.object.name).then((img) => {
-					if(img === "systems/ptu/images/item_icons/generic item.webp")
+					if(img === "systems/ptu/assets/images/item_icons/generic item.webp")
 						this.object.update({"img": `/systems/ptu/css/images/icons/item_icon.png`});
 					else
 						this.object.update({"img": img});

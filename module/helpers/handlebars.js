@@ -113,7 +113,7 @@ export function registerHandlebars() {
     })
   
     Handlebars.registerHelper("calcFrequencyIconPath", function (frequency, currentUseCount) {
-      const basePath = "systems/ptu/images/icons/";
+      const basePath = "systems/ptu/assets/images/icons/";
       const useCount = Number(currentUseCount);
       switch (frequency) {
         case "At-Will":
