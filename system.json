@@ -41,7 +41,6 @@
   "esmodules": ["module/ptu.js"],
   "socket": true,
   "styles": [
-    "css/ptu.css",
     "css/main.css",
     "import/jquery-ui.css"
   ],

@@ -1,6 +1,7 @@
 import { debug, error, log, PrepareMoveData, warn } from '../ptu.js'
 import { HardenedChanges } from '../data/training-data.js'
 import { sendItemMessage } from '../item/item-sheet.js';
+import { CSS } from '../utils/css-constants.js';
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -10,7 +11,7 @@ export class PTUGen8PokemonSheet extends ActorSheet {
 	/** @override */
 	static get defaultOptions() {
 		return mergeObject(super.defaultOptions, {
-			classes: ['ptu', 'sheet', 'actor', 'gen8'],
+			classes: CSS.POKEMON_SHEET,
 			template: 'systems/ptu/templates/actor/pokemon-sheet-gen8.hbs',
 			width: 1200,
 			height: 675,
