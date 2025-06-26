@@ -48,18 +48,18 @@ export class PTUItemSheet extends ItemSheet {
 
 		if(this.object.img == "icons/svg/item-bag.svg" || this.object.img == "icons/svg/mystery-man.svg") {
 			if(this.object.type == "dexentry")
-				this.object.update({"img": `/systems/ptu/css/images/icons/dex_icon.png`});
+				this.object.update({"img": `/systems/ptu/assets/images/icons/dex_icon.png`});
 			else if(this.object.type == "pokeedge")
-				this.object.update({"img": `/systems/ptu/css/images/icons/poke_edge_icon.png`});
+				this.object.update({"img": `/systems/ptu/assets/images/icons/poke_edge_icon.png`});
 			else if (this.object.type == "item")
 				GetItemArt(this.object.name).then((img) => {
 					if(img === "systems/ptu/assets/images/item_icons/generic item.webp")
-						this.object.update({"img": `/systems/ptu/css/images/icons/item_icon.png`});
+						this.object.update({"img": `/systems/ptu/assets/images/icons/item_icon.png`});
 					else
 						this.object.update({"img": img});
 				});
 			else
-				this.object.update({"img": `/systems/ptu/css/images/icons/${this.object.type.toLowerCase()}_icon.png`});
+				this.object.update({"img": `/systems/ptu/assets/images/icons/${this.object.type.toLowerCase()}_icon.png`});
 		}
 
 		return data;

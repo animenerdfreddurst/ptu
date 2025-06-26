@@ -596,7 +596,7 @@ async function createPTUMacro(data, slot) {
     macro = await Macro.create({
       name: `${actor.name}'s ${item.name}`,
       type: "script",
-      img: item.type == 'move' && item.img === "icons/svg/mystery-man.svg" ? `/systems/ptu/css/images/types2/${item.data.type}IC_Icon.png` : item.img,
+      img: item.type == 'move' && item.img === "icons/svg/mystery-man.svg" ? `/systems/ptu/assets/images/types2/${item.data.type}IC_Icon.png` : item.img,
       command: command,
       flags: { "ptu.itemMacro": true }
     });
