@@ -42,11 +42,11 @@
   "socket": true,
   "styles": [
     "css/main.css",
-    "import/jquery-ui.css"
+    "css/jquery-ui.css"
   ],
   "scripts": [
-    "import/jquery-ui.js",
-    "css/bootstrap.js"
+    "js/jquery-ui.js",
+    "js/bootstrap.js"
   ],
   "packs": [
     {
