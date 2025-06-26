@@ -38,11 +38,15 @@
       "url": "https://swendrowski.us"
     }
   ],
-  "esmodules": ["module/ptu.js"],
+  "esmodules": [
+    "module/ptu.js"
+  ],
   "socket": true,
   "styles": [
+    "css/bootstrap-grid.css",
     "css/main.css",
-    "css/jquery-ui.css"
+    "css/jquery-ui.css",
+    "css/autocomplete.css"
   ],
   "scripts": [
     "js/jquery-ui.js",
@@ -145,7 +149,7 @@
   "gridUnits": "m",
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "exp",
-  "url": "https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System",  
+  "url": "https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System",
   "manifest": "https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System/raw/development/system.json",
   "changelog": "https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System/raw/development/changelog.md",
   "download": "https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System/archive/development.zip",

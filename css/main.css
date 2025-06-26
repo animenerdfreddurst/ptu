@@ -1,4 +1,3 @@
-@import "bootstrap-grid.css";
 :root {
   --pkmnFontStyle: "Pokemon GB";
 }
@@ -626,6 +625,7 @@ span.readable {
 .item-effect {
   display: -webkit-box;
   -webkit-line-clamp: 4;
+  line-clamp: 4;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -997,6 +997,7 @@ p.summary {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
+  line-clamp: 3;
   overflow: hidden;
   margin: 0;
   word-break: break-word;
@@ -1697,7 +1698,7 @@ h3 {
 /*  CSE Chat Notification                       */
 /* -------------------------------------------- */
 .cse-notification {
-  font-family: 'FTY SKORZHEN NCV';
+  font-family: "FTY SKORZHEN NCV";
   font-weight: 400;
   line-height: 24px;
   word-break: break-word;
@@ -1714,8 +1715,8 @@ h3 {
 /*  New Move Sheet                              */
 /* -------------------------------------------- */
 .sheet.item section {
-  background-color: #D1FED4 !important;
-  border: 5px solid #AED3A2;
+  background-color: #d1fed4 !important;
+  border: 5px solid #aed3a2;
   padding: 1px;
   overflow: hidden;
 }
@@ -1756,7 +1757,7 @@ h3 {
   flex-direction: column;
 }
 .move-sheet .sheet-body .origin-box {
-  background-color: #9FCB94;
+  background-color: #9fcb94;
   width: 100%;
   height: 40px;
   padding: 0.5rem;
@@ -1800,7 +1801,7 @@ h3 {
   font-weight: bold;
   text-align: center;
   border-radius: 13px 0 0 13px;
-  background-color: #FFFFC4;
+  background-color: #ffffc4;
   position: relative;
   right: -1rem;
   margin-left: -1rem;
@@ -1832,9 +1833,14 @@ h3 {
   background-color: #fff;
   padding: 0.25rem;
   border-radius: 50%;
-  box-shadow: 0 0 0 3px #8CC3F0, 0 0 0 10px #B6EFF8, 0 0 0 13px #8CC3F0;
+  box-shadow: 0 0 0 3px #8cc3f0, 0 0 0 10px #b6eff8, 0 0 0 13px #8cc3f0;
 }
-.move-sheet .sheet-body .move-info .move-info-row .move-origin .move-origin-select {
+.move-sheet
+  .sheet-body
+  .move-info
+  .move-info-row
+  .move-origin
+  .move-origin-select {
   height: 28px;
   width: 85px;
   background-size: contain !important;
@@ -1845,13 +1851,28 @@ h3 {
   cursor: pointer;
   color: rgba(0, 0, 0, 0);
 }
-.move-sheet .sheet-body .move-info .move-info-row .move-origin .move-origin-select:focus {
+.move-sheet
+  .sheet-body
+  .move-info
+  .move-info-row
+  .move-origin
+  .move-origin-select:focus {
   box-shadow: unset;
 }
-.move-sheet .sheet-body .move-info .move-info-row .move-origin .move-origin-select.selected {
+.move-sheet
+  .sheet-body
+  .move-info
+  .move-info-row
+  .move-origin
+  .move-origin-select.selected {
   color: #000000;
 }
-.move-sheet .sheet-body .move-info .move-info-row .move-origin .move-origin-select:after {
+.move-sheet
+  .sheet-body
+  .move-info
+  .move-info-row
+  .move-origin
+  .move-origin-select:after {
   content: "►";
   position: absolute;
   top: 2px;
@@ -1869,19 +1890,41 @@ h3 {
   flex-grow: 1;
   margin: 0 0.5rem;
 }
-.move-sheet .sheet-body .move-info .move-info-row .move-info-col .move-type-row {
+.move-sheet
+  .sheet-body
+  .move-info
+  .move-info-row
+  .move-info-col
+  .move-type-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
 }
 .move-sheet .sheet-body .move-info .move-info-row .move-info-col .move-type,
-.move-sheet .sheet-body .move-info .move-info-row .move-info-col .move-category {
+.move-sheet
+  .sheet-body
+  .move-info
+  .move-info-row
+  .move-info-col
+  .move-category {
   position: relative;
   width: fit-content;
 }
-.move-sheet .sheet-body .move-info .move-info-row .move-info-col .move-type .type-select,
-.move-sheet .sheet-body .move-info .move-info-row .move-info-col .move-category .type-select {
+.move-sheet
+  .sheet-body
+  .move-info
+  .move-info-row
+  .move-info-col
+  .move-type
+  .type-select,
+.move-sheet
+  .sheet-body
+  .move-info
+  .move-info-row
+  .move-info-col
+  .move-category
+  .type-select {
   height: 34px;
   width: 165px;
   background-size: contain !important;
@@ -1889,16 +1932,50 @@ h3 {
   padding: 0.25rem;
   color: rgba(0, 0, 0, 0);
 }
-.move-sheet .sheet-body .move-info .move-info-row .move-info-col .move-type .type-select:focus,
-.move-sheet .sheet-body .move-info .move-info-row .move-info-col .move-category .type-select:focus {
+.move-sheet
+  .sheet-body
+  .move-info
+  .move-info-row
+  .move-info-col
+  .move-type
+  .type-select:focus,
+.move-sheet
+  .sheet-body
+  .move-info
+  .move-info-row
+  .move-info-col
+  .move-category
+  .type-select:focus {
   box-shadow: unset;
 }
-.move-sheet .sheet-body .move-info .move-info-row .move-info-col .move-type .type-select.selected,
-.move-sheet .sheet-body .move-info .move-info-row .move-info-col .move-category .type-select.selected {
+.move-sheet
+  .sheet-body
+  .move-info
+  .move-info-row
+  .move-info-col
+  .move-type
+  .type-select.selected,
+.move-sheet
+  .sheet-body
+  .move-info
+  .move-info-row
+  .move-info-col
+  .move-category
+  .type-select.selected {
   color: #000000;
 }
-.move-sheet .sheet-body .move-info .move-info-row .move-info-col .move-type:after,
-.move-sheet .sheet-body .move-info .move-info-row .move-info-col .move-category:after {
+.move-sheet
+  .sheet-body
+  .move-info
+  .move-info-row
+  .move-info-col
+  .move-type:after,
+.move-sheet
+  .sheet-body
+  .move-info
+  .move-info-row
+  .move-info-col
+  .move-category:after {
   content: ">";
   font: 17px "Pokemon GB", sans-serif;
   color: #191813;
@@ -1912,27 +1989,45 @@ h3 {
   position: absolute;
   pointer-events: none;
 }
-.move-sheet .sheet-body .move-info .move-info-row .move-info-col .move-other-info {
+.move-sheet
+  .sheet-body
+  .move-info
+  .move-info-row
+  .move-info-col
+  .move-other-info {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
   font-weight: bold;
 }
-.move-sheet .sheet-body .move-info .move-info-row .move-info-col .move-other-info > span {
+.move-sheet
+  .sheet-body
+  .move-info
+  .move-info-row
+  .move-info-col
+  .move-other-info
+  > span {
   display: flex;
   align-items: center;
   flex: 0 0 165px;
   padding: 0.25rem;
 }
-.move-sheet .sheet-body .move-info .move-info-row .move-info-col .move-other-info > span input {
+.move-sheet
+  .sheet-body
+  .move-info
+  .move-info-row
+  .move-info-col
+  .move-other-info
+  > span
+  input {
   border: unset;
   text-overflow: ellipsis;
 }
 .move-sheet .sheet-body .move-effect {
   margin: 0.5rem 0.5rem;
   background-color: white;
-  box-shadow: 0 0 0 5px #5899D1, 0 0 0 10px #73AEFA, 0 0 0 15px #5899D1;
+  box-shadow: 0 0 0 5px #5899d1, 0 0 0 10px #73aefa, 0 0 0 15px #5899d1;
   width: 100%;
   height: 100%;
   flex-grow: 1;
@@ -1987,7 +2082,13 @@ h3 {
   border-radius: 15px;
   background: #ffffffa6;
 }
-.ptu.automation .content .tabbed-content #settings-component .settings table tr {
+.ptu.automation
+  .content
+  .tabbed-content
+  #settings-component
+  .settings
+  table
+  tr {
   height: 30px;
 }
 .ptu.automation .content .tabbed-content #targets-component {
@@ -2000,16 +2101,31 @@ h3 {
   border-radius: 15px;
   background: #ffffffa6;
 }
-.ptu.automation .content .tabbed-content #targets-component .target-bar .target {
+.ptu.automation
+  .content
+  .tabbed-content
+  #targets-component
+  .target-bar
+  .target {
   display: flex;
   justify-content: space-between;
 }
-.ptu.automation .content .tabbed-content #targets-component .target-bar .target-select {
+.ptu.automation
+  .content
+  .tabbed-content
+  #targets-component
+  .target-bar
+  .target-select {
   flex: 0 0 85%;
   font-size: 14px;
   max-width: 150px;
 }
-.ptu.automation .content .tabbed-content #targets-component .target-bar a.item-delete {
+.ptu.automation
+  .content
+  .tabbed-content
+  #targets-component
+  .target-bar
+  a.item-delete {
   flex: 0 0 10%;
   align-self: center;
 }
@@ -2033,7 +2149,12 @@ h3 {
 .ptu.automation .content .tabbed-content #targets-component .header h4 {
   flex: 0 0 70%;
 }
-.ptu.automation .content .tabbed-content #targets-component .header a.item-create {
+.ptu.automation
+  .content
+  .tabbed-content
+  #targets-component
+  .header
+  a.item-create {
   flex: 0 0 30%;
   align-self: center;
   background: #dddddda6;
@@ -2051,19 +2172,39 @@ h3 {
   border-radius: 15px;
   background: #ffffffa6;
 }
-.ptu.automation .content .tabbed-content #effects-component .effect-bar .effect {
+.ptu.automation
+  .content
+  .tabbed-content
+  #effects-component
+  .effect-bar
+  .effect {
   display: flex;
   justify-content: space-between;
 }
-.ptu.automation .content .tabbed-content #effects-component .effect-bar .effect-select {
+.ptu.automation
+  .content
+  .tabbed-content
+  #effects-component
+  .effect-bar
+  .effect-select {
   flex: 0 0 50%;
   font-size: 14px;
   max-width: 200px;
 }
-.ptu.automation .content .tabbed-content #effects-component .effect-bar .effect-value {
+.ptu.automation
+  .content
+  .tabbed-content
+  #effects-component
+  .effect-bar
+  .effect-value {
   flex: 0 0 35%;
 }
-.ptu.automation .content .tabbed-content #effects-component .effect-bar a.item-delete {
+.ptu.automation
+  .content
+  .tabbed-content
+  #effects-component
+  .effect-bar
+  a.item-delete {
   flex: 0 0 10%;
   align-self: center;
 }
@@ -2087,7 +2228,12 @@ h3 {
 .ptu.automation .content .tabbed-content #effects-component .header h4 {
   flex: 0 0 70%;
 }
-.ptu.automation .content .tabbed-content #effects-component .header a.item-create {
+.ptu.automation
+  .content
+  .tabbed-content
+  #effects-component
+  .header
+  a.item-create {
   flex: 0 0 30%;
   align-self: center;
   background: #dddddda6;
@@ -2106,30 +2252,60 @@ h3 {
   border-radius: 15px;
   background: #ffffffa6;
 }
-.ptu.automation .content .tabbed-content #conditions-component .condition-bar .condition {
+.ptu.automation
+  .content
+  .tabbed-content
+  #conditions-component
+  .condition-bar
+  .condition {
   display: flex;
   justify-content: space-between;
 }
-.ptu.automation .content .tabbed-content #conditions-component .condition-bar .condition-select {
+.ptu.automation
+  .content
+  .tabbed-content
+  #conditions-component
+  .condition-bar
+  .condition-select {
   flex: 0 0 30%;
   font-size: 14px;
   max-width: 160px;
 }
-.ptu.automation .content .tabbed-content #conditions-component .condition-bar .condition-operator-select {
+.ptu.automation
+  .content
+  .tabbed-content
+  #conditions-component
+  .condition-bar
+  .condition-operator-select {
   flex: 0 0 30%;
   font-size: 14px;
   max-width: 150px;
 }
-.ptu.automation .content .tabbed-content #conditions-component .condition-bar .condition-value {
+.ptu.automation
+  .content
+  .tabbed-content
+  #conditions-component
+  .condition-bar
+  .condition-value {
   flex: 0 0 10%;
   height: 27px;
 }
-.ptu.automation .content .tabbed-content #conditions-component .condition-bar .condition-rangeIncreases-select {
+.ptu.automation
+  .content
+  .tabbed-content
+  #conditions-component
+  .condition-bar
+  .condition-rangeIncreases-select {
   flex: 0 0 25%;
   font-size: 14px;
   max-width: 150px;
 }
-.ptu.automation .content .tabbed-content #conditions-component .condition-bar a.item-delete {
+.ptu.automation
+  .content
+  .tabbed-content
+  #conditions-component
+  .condition-bar
+  a.item-delete {
   flex: 0 0 10%;
   align-self: center;
 }
@@ -2153,7 +2329,12 @@ h3 {
 .ptu.automation .content .tabbed-content #conditions-component .header h4 {
   flex: 0 0 70%;
 }
-.ptu.automation .content .tabbed-content #conditions-component .header a.item-create {
+.ptu.automation
+  .content
+  .tabbed-content
+  #conditions-component
+  .header
+  a.item-create {
   flex: 0 0 30%;
   align-self: center;
   background: #dddddda6;
@@ -2165,7 +2346,7 @@ h3 {
 /*  Level Up Form                               */
 /* -------------------------------------------- */
 .level-up .window-content {
-  background: linear-gradient(45deg, #D1FED4, #dffffe);
+  background: linear-gradient(45deg, #d1fed4, #dffffe);
   padding: 4px;
 }
 .level-up #mon-image-component {
@@ -2246,7 +2427,7 @@ h3 {
   font-weight: normal;
 }
 .level-up #mon-evolving-component .box {
-  background-color: #9FCB94;
+  background-color: #9fcb94;
   width: 100%;
   height: 45px;
   border-radius: 13px;
@@ -3255,7 +3436,12 @@ body.messages-dark-theme .chat-controls .roll-type-select {
 #ptu-sidebar .ptu-sidebar #menu-component #menu-content .struggle-row {
   flex: 0 0 100%;
 }
-#ptu-sidebar .ptu-sidebar #menu-component #menu-content .struggle-row .btn-body {
+#ptu-sidebar
+  .ptu-sidebar
+  #menu-component
+  #menu-content
+  .struggle-row
+  .btn-body {
   min-height: 60px !important;
 }
 #ptu-sidebar .ptu-sidebar #menu-component #menu-content .maneuvers-row .item {
@@ -3458,7 +3644,12 @@ body.messages-dark-theme .chat-controls .roll-type-select {
   overflow-wrap: normal !important;
   word-break: keep-all !important;
 }
-#ptu-sidebar .ptu-sidebar #abilities-list .movemaster-button .btn-body .icon-list {
+#ptu-sidebar
+  .ptu-sidebar
+  #abilities-list
+  .movemaster-button
+  .btn-body
+  .icon-list {
   padding-top: 4px;
   padding-bottom: 0;
   font-size: 14px;
@@ -3466,10 +3657,22 @@ body.messages-dark-theme .chat-controls .roll-type-select {
   justify-content: center;
   min-height: 24px;
 }
-#ptu-sidebar .ptu-sidebar #abilities-list .movemaster-button .btn-body .icon-list span {
+#ptu-sidebar
+  .ptu-sidebar
+  #abilities-list
+  .movemaster-button
+  .btn-body
+  .icon-list
+  span {
   margin: 0 4px;
 }
-#ptu-sidebar .ptu-sidebar #abilities-list .movemaster-button .btn-body .icon-list img {
+#ptu-sidebar
+  .ptu-sidebar
+  #abilities-list
+  .movemaster-button
+  .btn-body
+  .icon-list
+  img {
   height: 22px;
   border-width: 0px;
 }
@@ -3509,30 +3712,83 @@ body.messages-dark-theme .chat-controls .roll-type-select {
   border-width: 0;
   display: flex;
 }
-#ptu-sidebar .ptu-sidebar #moves-list .movemaster-button .btn-body .type-bar img,
-#ptu-sidebar .ptu-sidebar .struggle-row .movemaster-button .btn-body .type-bar img {
+#ptu-sidebar
+  .ptu-sidebar
+  #moves-list
+  .movemaster-button
+  .btn-body
+  .type-bar
+  img,
+#ptu-sidebar
+  .ptu-sidebar
+  .struggle-row
+  .movemaster-button
+  .btn-body
+  .type-bar
+  img {
   border: unset;
 }
-#ptu-sidebar .ptu-sidebar #moves-list .movemaster-button .btn-body .type-img img,
-#ptu-sidebar .ptu-sidebar .struggle-row .movemaster-button .btn-body .type-img img {
+#ptu-sidebar
+  .ptu-sidebar
+  #moves-list
+  .movemaster-button
+  .btn-body
+  .type-img
+  img,
+#ptu-sidebar
+  .ptu-sidebar
+  .struggle-row
+  .movemaster-button
+  .btn-body
+  .type-img
+  img {
   width: 248px;
   height: auto;
   padding: 0px !important;
 }
 #ptu-sidebar .ptu-sidebar #moves-list .movemaster-button .btn-body .icon-list,
-#ptu-sidebar .ptu-sidebar .struggle-row .movemaster-button .btn-body .icon-list {
+#ptu-sidebar
+  .ptu-sidebar
+  .struggle-row
+  .movemaster-button
+  .btn-body
+  .icon-list {
   padding-top: 4px;
   padding-bottom: 0;
   font-size: 14px;
   align-items: center;
   justify-content: center;
 }
-#ptu-sidebar .ptu-sidebar #moves-list .movemaster-button .btn-body .icon-list span,
-#ptu-sidebar .ptu-sidebar .struggle-row .movemaster-button .btn-body .icon-list span {
+#ptu-sidebar
+  .ptu-sidebar
+  #moves-list
+  .movemaster-button
+  .btn-body
+  .icon-list
+  span,
+#ptu-sidebar
+  .ptu-sidebar
+  .struggle-row
+  .movemaster-button
+  .btn-body
+  .icon-list
+  span {
   margin: 0 4px;
 }
-#ptu-sidebar .ptu-sidebar #moves-list .movemaster-button .btn-body .icon-list img,
-#ptu-sidebar .ptu-sidebar .struggle-row .movemaster-button .btn-body .icon-list img {
+#ptu-sidebar
+  .ptu-sidebar
+  #moves-list
+  .movemaster-button
+  .btn-body
+  .icon-list
+  img,
+#ptu-sidebar
+  .ptu-sidebar
+  .struggle-row
+  .movemaster-button
+  .btn-body
+  .icon-list
+  img {
   height: 22px;
   border-width: 0px;
 }
@@ -3751,28 +4007,92 @@ body.messages-dark-theme .chat-controls .roll-type-select {
 .mm-damage-application .mon-col .mon-list-header .mon-item .fas,
 .mm-damage-application .mon-col .mon-list .mon-item-header .fas,
 .mm-damage-application .mon-col .mon-list-header .mon-item-header .fas,
-.mm-damage-application .mon-col .mon-list .mon-item.applicators [data-mode="full"],
-.mm-damage-application .mon-col .mon-list-header .mon-item.applicators [data-mode="full"],
-.mm-damage-application .mon-col .mon-list .mon-item-header.applicators [data-mode="full"],
-.mm-damage-application .mon-col .mon-list-header .mon-item-header.applicators [data-mode="full"],
-.mm-damage-application .mon-col .mon-list .mon-item.applicators [data-mode="resist"],
-.mm-damage-application .mon-col .mon-list-header .mon-item.applicators [data-mode="resist"],
-.mm-damage-application .mon-col .mon-list .mon-item-header.applicators [data-mode="resist"],
-.mm-damage-application .mon-col .mon-list-header .mon-item-header.applicators [data-mode="resist"] {
+.mm-damage-application
+  .mon-col
+  .mon-list
+  .mon-item.applicators
+  [data-mode="full"],
+.mm-damage-application
+  .mon-col
+  .mon-list-header
+  .mon-item.applicators
+  [data-mode="full"],
+.mm-damage-application
+  .mon-col
+  .mon-list
+  .mon-item-header.applicators
+  [data-mode="full"],
+.mm-damage-application
+  .mon-col
+  .mon-list-header
+  .mon-item-header.applicators
+  [data-mode="full"],
+.mm-damage-application
+  .mon-col
+  .mon-list
+  .mon-item.applicators
+  [data-mode="resist"],
+.mm-damage-application
+  .mon-col
+  .mon-list-header
+  .mon-item.applicators
+  [data-mode="resist"],
+.mm-damage-application
+  .mon-col
+  .mon-list
+  .mon-item-header.applicators
+  [data-mode="resist"],
+.mm-damage-application
+  .mon-col
+  .mon-list-header
+  .mon-item-header.applicators
+  [data-mode="resist"] {
   color: #18520b;
 }
 .mm-damage-application .mon-col .mon-list .mon-item .far,
 .mm-damage-application .mon-col .mon-list-header .mon-item .far,
 .mm-damage-application .mon-col .mon-list .mon-item-header .far,
 .mm-damage-application .mon-col .mon-list-header .mon-item-header .far,
-.mm-damage-application .mon-col .mon-list .mon-item.applicators [data-mode="half"],
-.mm-damage-application .mon-col .mon-list-header .mon-item.applicators [data-mode="half"],
-.mm-damage-application .mon-col .mon-list .mon-item-header.applicators [data-mode="half"],
-.mm-damage-application .mon-col .mon-list-header .mon-item-header.applicators [data-mode="half"],
-.mm-damage-application .mon-col .mon-list .mon-item.applicators [data-mode="weak"],
-.mm-damage-application .mon-col .mon-list-header .mon-item.applicators [data-mode="weak"],
-.mm-damage-application .mon-col .mon-list .mon-item-header.applicators [data-mode="weak"],
-.mm-damage-application .mon-col .mon-list-header .mon-item-header.applicators [data-mode="weak"] {
+.mm-damage-application
+  .mon-col
+  .mon-list
+  .mon-item.applicators
+  [data-mode="half"],
+.mm-damage-application
+  .mon-col
+  .mon-list-header
+  .mon-item.applicators
+  [data-mode="half"],
+.mm-damage-application
+  .mon-col
+  .mon-list
+  .mon-item-header.applicators
+  [data-mode="half"],
+.mm-damage-application
+  .mon-col
+  .mon-list-header
+  .mon-item-header.applicators
+  [data-mode="half"],
+.mm-damage-application
+  .mon-col
+  .mon-list
+  .mon-item.applicators
+  [data-mode="weak"],
+.mm-damage-application
+  .mon-col
+  .mon-list-header
+  .mon-item.applicators
+  [data-mode="weak"],
+.mm-damage-application
+  .mon-col
+  .mon-list
+  .mon-item-header.applicators
+  [data-mode="weak"],
+.mm-damage-application
+  .mon-col
+  .mon-list-header
+  .mon-item-header.applicators
+  [data-mode="weak"] {
   color: #aa0200;
 }
 .mm-damage-application .mon-col .mon-list .mon-item.applicators,
@@ -3788,7 +4108,11 @@ body.messages-dark-theme .chat-controls .roll-type-select {
 .mm-damage-application .mon-col .mon-list .mon-item.applicators i,
 .mm-damage-application .mon-col .mon-list-header .mon-item.applicators i,
 .mm-damage-application .mon-col .mon-list .mon-item-header.applicators i,
-.mm-damage-application .mon-col .mon-list-header .mon-item-header.applicators i {
+.mm-damage-application
+  .mon-col
+  .mon-list-header
+  .mon-item-header.applicators
+  i {
   flex: 18% 0 0;
   color: black;
 }
@@ -3822,7 +4146,6 @@ body.messages-dark-theme .chat-controls .roll-type-select {
 .tooltip:hover .tooltip-content {
   visibility: visible;
 }
-/* TODO: Properly turn this into LESS */
 #ptu-sidebar .ptu-sidebar #features-list .movemaster-button {
   margin: 3px 0px;
   padding: 0;
@@ -3848,7 +4171,12 @@ body.messages-dark-theme .chat-controls .roll-type-select {
   overflow-wrap: normal !important;
   word-break: keep-all !important;
 }
-#ptu-sidebar .ptu-sidebar #features-list .movemaster-button .btn-body .icon-list {
+#ptu-sidebar
+  .ptu-sidebar
+  #features-list
+  .movemaster-button
+  .btn-body
+  .icon-list {
   padding-top: 4px;
   padding-bottom: 0;
   font-size: 14px;
@@ -3856,10 +4184,22 @@ body.messages-dark-theme .chat-controls .roll-type-select {
   justify-content: center;
   min-height: 24px;
 }
-#ptu-sidebar .ptu-sidebar #features-list .movemaster-button .btn-body .icon-list span {
+#ptu-sidebar
+  .ptu-sidebar
+  #features-list
+  .movemaster-button
+  .btn-body
+  .icon-list
+  span {
   margin: 0 4px;
 }
-#ptu-sidebar .ptu-sidebar #features-list .movemaster-button .btn-body .icon-list img {
+#ptu-sidebar
+  .ptu-sidebar
+  #features-list
+  .movemaster-button
+  .btn-body
+  .icon-list
+  img {
   height: 22px;
   border-width: 0px;
 }
@@ -3907,8 +4247,8 @@ body.messages-dark-theme .chat-controls .roll-type-select {
   --dur: 0.3s;
   --color-dark: #2f2f2f;
   --color-light: #fff;
-  --color-brand: #782E21;
-  --font-fam: system-ui, 'Lato', sans-serif;
+  --color-brand: #782e21;
+  --font-fam: system-ui, "Lato", sans-serif;
   --height: 5rem;
   --btn-width: 6rem;
   --bez: cubic-bezier(0, 0, 0.43, 1.49);
@@ -3982,8 +4322,8 @@ body.messages-dark-theme .chat-controls .roll-type-select {
 }
 .embed {
   border-radius: 0 3px 3px 0;
-  background: #1D1E20;
-  border-color: #1D1E20;
+  background: #1d1e20;
+  border-color: #1d1e20;
   display: flex;
   padding: 8px 10px;
   color: rgba(255, 255, 255, 0.6);
@@ -4151,25 +4491,28 @@ h6 {
   border-width: 7px;
 }
 .framed.primary {
-  background: #48A058;
-  color: #F8F3F8;
-  text-shadow: -1px -1px 0 #181010, 1px -1px 0 #181010, -1px 1px 0 #181010, 1px 1px 0 #181010;
+  background: #48a058;
+  color: #f8f3f8;
+  text-shadow: -1px -1px 0 #181010, 1px -1px 0 #181010, -1px 1px 0 #181010,
+    1px 1px 0 #181010;
 }
 .framed.primary.exclude-border {
   background-clip: padding-box;
 }
 .framed.secondary {
-  background: #F0B088;
-  color: #F8F3F8;
-  text-shadow: -1px -1px 0 #181010, 1px -1px 0 #181010, -1px 1px 0 #181010, 1px 1px 0 #181010;
+  background: #f0b088;
+  color: #f8f3f8;
+  text-shadow: -1px -1px 0 #181010, 1px -1px 0 #181010, -1px 1px 0 #181010,
+    1px 1px 0 #181010;
 }
 .framed.secondary.exclude-border {
   background-clip: padding-box;
 }
 .framed.danger {
-  background: #B3181C;
-  color: #F8F3F8;
-  text-shadow: -1px -1px 0 #181010, 1px -1px 0 #181010, -1px 1px 0 #181010, 1px 1px 0 #181010;
+  background: #b3181c;
+  color: #f8f3f8;
+  text-shadow: -1px -1px 0 #181010, 1px -1px 0 #181010, -1px 1px 0 #181010,
+    1px 1px 0 #181010;
 }
 .framed.danger.exclude-border {
   background-clip: padding-box;
@@ -4197,7 +4540,7 @@ h6 {
   box-shadow: -4em -1em 0 #181010, -5em -1em 0 #181010, -4em 0 0 #181010, -5em 0 0 #181010, -3em 0 0 #181010, -2em 0 0 #181010, 1em 2em 0 #181010, 1em 2em 0 #181010, 2em 2em 0 #181010, 2em 2em 0 #181010;
 }*/
 .stats h2 {
-  background-color: #F8F3F8;
+  background-color: #f8f3f8;
   margin-left: -2em;
   margin-top: -2em;
   padding: 1em 1em 1em 0;
@@ -4215,16 +4558,20 @@ h6 {
   left: 0;
   bottom: 0;
   display: inline-block;
-  content: '';
+  content: "";
   width: 2px;
   height: 2px;
   font-size: 14px;
   color: #181010;
-  -webkit-box-shadow: 5em -1em 0 #181010, 4em -1em 0 #181010, 5em 0 0 #181010, 4em 0 0 #181010, 3em 0 0 #181010, 2em 0 0 #181010, -1em 2em 0 #181010, -2em 2em 0 #181010, 2em 2em 0 #181010, 2em 2em 0 #181010;
-  box-shadow: 5em -1em 0 #181010, 4em -1em 0 #181010, 5em 0 0 #181010, 4em 0 0 #181010, 3em 0 0 #181010, 2em 0 0 #181010, -1em 2em 0 #181010, -2em 2em 0 #181010, 2em 2em 0 #181010, 2em 2em 0 #181010;
+  -webkit-box-shadow: 5em -1em 0 #181010, 4em -1em 0 #181010, 5em 0 0 #181010,
+    4em 0 0 #181010, 3em 0 0 #181010, 2em 0 0 #181010, -1em 2em 0 #181010,
+    -2em 2em 0 #181010, 2em 2em 0 #181010, 2em 2em 0 #181010;
+  box-shadow: 5em -1em 0 #181010, 4em -1em 0 #181010, 5em 0 0 #181010,
+    4em 0 0 #181010, 3em 0 0 #181010, 2em 0 0 #181010, -1em 2em 0 #181010,
+    -2em 2em 0 #181010, 2em 2em 0 #181010, 2em 2em 0 #181010;
 }
 .stats-flipped h2 {
-  background-color: #F8F3F8;
+  background-color: #f8f3f8;
   margin-left: -2em;
   margin-top: -2em;
   padding: 1em 1em 1em 0;
@@ -4300,9 +4647,9 @@ ul.buttons.compact li {
   height: 9px;
 }
 .progress-bar.p1::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #B3181C;
+  background: #b3181c;
   width: 1%;
   height: 3px;
   position: absolute;
@@ -4310,9 +4657,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p2::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #B3181C;
+  background: #b3181c;
   width: 2%;
   height: 3px;
   position: absolute;
@@ -4320,9 +4667,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p3::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #B3181C;
+  background: #b3181c;
   width: 3%;
   height: 3px;
   position: absolute;
@@ -4330,9 +4677,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p4::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #B3181C;
+  background: #b3181c;
   width: 4%;
   height: 3px;
   position: absolute;
@@ -4340,9 +4687,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p5::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #B3181C;
+  background: #b3181c;
   width: 5%;
   height: 3px;
   position: absolute;
@@ -4350,9 +4697,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p6::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #B3181C;
+  background: #b3181c;
   width: 6%;
   height: 3px;
   position: absolute;
@@ -4360,9 +4707,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p7::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #B3181C;
+  background: #b3181c;
   width: 7%;
   height: 3px;
   position: absolute;
@@ -4370,9 +4717,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p8::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #B3181C;
+  background: #b3181c;
   width: 8%;
   height: 3px;
   position: absolute;
@@ -4380,9 +4727,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p9::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #B3181C;
+  background: #b3181c;
   width: 9%;
   height: 3px;
   position: absolute;
@@ -4390,9 +4737,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p10::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #B3181C;
+  background: #b3181c;
   width: 10%;
   height: 3px;
   position: absolute;
@@ -4400,9 +4747,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p11::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #B3181C;
+  background: #b3181c;
   width: 11%;
   height: 3px;
   position: absolute;
@@ -4410,9 +4757,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p12::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #B3181C;
+  background: #b3181c;
   width: 12%;
   height: 3px;
   position: absolute;
@@ -4420,9 +4767,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p13::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #B3181C;
+  background: #b3181c;
   width: 13%;
   height: 3px;
   position: absolute;
@@ -4430,9 +4777,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p14::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #B3181C;
+  background: #b3181c;
   width: 14%;
   height: 3px;
   position: absolute;
@@ -4440,9 +4787,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p15::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #B3181C;
+  background: #b3181c;
   width: 15%;
   height: 3px;
   position: absolute;
@@ -4450,9 +4797,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p16::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #B3181C;
+  background: #b3181c;
   width: 16%;
   height: 3px;
   position: absolute;
@@ -4460,9 +4807,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p17::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #B3181C;
+  background: #b3181c;
   width: 17%;
   height: 3px;
   position: absolute;
@@ -4470,9 +4817,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p18::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #B3181C;
+  background: #b3181c;
   width: 18%;
   height: 3px;
   position: absolute;
@@ -4480,9 +4827,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p19::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #B3181C;
+  background: #b3181c;
   width: 19%;
   height: 3px;
   position: absolute;
@@ -4490,9 +4837,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p20::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #B3181C;
+  background: #b3181c;
   width: 20%;
   height: 3px;
   position: absolute;
@@ -4500,9 +4847,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p21::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 21%;
   height: 3px;
   position: absolute;
@@ -4510,9 +4857,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p22::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 22%;
   height: 3px;
   position: absolute;
@@ -4520,9 +4867,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p23::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 23%;
   height: 3px;
   position: absolute;
@@ -4530,9 +4877,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p24::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 24%;
   height: 3px;
   position: absolute;
@@ -4540,9 +4887,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p25::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 25%;
   height: 3px;
   position: absolute;
@@ -4550,9 +4897,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p26::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 26%;
   height: 3px;
   position: absolute;
@@ -4560,9 +4907,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p27::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 27%;
   height: 3px;
   position: absolute;
@@ -4570,9 +4917,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p28::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 28%;
   height: 3px;
   position: absolute;
@@ -4580,9 +4927,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p29::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 29%;
   height: 3px;
   position: absolute;
@@ -4590,9 +4937,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p30::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 30%;
   height: 3px;
   position: absolute;
@@ -4600,9 +4947,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p31::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 31%;
   height: 3px;
   position: absolute;
@@ -4610,9 +4957,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p32::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 32%;
   height: 3px;
   position: absolute;
@@ -4620,9 +4967,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p33::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 33%;
   height: 3px;
   position: absolute;
@@ -4630,9 +4977,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p34::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 34%;
   height: 3px;
   position: absolute;
@@ -4640,9 +4987,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p35::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 35%;
   height: 3px;
   position: absolute;
@@ -4650,9 +4997,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p36::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 36%;
   height: 3px;
   position: absolute;
@@ -4660,9 +5007,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p37::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 37%;
   height: 3px;
   position: absolute;
@@ -4670,9 +5017,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p38::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 38%;
   height: 3px;
   position: absolute;
@@ -4680,9 +5027,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p39::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 39%;
   height: 3px;
   position: absolute;
@@ -4690,9 +5037,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p40::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 40%;
   height: 3px;
   position: absolute;
@@ -4700,9 +5047,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p41::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 41%;
   height: 3px;
   position: absolute;
@@ -4710,9 +5057,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p42::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 42%;
   height: 3px;
   position: absolute;
@@ -4720,9 +5067,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p43::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 43%;
   height: 3px;
   position: absolute;
@@ -4730,9 +5077,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p44::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 44%;
   height: 3px;
   position: absolute;
@@ -4740,9 +5087,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p45::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 45%;
   height: 3px;
   position: absolute;
@@ -4750,9 +5097,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p46::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 46%;
   height: 3px;
   position: absolute;
@@ -4760,9 +5107,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p47::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 47%;
   height: 3px;
   position: absolute;
@@ -4770,9 +5117,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p48::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 48%;
   height: 3px;
   position: absolute;
@@ -4780,9 +5127,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p49::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 49%;
   height: 3px;
   position: absolute;
@@ -4790,9 +5137,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p50::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #F0B088;
+  background: #f0b088;
   width: 50%;
   height: 3px;
   position: absolute;
@@ -4800,9 +5147,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p51::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 51%;
   height: 3px;
   position: absolute;
@@ -4810,9 +5157,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p52::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 52%;
   height: 3px;
   position: absolute;
@@ -4820,9 +5167,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p53::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 53%;
   height: 3px;
   position: absolute;
@@ -4830,9 +5177,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p54::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 54%;
   height: 3px;
   position: absolute;
@@ -4840,9 +5187,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p55::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 55%;
   height: 3px;
   position: absolute;
@@ -4850,9 +5197,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p56::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 56%;
   height: 3px;
   position: absolute;
@@ -4860,9 +5207,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p57::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 57%;
   height: 3px;
   position: absolute;
@@ -4870,9 +5217,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p58::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 58%;
   height: 3px;
   position: absolute;
@@ -4880,9 +5227,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p59::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 59%;
   height: 3px;
   position: absolute;
@@ -4890,9 +5237,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p60::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 60%;
   height: 3px;
   position: absolute;
@@ -4900,9 +5247,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p61::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 61%;
   height: 3px;
   position: absolute;
@@ -4910,9 +5257,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p62::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 62%;
   height: 3px;
   position: absolute;
@@ -4920,9 +5267,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p63::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 63%;
   height: 3px;
   position: absolute;
@@ -4930,9 +5277,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p64::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 64%;
   height: 3px;
   position: absolute;
@@ -4940,9 +5287,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p65::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 65%;
   height: 3px;
   position: absolute;
@@ -4950,9 +5297,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p66::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 66%;
   height: 3px;
   position: absolute;
@@ -4960,9 +5307,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p67::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 67%;
   height: 3px;
   position: absolute;
@@ -4970,9 +5317,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p68::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 68%;
   height: 3px;
   position: absolute;
@@ -4980,9 +5327,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p69::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 69%;
   height: 3px;
   position: absolute;
@@ -4990,9 +5337,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p70::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 70%;
   height: 3px;
   position: absolute;
@@ -5000,9 +5347,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p71::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 71%;
   height: 3px;
   position: absolute;
@@ -5010,9 +5357,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p72::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 72%;
   height: 3px;
   position: absolute;
@@ -5020,9 +5367,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p73::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 73%;
   height: 3px;
   position: absolute;
@@ -5030,9 +5377,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p74::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 74%;
   height: 3px;
   position: absolute;
@@ -5040,9 +5387,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p75::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 75%;
   height: 3px;
   position: absolute;
@@ -5050,9 +5397,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p76::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 76%;
   height: 3px;
   position: absolute;
@@ -5060,9 +5407,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p77::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 77%;
   height: 3px;
   position: absolute;
@@ -5070,9 +5417,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p78::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 78%;
   height: 3px;
   position: absolute;
@@ -5080,9 +5427,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p79::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 79%;
   height: 3px;
   position: absolute;
@@ -5090,9 +5437,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p80::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 80%;
   height: 3px;
   position: absolute;
@@ -5100,9 +5447,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p81::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 81%;
   height: 3px;
   position: absolute;
@@ -5110,9 +5457,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p82::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 82%;
   height: 3px;
   position: absolute;
@@ -5120,9 +5467,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p83::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 83%;
   height: 3px;
   position: absolute;
@@ -5130,9 +5477,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p84::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 84%;
   height: 3px;
   position: absolute;
@@ -5140,9 +5487,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p85::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 85%;
   height: 3px;
   position: absolute;
@@ -5150,9 +5497,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p86::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 86%;
   height: 3px;
   position: absolute;
@@ -5160,9 +5507,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p87::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 87%;
   height: 3px;
   position: absolute;
@@ -5170,9 +5517,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p88::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 88%;
   height: 3px;
   position: absolute;
@@ -5180,9 +5527,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p89::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 89%;
   height: 3px;
   position: absolute;
@@ -5190,9 +5537,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p90::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 90%;
   height: 3px;
   position: absolute;
@@ -5200,9 +5547,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p91::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 91%;
   height: 3px;
   position: absolute;
@@ -5210,9 +5557,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p92::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 92%;
   height: 3px;
   position: absolute;
@@ -5220,9 +5567,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p93::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 93%;
   height: 3px;
   position: absolute;
@@ -5230,9 +5577,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p94::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 94%;
   height: 3px;
   position: absolute;
@@ -5240,9 +5587,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p95::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 95%;
   height: 3px;
   position: absolute;
@@ -5250,9 +5597,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p96::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 96%;
   height: 3px;
   position: absolute;
@@ -5260,9 +5607,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p97::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 97%;
   height: 3px;
   position: absolute;
@@ -5270,9 +5617,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p98::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 98%;
   height: 3px;
   position: absolute;
@@ -5280,9 +5627,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p99::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 99%;
   height: 3px;
   position: absolute;
@@ -5290,9 +5637,9 @@ ul.buttons.compact li {
   left: 0;
 }
 .progress-bar.p100::after {
-  content: '';
+  content: "";
   display: inline-block;
-  background: #48A058;
+  background: #48a058;
   width: 100%;
   height: 3px;
   position: absolute;
@@ -5302,7 +5649,7 @@ ul.buttons.compact li {
 /* Overrides for the core Foundry CSS */
 form button,
 #settings button {
-  background: #F8F3F8 !important;
+  background: #f8f3f8 !important;
   border: none !important;
 }
 .sheet-tabs .item {
@@ -5324,14 +5671,14 @@ h2 {
   border-style: solid !important;
   padding: 1em !important;
   margin: 1em 0 0 0 !important;
-  background: #F8F3F8 !important;
+  background: #f8f3f8 !important;
 }
 body {
   font-family: var(--font-primary);
   font-variant: small-caps;
   font-smooth: never;
   -webkit-font-smoothing: none;
-  background: #F8F3F8;
+  background: #f8f3f8;
   color: #181010;
   font-size: 14px;
   -ms-interpolation-mode: nearest-neighbor;
@@ -5386,7 +5733,7 @@ h6 {
   right: 0;
   top: 0;
   width: 300px;
-  background: #F8F3F8;
+  background: #f8f3f8;
   padding: 2em;
 }
 @-webkit-keyframes floater {
@@ -5557,5 +5904,5 @@ input[name="totalwealth"] {
 }
 
 .document-name {
-  font-size: 14px
+  font-size: 14px;
 }
