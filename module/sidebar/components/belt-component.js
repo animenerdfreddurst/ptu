@@ -25,7 +25,7 @@ export default class BeltComponent extends Component {
         }
         // Else display this component
 
-        const dividerIcon = "<img class='divider-image' src='systems/ptu/images/icons/DividerIcon_PokeballBelt.png' style='border:none; width:200px;'>"
+        const dividerIcon = "<img class='divider-image' src='systems/ptu/assets/images/icons/DividerIcon_PokeballBelt.png' style='border:none; width:200px;'>"
         const beltMons = [];
         let output = "";
 

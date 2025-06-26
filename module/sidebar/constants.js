@@ -81,7 +81,7 @@ export const CategoryIconSuffix = ".png";
 // export const TypeIconPath = "systems/ptu/css/images/types/";
 // export const CategoryIconPath = "systems/ptu/css/images/categories/";
 
-export const AlternateIconPath = "systems/ptu/images/icons/";
+export const AlternateIconPath = "systems/ptu/assets/images/icons/";
 
 // export const AtWillReadyMark = "∞";
 

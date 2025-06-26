@@ -305,7 +305,7 @@ export async function ThrowPokeball(thrower, target, pokeball) {
     ui.notifications.info("Removed 1 quantity from Pokeball in inventory.")
     pokeball.update({"system.quantity": Number(duplicate(pokeball.system.quantity)) - 1});
 
-    const POKEBALL_IMAGE_PATH = pokeball?.img ?? "systems/ptu/images/item_icons/basic ball.webp";
+    const POKEBALL_IMAGE_PATH = pokeball?.img ?? "systems/ptu/assets/images/item_icons/basic ball.webp";
 
     let accuracyBonus = thrower?.data?.data?.modifiers?.acBonus?.total ?? 0;
     // The only thing I know of that gives a bonus would be Tools of the Trade, +2AC
@@ -459,7 +459,7 @@ export async function PlayReleaseOwnedPokemonAnimation(token) {
     let actor = game.actors.get(tokenData.actorId);
     if(actor.type != "pokemon") {return false}
     
-    let item_icon_path = "systems/ptu/images/item_icons/"
+    let item_icon_path = "systems/ptu/assets/images/item_icons/"
     let pokeball = (actor?.data?.data?.pokeball.toLowerCase()) ?? "basic ball";
     if(pokeball == "") { pokeball = "basic ball"; }
 

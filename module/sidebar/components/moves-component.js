@@ -53,7 +53,7 @@ export default class MovesList extends Component {
 
         let output = "";
         if(this.state.moves.length > 0)
-            output += "<img class='divider-image' src='systems/ptu/images/icons/DividerIcon_Moves.png' style='border:none; width:200px;'>"
+            output += "<img class='divider-image' src='systems/ptu/assets/images/icons/DividerIcon_Moves.png' style='border:none; width:200px;'>"
 
         for (const move of this.state.moves.sort(this._sort) ?? []) {
             // Move data is prepared on a duplicate entry, otherwise the preperation data will be flagged as 

@@ -164,7 +164,7 @@ export function LoadSystemSettings() {
         scope: "world",
         config: true,
         type: String,
-        default: "systems/ptu/images/pokemon_sprites/",
+        default: "systems/ptu/assets/images/pokemon_sprites/",
         filePicker: true,
         category: "general"
     });

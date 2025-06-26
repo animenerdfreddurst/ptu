@@ -20,7 +20,7 @@ export default class ItemsComponent extends Component {
         let output = "";
         if (this.state.actor.type == 'character') {
             const items = this.state.actor.itemTypes.item;
-            dividerIcon = "<img class='divider-image' src='systems/ptu/images/icons/DividerIcon_Items.png' style='border:none; width:200px;'>"
+            dividerIcon = "<img class='divider-image' src='systems/ptu/assets/images/icons/DividerIcon_Items.png' style='border:none; width:200px;'>"
 
 
             if (items.length > 0) {
@@ -39,7 +39,7 @@ export default class ItemsComponent extends Component {
                 }
             }
         } else if (this.state.actor.type == 'pokemon') {
-            dividerIcon = "<img class='divider-image' src='systems/ptu/images/icons/DividerIcon_HeldItem.png' style='border:none; width:200px;'>"
+            dividerIcon = "<img class='divider-image' src='systems/ptu/assets/images/icons/DividerIcon_HeldItem.png' style='border:none; width:200px;'>"
             const itemName = this.state.actor.system.heldItem;
             if (itemName != "None")
             {
