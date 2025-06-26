@@ -43,10 +43,15 @@
   ],
   "socket": true,
   "styles": [
+<<<<<<< HEAD
     "css/bootstrap-grid.css",
     "css/styles.css",
     "css/jquery-ui.css",
     "css/autocomplete.css"
+=======
+    "css/main.css",
+    "css/jquery-ui.css"
+>>>>>>> 8924489 (clean up of css and import folder)
   ],
   "scripts": [
     "js/jquery-ui.js",
