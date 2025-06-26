@@ -78,8 +78,8 @@ export const TypeIconSuffix = "IC.png";
 export const TypeIconSuffixFlipped = "IC_Flipped.png";
 export const CategoryIconSuffix = ".png";
 
-// export const TypeIconPath = "systems/ptu/css/images/types/";
-// export const CategoryIconPath = "systems/ptu/css/images/categories/";
+// export const TypeIconPath = "systems/ptu/assets/images/types/";
+// export const CategoryIconPath = "systems/ptu/assets/images/categories/";
 
 export const AlternateIconPath = "systems/ptu/assets/images/icons/";
 
