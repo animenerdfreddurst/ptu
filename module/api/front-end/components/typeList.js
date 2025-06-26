@@ -20,7 +20,7 @@ export default class TypeList extends Component {
         const types = this.state.typings.map(type => {
             return {
                 type: type,
-                img: `/systems/ptu/css/images/types2/${type}IC.png`
+                img: `/systems/ptu/assets/images/types2/${type}IC.png`
             }
         })
 

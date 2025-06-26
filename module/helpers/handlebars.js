@@ -167,7 +167,7 @@ export function registerHandlebars() {
       return types.reduce((html, type, index, array) => {
         if (type == "null") type = "Untyped";
         if (isTypeDefaultType(type)) {
-          return html += `<img class="mr-1 ml-1" src="/systems/ptu/css/images/types/${type}IC.webp">` + (includeSlash ? (index != (array.length - 1) ? "<span>/</span>" : "") : "");
+          return html += `<img class="mr-1 ml-1" src="/systems/ptu/assets/images/types/${type}IC.webp">` + (includeSlash ? (index != (array.length - 1) ? "<span>/</span>" : "") : "");
         } else {
           const path = findCustomTypeImagePath(type);
           return html += `<img class="mr-1 ml-1" src="${path}">` + (includeSlash ? (index != (array.length - 1) ? "<span>/</span>" : "") : "");
@@ -177,7 +177,7 @@ export function registerHandlebars() {
   
     Handlebars.registerHelper("loadTypeImage", function (type) {
       if (isTypeDefaultType(type)) {
-        return `<img src="/systems/ptu/css/images/types/${type}IC.webp">`;
+        return `<img src="/systems/ptu/assets/images/types/${type}IC.webp">`;
       } else {
         const path = findCustomTypeImagePath(type);
         return `<img src="${path}">`;
@@ -187,7 +187,7 @@ export function registerHandlebars() {
     Handlebars.registerHelper("loadTypeImageUrl", function (type) {
 
       if (isTypeDefaultType(type) || type == "Special" || type == "Physical" || type == "Status") {
-        return `/systems/ptu/css/images/types2/${type}IC.png`;
+        return `/systems/ptu/assets/images/types2/${type}IC.png`;
       } else { 
         return findCustomTypeImagePath(type);
       }

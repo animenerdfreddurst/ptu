@@ -68,14 +68,14 @@ a.item {
 .name-label {
   content: "";
   width: 35px;
-  background: url("images/pokeball-hgss.png") no-repeat !important;
+  background: url("../assets/images/pokeball-hgss.png") no-repeat !important;
   background-size: contain !important;
   padding-right: 5px;
 }
 .level {
   content: "";
   width: 26px;
-  background: url("images/lvl.png") no-repeat !important;
+  background: url("../assets/images/lvl.png") no-repeat !important;
   background-size: contain !important;
   margin: 0 5px 0 10px;
   position: relative;
@@ -84,7 +84,7 @@ a.item {
 }
 .options .hp {
   width: 3rem;
-  background: url("images/hp.png") no-repeat !important;
+  background: url("../assets/images/hp.png") no-repeat !important;
   background-size: contain !important;
   margin: 0 5px 0 0px;
   position: relative;
@@ -480,7 +480,7 @@ a.item {
   color: white;
 }
 input[name="data.money"] {
-  background-image: url(/systems/ptu/css/images/1200px-All-currency-symbol.png);
+  background-image: url(/systems/ptu/assets/images/1200px-All-currency-symbol.png);
   padding-left: 20px;
   background-size: 12px 12px;
   background-repeat: no-repeat;
@@ -560,7 +560,7 @@ input[name="data.money"] {
   background: #93c47d;
 }
 .itemBox {
-  background: url(/systems/ptu/css/images/item-box.svg);
+  background: url(/systems/ptu/assets/images/item-box.svg);
   background-repeat: no-repeat;
   background-size: auto 100%;
   position: relative;
@@ -3190,8 +3190,8 @@ body.messages-dark-theme .message-content {
 }
 body.messages-dark-theme .chat-form textarea {
   /* position: relative !important;
-    -o-border-image: url("images/frame.png") 7 round !important;
-    border-image: url("images/frame.png") 7 round !important;
+    -o-border-image: url("../assets/images/frame.png") 7 round !important;
+    border-image: url("../assets/images/frame.png") 7 round !important;
     border-width: 7px !important;
     border-style: solid !important;
     padding: 1em !important;
@@ -4478,16 +4478,16 @@ h6 {
 }
 .framed {
   position: relative;
-  -o-border-image: url("images/frame-hd.png") 42 round;
-  border-image: url("images/frame-hd.png") 42 round;
+  -o-border-image: url("../assets/images/frame-hd.png") 42 round;
+  border-image: url("../assets/images/frame-hd.png") 42 round;
   border-width: 21px;
   border-style: solid;
   padding: 1em;
   margin: 1em 0 0 0;
 }
 .framed.no-hd {
-  -o-border-image: url("images/frame.png") 7 round;
-  border-image: url("images/frame.png") 7 round;
+  -o-border-image: url("../assets/images/frame.png") 7 round;
+  border-image: url("../assets/images/frame.png") 7 round;
   border-width: 7px;
 }
 .framed.primary {
@@ -4599,12 +4599,12 @@ button.pokemon,
 .button.pokemon {
   text-indent: -1000em;
   width: 100%;
-  background: url("images/pkmn.png") 1em center no-repeat !important;
+  background: url("../assets/images/pkmn.png") 1em center no-repeat !important;
   background-size: contain !important;
 }
 button.pokemon.active,
 .button.pokemon.active {
-  background: url("images/pkmn-selected.png") 1em center no-repeat !important;
+  background: url("../assets/images/pkmn-selected.png") 1em center no-repeat !important;
   background-size: contain !important;
 }
 .sheet-tabs > li > button::before {
@@ -4640,8 +4640,8 @@ ul.buttons.compact li {
 .progress-bar {
   position: relative;
   width: 100%;
-  -o-border-image: url("images/progress-frame.png") 1 round;
-  border-image: url("images/progress-frame.png") 1 round;
+  -o-border-image: url("../assets/images/progress-frame.png") 1 round;
+  border-image: url("../assets/images/progress-frame.png") 1 round;
   border-style: solid;
   background-clip: padding-box;
   height: 9px;
@@ -5665,8 +5665,8 @@ h2 {
 }
 .message {
   position: relative !important;
-  -o-border-image: url("images/frame.png") 7 round !important;
-  border-image: url("images/frame.png") 7 round !important;
+  -o-border-image: url("../assets/images/frame.png") 7 round !important;
+  border-image: url("../assets/images/frame.png") 7 round !important;
   border-width: 7px !important;
   border-style: solid !important;
   padding: 1em !important;
@@ -5774,7 +5774,7 @@ h6 {
   -webkit-box-flex: 0;
   -ms-flex-positive: 0;
   flex-grow: 0;
-  background: url("images/pokeball.png") no-repeat !important;
+  background: url("../assets/images/pokeball.png") no-repeat !important;
   background-size: contain !important;
 }
 .pokeball-spacing {
@@ -5795,7 +5795,7 @@ h6 {
   -webkit-box-flex: 0;
   -ms-flex-positive: 0;
   flex-grow: 0;
-  background: url("images/pokeball-shaded.png") no-repeat !important;
+  background: url("../assets/images/pokeball-shaded.png") no-repeat !important;
   background-size: contain !important;
 }
 .level-header {
@@ -5811,7 +5811,7 @@ h6 {
 .resources .hp {
   content: "";
   width: 30px;
-  background: url("images/hp.png") no-repeat !important;
+  background: url("../assets/images/hp.png") no-repeat !important;
   background-size: contain !important;
 }
 .hp-info {
@@ -5879,7 +5879,7 @@ h6 {
   padding-bottom: 10px;
 }
 input[name="totalwealth"] {
-  background-image: url(/systems/ptu/css/images/1200px-All-currency-symbol.png);
+  background-image: url(/systems/ptu/assets/images/1200px-All-currency-symbol.png);
   padding-left: 20px;
   background-size: 18px 18px;
   background-repeat: no-repeat;
