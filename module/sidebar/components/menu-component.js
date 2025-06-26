@@ -30,7 +30,7 @@ export default class MenuComponent extends Component {
         if (!this.state.actor) return;
 
 
-        const dividerIcon = "<img class='divider-image' src='systems/ptu/images/icons/Divider.png' style='border:none; width:200px;'>"
+        const dividerIcon = "<img class='divider-image' src='systems/ptu/assets/images/icons/Divider.png' style='border:none; width:200px;'>"
         let output = dividerIcon;
 
         switch (this.state.menuOption) {

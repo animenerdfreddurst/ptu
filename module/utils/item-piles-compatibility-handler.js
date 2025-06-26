@@ -3,7 +3,7 @@ import { debug, log } from "../ptu.js";
 
 export async function GetItemArt(item_name, type = ".webp") { 
 
-    const imgDirectoryPath = "systems/ptu/images/item_icons/";
+    const imgDirectoryPath = "systems/ptu/assets/images/item_icons/";
     const customImgDirectoryPath = game.settings.get("ptu", "customItemIconDirectory");
 
     const basePath = imgDirectoryPath+(imgDirectoryPath.endsWith('/') ? '' : '/');
@@ -103,12 +103,12 @@ Hooks.on("item-piles-createItemPile", async function(created_token, options) {
 //     item_name = item_name.replace("Thrown ","").replace("Broken ","");
 //     let item_current_img = item?.object?.img;
 
-//     if((item_current_img == "icons/svg/mystery-man.svg") || (item_current_img == "icons/svg/item-bag.svg") || (item_current_img == "systems/ptu/images/item_icons/generic item.webp"))
+//     if((item_current_img == "icons/svg/mystery-man.svg") || (item_current_img == "icons/svg/item-bag.svg") || (item_current_img == "systems/ptu/assets/images/item_icons/generic item.webp"))
 //     {
 //         let new_image = await GetItemArt(item_name);
         
 //         // Default to item-bag icon instead of 'Old Gateau'
-//         if(new_image === "systems/ptu/images/item_icons/generic item.webp")
+//         if(new_image === "systems/ptu/assets/images/item_icons/generic item.webp")
 //             new_image = "icons/svg/item-bag.svg";
 
 //         log("renderPTUItemSheet: Default image detected, replacing with:", new_image);
@@ -154,7 +154,7 @@ Hooks.on("createItem", async function(ptu_item, options, id) {
     item_name = item_name.replace("Thrown ","").replace("Broken ","");
     let item_current_img = ptu_item?.img;
 
-    if((item_current_img == "icons/svg/mystery-man.svg") || (item_current_img == "icons/svg/item-bag.svg") || (item_current_img == "systems/ptu/images/item_icons/generic item.webp"))
+    if((item_current_img == "icons/svg/mystery-man.svg") || (item_current_img == "icons/svg/item-bag.svg") || (item_current_img == "systems/ptu/assets/images/item_icons/generic item.webp"))
     {
         let new_image = await GetItemArt(item_name)
 

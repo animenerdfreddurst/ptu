@@ -50,7 +50,7 @@ export default class AbilitiesList extends Component {
 
         let output = "";
         if(this.state.abilities.length > 0)
-            output += "<img class='divider-image' src='systems/ptu/images/icons/DividerIcon_Abilities.png' style='border:none; width:200px;'>"
+            output += "<img class='divider-image' src='systems/ptu/assets/images/icons/DividerIcon_Abilities.png' style='border:none; width:200px;'>"
 
         for (const ability of this.state.abilities?.sort(this._sort.bind(this)) ?? []) {
             // Ability data is prepared on a duplicate entry, otherwise the preperation data will be flagged as 
@@ -110,7 +110,7 @@ export default class AbilitiesList extends Component {
         
         function getIconPath(frequency) {
             if(!frequency) return;
-            const basePath = "systems/ptu/images/icons/"
+            const basePath = "systems/ptu/assets/images/icons/"
             switch (true) {
                 case frequency.includes("swift action"): return basePath + "SwiftActionBackground.png";
                 case frequency.includes("standard action"): return basePath + "StandardActionBackground.png";
