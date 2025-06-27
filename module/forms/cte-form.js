@@ -1,7 +1,7 @@
 import CustomSpeciesFolder from "../entities/custom-species-folder.js"
 import initStore from "../api/front-end/cseStore.js";
 import TypeList from "../api/front-end/components/typeList.js";
-import { log, debug } from "../ptu.js";
+import { log, debug } from "../../main.js";
 import NewMonComponent from "../api/front-end/components/newMonComponent.js";
 import CseDragAndDropList from "../api/front-end/components/cse-dad-list.js";
 import { InitCustomTypings } from "../custom-typings.js";

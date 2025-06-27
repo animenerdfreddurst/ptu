@@ -1,4 +1,4 @@
-import { debug, warn } from "../../ptu.js";
+import { debug, warn } from "../../../main.js";
 
 export function CalculateTrainerCapabilities(trainerSkills, items, speedCombatStages, ptuFlags) {
     let mods = {

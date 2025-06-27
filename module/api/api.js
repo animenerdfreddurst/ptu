@@ -1,6 +1,6 @@
 import { displayAppliedDamageToTargets, ApplyInjuries } from '../combat/damage-calc-tools.js';
-import { LATEST_VERSION } from '../ptu.js'
-import { debug, log } from '../ptu.js';
+import { LATEST_VERSION } from '../../main.js'
+import { debug, log } from '../../main.js';
 import { addStepsToEffectiveness, dataFromPath } from '../utils/generic-helpers.js';
 import { PlayPokeballReturnAnimation } from '../combat/effects/pokeball_effects.js';
 

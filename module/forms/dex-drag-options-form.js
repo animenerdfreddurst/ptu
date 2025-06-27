@@ -1,4 +1,4 @@
-import { log, debug } from "../ptu.js";
+import { log, debug } from "../../main.js";
 import { getRandomNormIntInclusive } from '../utils/generic-helpers.js';
 
 /**

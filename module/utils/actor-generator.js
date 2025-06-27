@@ -1,7 +1,7 @@
 import { DistributeStatsWeighted, DistributeStatsRandomly, DistributeByBaseStats, BaseStatsWithNature, ApplyLevelUpPoints } from './calculate-stat-distribution.js'
 import { getRandomIntInclusive } from './generic-helpers.js';
 import { CalcLevel } from '../actor/calculations/level-up-calculator.js';
-import { debug, log } from "../ptu.js"
+import { debug, log } from "../../main.js"
 import { GetSpeciesArt } from './species-command-parser.js'
 import { GetOrCacheAbilities, GetOrCacheCapabilities, GetOrCacheMoves} from './cache-helper.js'
 

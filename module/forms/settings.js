@@ -1,4 +1,4 @@
-import { debug } from "../ptu.js";
+import { debug } from "../../main.js";
 
 export const PTUSettingCategories = [
     {id: "general", label: "General", icon: "fas fa-cogs"},

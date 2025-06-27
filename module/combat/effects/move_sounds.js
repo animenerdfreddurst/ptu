@@ -1,4 +1,4 @@
-import { debug, log } from "../../ptu.js";
+import { debug, log } from "../../../main.js";
 
 export const battle_sound_paths = {
 	"miss":{

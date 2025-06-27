@@ -5,7 +5,7 @@ import { CalculateSkills } from "./calculations/skills-calculator.js";
 import { CalcBaseStats, CalculateStatTotal, CalculatePTStatTotal, CalculatePoisonedCondition } from "./calculations/stats-calculator.js";
 import { GetMonEffectiveness } from "./calculations/effectiveness-calculator.js";
 import { CritOptions } from "./character-sheet-gen8.js";
-import { warn, debug, log } from '../ptu.js'
+import { warn, debug, log } from '../../main.js'
 import { PlayMoveAnimations, move_animation_delay_ms } from "../combat/effects/move_animations.js";
 import { PlayMoveSounds } from "../combat/effects/move_sounds.js";
 import { ActionTypes, FiveStrikeHitsDictionary } from "../combat/damage-calc-tools.js";

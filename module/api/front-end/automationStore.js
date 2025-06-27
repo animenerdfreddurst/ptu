@@ -1,5 +1,5 @@
 import Store from './lib/store.js';
-import { debug, log } from '../../ptu.js';
+import { debug, log } from '../../../main.js';
 
 export default function ({ object, form }) {
     const store = new Store({

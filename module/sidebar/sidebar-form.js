@@ -1,5 +1,5 @@
 import initStore from "./sidebarStore.js";
-import { log, debug } from "../ptu.js";
+import { log, debug } from "../../main.js";
 import MoveList from './components/moves-component.js';
 import AbilitiesList from './components/abilities-component.js';
 import FeaturesList from './components/features-component.js';

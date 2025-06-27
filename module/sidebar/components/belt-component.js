@@ -1,5 +1,5 @@
 import Component from '../../api/front-end/lib/component.js';
-import { PrepareAbilityData } from '../../ptu.js';
+import { PrepareAbilityData } from '../../../main.js';
 
 export default class BeltComponent extends Component {
     constructor(store) {

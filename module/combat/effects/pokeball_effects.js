@@ -1,4 +1,4 @@
-import { debug, log } from "../../ptu.js";
+import { debug, log } from "../../../main.js";
 import { PlayMissDodgeAnimation, PlayHitShakeAnimation } from "./move_animations.js";
 import { RollCaptureChance, applyCapture } from "../../utils/pokeball-capture-calculations.js"
 import { timeout, capitalizeFirstLetter } from "../../utils/generic-helpers.js";

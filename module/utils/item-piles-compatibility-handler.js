@@ -1,4 +1,4 @@
-import { debug, log } from "../ptu.js";
+import { debug, log } from "../../main.js";
 
 
 export async function GetItemArt(item_name, type = ".webp") { 
