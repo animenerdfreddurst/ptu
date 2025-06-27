@@ -39,7 +39,7 @@
     }
   ],
   "esmodules": [
-    "module/ptu.js"
+    "main.js"
   ],
   "socket": true,
   "styles": [
