@@ -1,6 +1,6 @@
 import {BlankPTUSpecies} from "../data/species-template.js"
 import CustomSpeciesFolder from "../entities/custom-species-folder.js"
-import { log } from "../ptu.js";
+import { log } from "../../main.js";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications

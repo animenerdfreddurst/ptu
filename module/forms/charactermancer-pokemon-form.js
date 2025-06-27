@@ -1,4 +1,4 @@
-import { log, debug } from "../ptu.js";
+import { log, debug } from "../../main.js";
 import LevelField from "../api/front-end/components/levelField.js";
 import initStore from "../api/front-end/charactermancerStore.js";
 import LevelExpField from "../api/front-end/components/levelExpField.js";

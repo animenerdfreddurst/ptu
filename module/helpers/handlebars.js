@@ -1,4 +1,4 @@
-import { PrepareMoveData } from "../ptu.js";
+import { PrepareMoveData } from "../../main.js";
 import { TypeEffectiveness } from "../data/effectiveness-data.js";
 
 const validTypeImageExtensions = ["webp", "png"];

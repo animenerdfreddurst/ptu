@@ -1,5 +1,5 @@
 import CustomSpeciesFolder from './entities/custom-species-folder.js'
-import {log, warn, error, debug} from './ptu.js'
+import {log, warn, error, debug} from './../main.js'
 
 export async function PrepareCustomSpecies() {
     console.groupCollapsed("Preparing Custom Species");

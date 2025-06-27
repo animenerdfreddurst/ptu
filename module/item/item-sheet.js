@@ -1,4 +1,4 @@
-import { PrepareMoveData, warn, debug } from '../ptu.js';
+import { PrepareMoveData, warn, debug } from '../../main.js';
 import { sendMoveMessage } from '../actor/pokemon-sheet-gen8.js'
 import { GetItemArt } from '../utils/item-piles-compatibility-handler.js';
 

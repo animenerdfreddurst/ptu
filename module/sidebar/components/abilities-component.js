@@ -1,5 +1,5 @@
 import Component from '../../api/front-end/lib/component.js';
-import { PrepareAbilityData } from '../../ptu.js';
+import { PrepareAbilityData } from '../../../main.js';
 import { CoatIcon, FullActionIcon, ShiftActionIcon, BlastIcon, BlessingIcon, BurstIcon, LineIcon, MeleeIcon, SelfIcon, RangeIcon, TriggerIcon, FieldIcon, SwiftActionIcon, HealingIcon, FriendlyIcon, SonicIcon, InterruptIcon, ShieldIcon, SocialIcon, FiveStrikeIcon, DoubleStrikeIcon, GroundsourceIcon, SmiteIcon, ExhaustIcon, PassIcon, SetupIcon, IllusionIcon } from '../constants.js';
 
 export default class AbilitiesList extends Component {

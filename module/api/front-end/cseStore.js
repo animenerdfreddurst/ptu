@@ -1,6 +1,6 @@
 import Store from './lib/store.js';
 import { CalcLevel } from '../../actor/calculations/level-up-calculator.js';
-import { debug, log } from '../../ptu.js';
+import { debug, log } from '../../../main.js';
 import { CheckStage } from '../../utils/calculate-evolution.js';
 import { GetSpeciesArt } from '../../utils/species-command-parser.js';
 import { CalcBaseStats, CalculateStatTotal } from '../../actor/calculations/stats-calculator.js';

@@ -1,4 +1,4 @@
-import { warn, debug, log } from "../ptu.js";
+import { warn, debug, log } from "../../main.js";
 import { PTUCombatTrackerConfig } from "../forms/combat-tracker-config-form.js";
 import { EffectFns } from "./effects/afflictions.js";
 import { PlayReleaseOwnedPokemonAnimation } from "./effects/pokeball_effects.js";

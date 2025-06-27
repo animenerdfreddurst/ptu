@@ -1,4 +1,4 @@
-import { debug, log } from "../ptu.js";
+import { debug, log } from "../../main.js";
 import { timeout } from "./generic-helpers.js";
 
 export function ActorHasItemWithName(actor, initial_item_name, item_category = "Any", precise_naming = false) {

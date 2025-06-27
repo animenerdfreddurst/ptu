@@ -1,4 +1,4 @@
-import { debug, log } from "../ptu.js";
+import { debug, log } from "../../main.js";
 import { injuryTokenSplash } from "../../module/combat/effects/move_animations.js";
 
 Hooks.on("renderChatMessage", (message, html, data) => {

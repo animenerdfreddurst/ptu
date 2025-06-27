@@ -1,6 +1,6 @@
 import Component from '../../api/front-end/lib/component.js';
 import { sendMoveMessage } from '../../actor/pokemon-sheet-gen8.js'
-import { PrepareMoveData } from '../../ptu.js';
+import { PrepareMoveData } from '../../../main.js';
 import { CoatIcon, FullActionIcon, ShiftActionIcon, BlastIcon, BlessingIcon, BurstIcon, LineIcon, MeleeIcon, SelfIcon, RangeIcon, TriggerIcon, FieldIcon, SwiftActionIcon, HealingIcon, FriendlyIcon, SonicIcon, InterruptIcon, ShieldIcon, SocialIcon, FiveStrikeIcon, DoubleStrikeIcon, GroundsourceIcon, SmiteIcon, ExhaustIcon, PassIcon, SetupIcon, IllusionIcon } from '../constants.js';
 
 export default class MovesList extends Component {

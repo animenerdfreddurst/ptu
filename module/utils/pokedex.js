@@ -1,4 +1,4 @@
-import { debug, log} from '../ptu.js'
+import { debug, log} from '../../main.js'
 
 export default async function RenderDex(species, type = "desc") {
     if (!species) return;

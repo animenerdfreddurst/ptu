@@ -1,4 +1,4 @@
-import { debug } from '../../../ptu.js';
+import { debug } from '../../../../main.js';
 import Component from '../lib/component.js';
 import { GetSpeciesData } from '../../../actor/actor.js';
 import { capitalizeFirstLetter } from '../../../utils/generic-helpers.js';

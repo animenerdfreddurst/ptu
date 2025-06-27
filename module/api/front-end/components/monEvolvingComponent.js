@@ -1,4 +1,4 @@
-import { debug } from '../../../ptu.js';
+import { debug } from '../../../../main.js';
 import Component from '../lib/component.js';
 
 export default class MonEvolvingComponent extends Component {
