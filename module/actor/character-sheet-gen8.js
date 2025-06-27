@@ -238,6 +238,7 @@ export class PTUGen8CharacterSheet extends ActorSheet {
 			});
 		}
 
+		//TODO replace with vanilla JS
 		html.find('#heldItemInput').autocomplete({
 			source: game.ptu.data.items.map((i) => i.name),
 			autoFocus: true,
