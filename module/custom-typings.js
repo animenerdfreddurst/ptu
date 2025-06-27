@@ -1,5 +1,5 @@
 import { TypeEffectiveness } from './data/effectiveness-data.js';
-import {log, warn, error, debug} from './ptu.js'
+import {log, warn, error, debug} from './../main.js'
 
 export async function InitCustomTypings() {
     try {

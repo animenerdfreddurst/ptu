@@ -1,4 +1,4 @@
-import { debug, log } from "../../ptu.js";
+import { debug, log } from "../../../main.js";
 import { ApplyFlatDamage } from '../damage-calc-tools.js';
 
 export const Afflictions = [

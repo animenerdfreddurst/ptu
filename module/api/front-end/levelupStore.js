@@ -1,6 +1,6 @@
 import Store from './lib/store.js';
 import { CalculatePTStatTotal, CalculateStatTotal } from '../../actor/calculations/stats-calculator.js';
-import { debug, log } from '../../ptu.js';
+import { debug, log } from '../../../main.js';
 import { CheckStage } from '../../utils/calculate-evolution.js';
 import { GetOrCacheAbilities, GetOrCacheMoves } from "../../utils/cache-helper.js";
 

@@ -1,5 +1,5 @@
 import initStore from "../api/front-end/automationStore.js";
-import { log, debug } from "../ptu.js";
+import { log, debug } from "../../main.js";
 import TabsComponent from "../api/front-end/components/tabs-component.js";
 import TargetsComponent from "../api/front-end/components/targets-component.js";
 import ConditionsComponent from "../api/front-end/components/conditions-component.js";

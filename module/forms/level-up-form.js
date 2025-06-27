@@ -5,7 +5,7 @@ import MonStatBlockTotalComponent from "../api/front-end/components/monStatBlock
 import MonMovesListComponent from "../api/front-end/components/monMovesListComponent.js";
 import MonAbilitiesListComponent from "../api/front-end/components/monAbilitiesListComponent.js";
 import initStore from "../api/front-end/levelupStore.js";
-import { log, debug } from "../ptu.js";
+import { log, debug } from "../../main.js";
 import { pokemonData } from '../data/species-data.js';
 import { GetSpeciesArt } from '../utils/species-command-parser.js';
 import { GetOrCacheAbilities } from "../utils/cache-helper.js";

@@ -1,4 +1,4 @@
-import { debug, log } from "../ptu.js"
+import { debug, log } from "../../main.js"
 import { getRandomIntInclusive, lpad} from './generic-helpers.js'
 import { GetOrCacheAbilities, GetOrCacheCapabilities, GetOrCacheMoves} from './cache-helper.js'
 

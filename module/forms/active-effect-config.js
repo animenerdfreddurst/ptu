@@ -1,4 +1,4 @@
-import { debug } from "../ptu.js";
+import { debug } from "../../main.js";
 
 /**
  * A form designed for creating and editing an Active Effect on an Actor or Item entity.

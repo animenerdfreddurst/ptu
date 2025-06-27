@@ -1,6 +1,6 @@
 // Initiative revamp sort code
 
-import { debug } from "../ptu.js";
+import { debug } from "../../main.js";
 
 export class PTUCombatOverrides extends Combat {
   async startCombat() {

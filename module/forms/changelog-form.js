@@ -1,4 +1,4 @@
-import {LATEST_VERSION} from '../ptu.js'
+import {LATEST_VERSION} from '../../main.js'
 
 /**
  * Extend the basic ActorSheet with some very simple modifications

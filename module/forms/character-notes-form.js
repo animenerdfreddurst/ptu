@@ -1,4 +1,4 @@
-import { log, debug } from "../ptu.js";
+import { log, debug } from "../../main.js";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
