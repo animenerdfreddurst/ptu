@@ -44,7 +44,7 @@
   "socket": true,
   "styles": [
     "css/bootstrap-grid.css",
-    "css/main.css",
+    "css/styles.css",
     "css/jquery-ui.css",
     "css/autocomplete.css"
   ],
