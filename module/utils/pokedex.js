@@ -10,7 +10,7 @@ export default async function RenderDex(species, type = "desc") {
     const dexEntry = dexEntries.find( x => (x.name?.toLowerCase() === speciesData._id.toLowerCase()));
 
     const pokedexDialog = new Dialog({
-        title: "Pokédex information for " + speciesData._id.toLowerCase(),
+        title: "Pokedex information for " + speciesData._id.toLowerCase(),
         content: await renderTemplate('/systems/ptu/templates/pokedex.hbs', {img: await game.ptu.utils.generator.GetSpeciesArt(speciesData, imageBasePath),speciesData, dexEntry, type}),
         buttons: {}
     });

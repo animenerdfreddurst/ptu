@@ -70,7 +70,18 @@
                                     {{#if editLocked}}disabled{{/if}}
                                 />
                             </span>
-                            <span style="flex: 0 0 100%;">
+                            <span style="flex: 0 0 100%">
+                                Range
+                                <input
+                                    class="ml-2"
+                                    name="system.range"
+                                    type="text"
+                                    value="{{item.system.range}}"
+                                    placeholder=""
+                                    {{#if editLocked}}disabled{{/if}}
+                                />
+                            </span>
+							<span style="flex: 0 0 100%;">
                                 Keywords
                                 <input
                                     class="ml-2"

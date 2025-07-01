@@ -171,7 +171,7 @@ function PrepareEvolution(prevent_evolution = undefined) {
 }
 
 function PrepareStats(type, randomPercent = 0.1) {
-    let stats = {atk: {},def: {},spatk: {},spdef: {},spd: {},hp: {}};//duplicate(this.actor.data.data.stats);
+    let stats = {atk: {},def: {},spa: {},spd: {},spe: {},hp: {}};//duplicate(this.actor.data.data.stats);
     let levelUpPoints = this.actor.system.levelUpPoints ? duplicate(this.actor.system.levelUpPoints) : this.actor.system.level.current + 10;
     let speciesStats = BaseStatsWithNature(this.species.data["Base Stats"], this.actor.system.nature.value);
 
@@ -200,9 +200,9 @@ function PrepareStats(type, randomPercent = 0.1) {
             switch(stat) {
                 case "Attack": key = "atk"; break;
                 case "Defense": key = "def"; break;
-                case "Special Attack": key = "spatk"; break;
-                case "Special Defense": key = "spdef"; break;
-                case "Speed": key = "spd"; break;
+                case "Special Attack": key = "spa"; break;
+                case "Special Defense": key = "spd"; break;
+                case "Speed": key = "spe"; break;
                 case "HP": key = "hp"; break;
             }
             if(isNaN(stats[key].levelUp)) stats[key].levelUp = 0;

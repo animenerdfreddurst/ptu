@@ -375,13 +375,13 @@ a.item {
     .key {
       &.hp,
       &.def,
-      &.spdef {
+      &.spd {
         background: #788898;
       }
 
       &.atk,
-      &.spatk,
-      &.spd,
+      &.spa,
+      &.spe,
       &.stat-header {
         background: #8898a8;
       }
@@ -391,13 +391,13 @@ a.item {
 
     &.hp,
     &.def,
-    &.spdef {
+    &.spd {
       background: #c8d0d8;
     }
 
     &.atk,
-    &.spatk,
-    &.spd {
+    &.spa,
+    &.spe {
       background: #e0e8e8;
     }
   }
@@ -421,11 +421,11 @@ a.item {
     row-gap: 3px;
 
     &.pokemon {
-      grid-template: [row1-start] "stats-header base-header mod-header levelUp-header stage-header total-header" 25px [row1-end] [row2-start] "hp hp-base hp-mod hp-levelUp . hp-total" 25px [row2-end] [row3-start] "atk atk-base atk-mod atk-levelUp atk-stage atk-total" 25px [row3-end] [row4-start] "def def-base def-mod def-levelUp def-stage def-total" 25px [row4-end] [row5-start] "spatk spatk-base spatk-mod spatk-levelUp spatk-stage spatk-total" 25px [row5-end] [row6-start] "spdef spdef-base spdef-mod spdef-levelUp spdef-stage spdef-total" 25px [row6-end] [row7-start] "spd spd-base spd-mod spd-levelUp spd-stage spd-total" 25px [row7-end] / 15% 15% 15% 15% 15% 25%;
+      grid-template: [row1-start] "stats-header base-header mod-header levelUp-header stage-header total-header" 25px [row1-end] [row2-start] "hp hp-base hp-mod hp-levelUp . hp-total" 25px [row2-end] [row3-start] "atk atk-base atk-mod atk-levelUp atk-stage atk-total" 25px [row3-end] [row4-start] "def def-base def-mod def-levelUp def-stage def-total" 25px [row4-end] [row5-start] "spa spa-base spa-mod spa-levelUp spa-stage spa-total" 25px [row5-end] [row6-start] "spd spd-base spd-mod spd-levelUp spd-stage spd-total" 25px [row6-end] [row7-start] "spe spe-base spe-mod spe-levelUp spe-stage spe-total" 25px [row7-end] / 15% 15% 15% 15% 15% 25%;
     }
 
     &.player {
-      grid-template: [row1-start] "stats-header base-header mod-header levelUp-header total-header" 25px [row1-end] [row2-start] "hp hp-base hp-mod hp-levelUp hp-total" 25px [row2-end] [row3-start] "atk atk-base atk-mod atk-levelUp atk-total" 25px [row3-end] [row4-start] "def def-base def-mod def-levelUp def-total" 25px [row4-end] [row5-start] "spatk spatk-base spatk-mod spatk-levelUp spatk-total" 25px [row5-end] [row6-start] "spdef spdef-base spdef-mod spdef-levelUp spdef-total" 25px [row6-end] [row7-start] "spd spd-base spd-mod spd-levelUp spd-total" 25px [row7-end] / 15% 20% 20% 20% 25%;
+      grid-template: [row1-start] "stats-header base-header mod-header levelUp-header total-header" 25px [row1-end] [row2-start] "hp hp-base hp-mod hp-levelUp hp-total" 25px [row2-end] [row3-start] "atk atk-base atk-mod atk-levelUp atk-total" 25px [row3-end] [row4-start] "def def-base def-mod def-levelUp def-total" 25px [row4-end] [row5-start] "spa spa-base spa-mod spa-levelUp spa-total" 25px [row5-end] [row6-start] "spd spd-base spd-mod spd-levelUp spd-total" 25px [row6-end] [row7-start] "spe spe-base spe-mod spe-levelUp spe-total" 25px [row7-end] / 15% 20% 20% 20% 25%;
     }
 
     background: #e0e8e8;
@@ -541,51 +541,27 @@ a.item {
     }
   }
 
-  &.spatk {
-    grid-area: spatk;
+  &.spa {
+    grid-area: spa;
 
     &.base {
-      grid-area: spatk-base;
+      grid-area: spa-base;
     }
 
     &.mod {
-      grid-area: spatk-mod;
+      grid-area: spa-mod;
     }
 
     &.stage {
-      grid-area: spatk-stage;
+      grid-area: spa-stage;
     }
 
     &.total {
-      grid-area: spatk-total;
+      grid-area: spa-total;
     }
 
     &.levelUp {
-      grid-area: spatk-levelUp;
-    }
-  }
-
-  &.spdef {
-    grid-area: spdef;
-
-    &.base {
-      grid-area: spdef-base;
-    }
-
-    &.mod {
-      grid-area: spdef-mod;
-    }
-
-    &.stage {
-      grid-area: spdef-stage;
-    }
-
-    &.total {
-      grid-area: spdef-total;
-    }
-
-    &.levelUp {
-      grid-area: spdef-levelUp;
+      grid-area: spa-levelUp;
     }
   }
 
@@ -610,6 +586,30 @@ a.item {
 
     &.levelUp {
       grid-area: spd-levelUp;
+    }
+  }
+
+  &.spe {
+    grid-area: spe;
+
+    &.base {
+      grid-area: spe-base;
+    }
+
+    &.mod {
+      grid-area: spe-mod;
+    }
+
+    &.stage {
+      grid-area: spe-stage;
+    }
+
+    &.total {
+      grid-area: spe-total;
+    }
+
+    &.levelUp {
+      grid-area: spe-levelUp;
     }
   }
 }
@@ -1054,13 +1054,13 @@ span.readable {
       .key {
         &.hp,
         &.def,
-        &.spdef {
+        &.spd {
           background: #e6e6e6;
         }
 
         &.atk,
-        &.spatk,
-        &.spd,
+        &.spa,
+        &.spe,
         &.stat-header {
           background: #d3d3d1;
         }
@@ -1068,13 +1068,13 @@ span.readable {
 
       &.hp,
       &.def,
-      &.spdef {
+      &.spd {
         background: #fefefe;
       }
 
       &.atk,
-      &.spatk,
-      &.spd {
+      &.spa,
+      &.spe {
         background: #e1ecf2;
       }
     }
@@ -1484,8 +1484,8 @@ a.hover-button {
         #3d3d3d 100%
       );
     }
-    &.spatk,
-    &.spdef {
+    &.spa,
+    &.spd {
       background: rgb(39, 39, 39);
       background: linear-gradient(
         90deg,
@@ -1494,7 +1494,7 @@ a.hover-button {
         #3d2e1b 100%
       );
     }
-    &.spd {
+    &.spe {
       background: rgb(39, 39, 39);
       background: linear-gradient(
         90deg,
@@ -2816,8 +2816,8 @@ h3 {
           #3d3d3d 100%
         );
       }
-      &.spatk,
-      &.spdef {
+      &.spa,
+      &.spd {
         background: rgb(39, 39, 39);
         background: linear-gradient(
           90deg,
@@ -2826,7 +2826,7 @@ h3 {
           #3d2e1b 100%
         );
       }
-      &.spd {
+      &.spe {
         background: rgb(39, 39, 39);
         background: linear-gradient(
           90deg,

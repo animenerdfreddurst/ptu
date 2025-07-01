@@ -51,9 +51,9 @@ export async function ApplyLevelUpPoints(actor, type, randomPercent = 0.1) {
             switch(stat) {
                 case "Attack": key = "atk"; break;
                 case "Defense": key = "def"; break;
-                case "Special Attack": key = "spatk"; break;
-                case "Special Defense": key = "spdef"; break;
-                case "Speed": key = "spd"; break;
+                case "Special Attack": key = "spa"; break;
+                case "Special Defense": key = "spd"; break;
+                case "Speed": key = "spe"; break;
                 case "HP": key = "hp"; break;
             }
             if(isNaN(stats[key].levelUp)) stats[key].levelUp = 0;

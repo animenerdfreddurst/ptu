@@ -12,12 +12,12 @@ export function CalcBaseStats(stats, speciesData, nature, baseStatModifier, igno
     newStats.atk.value = (baseStatModifier?.atk.total ?? 0) + newStats.atk.base;
     newStats.def.base = CalcBaseStat(speciesData, nature, "Defense", ignoreStages);
     newStats.def.value = (baseStatModifier?.def.total ?? 0) + newStats.def.base;
-    newStats.spatk.base = CalcBaseStat(speciesData, nature, "Special Attack", ignoreStages);
-    newStats.spatk.value = (baseStatModifier?.spatk.total ?? 0)  + newStats.spatk.base;
-    newStats.spdef.base = CalcBaseStat(speciesData, nature, "Special Defense", ignoreStages);
-    newStats.spdef.value = (baseStatModifier?.spdef.total ?? 0)  + newStats.spdef.base;
-    newStats.spd.base = CalcBaseStat(speciesData, nature, "Speed", ignoreStages);
+    newStats.spa.base = CalcBaseStat(speciesData, nature, "Special Attack", ignoreStages);
+    newStats.spa.value = (baseStatModifier?.spa.total ?? 0)  + newStats.spa.base;
+    newStats.spd.base = CalcBaseStat(speciesData, nature, "Special Defense", ignoreStages);
     newStats.spd.value = (baseStatModifier?.spd.total ?? 0)  + newStats.spd.base;
+    newStats.spe.base = CalcBaseStat(speciesData, nature, "Speed", ignoreStages);
+    newStats.spe.value = (baseStatModifier?.spe.total ?? 0)  + newStats.spe.base;
 
     return newStats;
 }
@@ -58,10 +58,10 @@ export function CalculateStatTotal(levelUpPoints, stats, {twistedPower, ignoreSt
 
     if(twistedPower) {
         let atkTotal = stats.atk.total;
-        let spatkTotal = stats.spatk.total;
-        //if(Math.abs(atkTotal - spatkTotal) <= 5 ) {
-            stats.atk.total += Math.floor(spatkTotal / 2);
-            stats.spatk.total += Math.floor(atkTotal / 2);
+        let spaTotal = stats.spa.total;
+        //if(Math.abs(atkTotal - spaTotal) <= 5 ) {
+            stats.atk.total += Math.floor(spaTotal / 2);
+            stats.spa.total += Math.floor(atkTotal / 2);
         //}
     }
 
@@ -95,9 +95,9 @@ export function CalculatePTStatTotal(levelUpPoints, level, stats, {twistedPower,
         "HP":              "hp",
         "Attack":          "atk",
         "Defense":         "def",
-        "Special Attack":  "spatk",
-        "Special Defense": "spdef",
-        "Speed":           "spd"
+        "Special Attack":  "spa",
+        "Special Defense": "spd",
+        "Speed":           "spe"
        }
    
 
@@ -137,10 +137,10 @@ export function CalculatePTStatTotal(levelUpPoints, level, stats, {twistedPower,
 
     if(twistedPower) {
         let atkTotal = stats.atk.total;
-        let spatkTotal = stats.spatk.total;
-        //if(Math.abs(atkTotal - spatkTotal) <= 5 ) {
-            stats.atk.total += Math.floor(spatkTotal / 2);
-            stats.spatk.total += Math.floor(atkTotal / 2);
+        let spaTotal = stats.spa.total;
+        //if(Math.abs(atkTotal - spaTotal) <= 5 ) {
+            stats.atk.total += Math.floor(spaTotal / 2);
+            stats.spa.total += Math.floor(atkTotal / 2);
         //}
     }
 
@@ -172,6 +172,6 @@ export function CalculatePoisonedCondition(stats, ptuFlags) {
     if(ptuFlags?.is_poisoned == undefined) return stats;
 
     /** TODO: Add Potent Venom check */
-    stats.spdef.stage.mod -= 2;
+    stats.spd.stage.mod -= 2;
     return stats;
 }

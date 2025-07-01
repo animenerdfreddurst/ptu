@@ -135,7 +135,7 @@ export default class Api {
                 
                 const allowed = (game.settings.get("ptu", "pokeball-prompts") == 1 || game.settings.get("ptu", "pokeball-prompts") == 3) ? await new Promise((resolve, reject) => {
                     const dialog = new Dialog({
-                        title: "Throw Pokéball?",
+                        title: "Throw Pokeball?",
                         content: `<p>It seems that ${trainerName} wishes to throw a ball at ${pokemonName}.<br>Will you let them?</p>`,
                         buttons: {
                             yes: {
@@ -177,8 +177,8 @@ export default class Api {
                 
                 const allowed = await new Promise((resolve, reject) => {
                     const dialog = new Dialog({
-                        title: "Pokédex Scan?",
-                        content: `<p class="readable fs-14 mt-0">It seems that ${trainerName} wishes to scan ${pokemonName} with their Pokédex.<br>Will you let them?</p>`,
+                        title: "Pokedex Scan?",
+                        content: `<p class="readable fs-14 mt-0">It seems that ${trainerName} wishes to scan ${pokemonName} with their Pokedex.<br>Will you let them?</p>`,
                         buttons: {
                             no: {
                                 icon: '<i class="fas fa-times"></i>',
@@ -247,7 +247,7 @@ export default class Api {
                         actualDamage = damage;
                     }
                     else {
-                        const defense = damageCategory == "Special" ? document.actor.system.stats.spdef.total : document.actor.system.stats.def.total;
+                        const defense = damageCategory == "Special" ? document.actor.system.stats.spd.total : document.actor.system.stats.def.total;
                         let dr = parseInt(damageCategory == "Special" ? (document.actor.system.modifiers?.damageReduction?.special?.total ?? 0) : (document.actor.system.modifiers?.damageReduction?.physical?.total ?? 0));
                         if(document.actor.system.heldItem?.toLowerCase()?.includes("brace")) {
                             if(document.actor.system.heldItem.toLowerCase().includes(damageType.toLowerCase())) {
@@ -300,7 +300,7 @@ export default class Api {
                     }
                     else {
                         // Calculate defense based on damage category
-                        const defense = attack.damageCategory == "Special" ? actor.system.stats.spdef.total : actor.system.stats.def.total;
+                        const defense = attack.damageCategory == "Special" ? actor.system.stats.spd.total : actor.system.stats.def.total;
                         // Calculate damage reduction based on damage category
                         let dr = parseInt(attack.damageCategory == "Special" ? (actor.system.modifiers?.damageReduction?.special?.total ?? 0) : (actor.system.modifiers?.damageReduction?.physical?.total ?? 0));
                         // If the actor is holding a brace item of the damage type, add 15 damage reduction
@@ -582,7 +582,7 @@ export default class Api {
     /**
      * @param {*} object - Instance of a PTUActor, Token, TokenDocument or UUID string. 
      * @param {Object} options - See subproperties:
-     * @param {String} options.pokeball - Pokéball which the Pokémon was captured with.
+     * @param {String} options.pokeball - Pokeball which the Pokemon was captured with.
      * @param {Number} options.timeout - DM Query Timeout duration, default 15 sec
      * @param {Object} options.permission - Possible Permission overwrite
      * 

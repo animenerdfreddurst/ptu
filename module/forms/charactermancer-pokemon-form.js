@@ -54,9 +54,9 @@ export class PTUPokemonCharactermancer extends FormApplication {
       "HP": "HP",
       "Attack": "ATK",
       "Defense": "DEF",
-      "Special Attack": "SPATK",
-      "Special Defense": "SPDEF",
-      "Speed": "SPD"
+      "Special Attack": "SPA",
+      "Special Defense": "SPD",
+      "Speed": "SPE"
     }
     
     this.allSpecies = game.ptu.data.pokemonData.map(x => {return {number: x.ptuNumber, name: x._id}}).concat(game.ptu.data.customSpeciesData.map(x => {return {number: x.ptuNumber, name: x._id}}));
@@ -136,9 +136,9 @@ export class PTUPokemonCharactermancer extends FormApplication {
       statHpTotalField: new StatBlockTotal(this.store, "hp"),
       statAtkTotalField: new StatBlockTotal(this.store, "atk"),
       statDefTotalField: new StatBlockTotal(this.store, "def"),
-      statSpatkTotalField: new StatBlockTotal(this.store, "spatk"),
-      statSpdefTotalField: new StatBlockTotal(this.store, "spdef"),
+      statSpaTotalField: new StatBlockTotal(this.store, "spa"),
       statSpdTotalField: new StatBlockTotal(this.store, "spd"),
+      statSpeTotalField: new StatBlockTotal(this.store, "spe"),
       levelUpPoints: new StatBlockLevelUpPoints(this.store),
     }   
 
@@ -214,9 +214,9 @@ export class PTUPokemonCharactermancer extends FormApplication {
           "hp.levelUp": formData.stats.hp.levelUp,
           "atk.levelUp": formData.stats.atk.levelUp,
           "def.levelUp": formData.stats.def.levelUp,
-          "spatk.levelUp": formData.stats.spatk.levelUp,
-          "spdef.levelUp": formData.stats.spdef.levelUp,
+          "spa.levelUp": formData.stats.spa.levelUp,
           "spd.levelUp": formData.stats.spd.levelUp,
+          "spe.levelUp": formData.stats.spe.levelUp,
         }
       }
     }

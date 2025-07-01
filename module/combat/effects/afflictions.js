@@ -332,7 +332,7 @@ export const EffectFns = new Map([
                     return;
                 }
                 case 2: {
-                    const dmg = Math.floor(Number(actor.system.stats.spatk.total) / 2);
+                    const dmg = Math.floor(Number(actor.system.stats.spa.total) / 2);
                     await ApplyFlatDamage([token], "Confusion Damage", dmg);
                     return;
                 }

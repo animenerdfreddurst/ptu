@@ -93,7 +93,7 @@ export function GetMonEffectiveness(data) {
     }
 
     let capabilities = {
-        "Pokébot": {active: false, execute: function (typeCalc) {
+        "Pokebot": {active: false, execute: function (typeCalc) {
                 typeCalc["Fire"] *= 2;
                 typeCalc["Electric"] *= 2;
                 typeCalc["Ground"] *= 2;

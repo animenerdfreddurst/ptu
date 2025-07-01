@@ -15,7 +15,7 @@ export function LoadSystemSettings() {
     });
 
     game.settings.register("ptu", "useTutorPoints", {
-        name: "Use Tutor Points for Pokémon",
+        name: "Use Tutor Points for Pokemon",
         hint: "Otherwise use the suggested changes in the 'GM Advice and Suggested Houserules' (see: https://pastebin.com/iDt2Mj0d)",
         scope: "world",
         config: true,
@@ -69,7 +69,7 @@ export function LoadSystemSettings() {
 
     game.settings.register("ptu", "nonOwnerCanSeeTabs", {
         name: "Non-owners can see Sheet Tabs",
-        hint: "Allow players with Limited/Observer permissions to browse tabs in a Pokémon/Trainer's full sheet",
+        hint: "Allow players with Limited/Observer permissions to browse tabs in a Pokemon/Trainer's full sheet",
         scope: "world",
         config: true,
         type: Boolean,
@@ -78,13 +78,13 @@ export function LoadSystemSettings() {
     });
 
     game.settings.register("ptu", "dex-permission", {
-        name: "Pokédex Permission",
-        hint: "The required permission for a player to be able to see a Pokédex entry",
+        name: "Pokedex Permission",
+        hint: "The required permission for a player to be able to see a Pokedex entry",
         scope: "world",
         config: true,
         type: Number,
         choices: {
-            1: "Disable Pokédex",
+            1: "Disable Pokedex",
             2: "Dexentry description only (Basic description and details only)",
             3: "Full details on owned Tokens, Dexentry description on un-owned tokens",
             4: "Full details on owned Mons (checks trainer's dex tab), Dexentry Description on un-owned mons",
@@ -104,7 +104,7 @@ export function LoadSystemSettings() {
         choices: {
             1: "Always ask",
             2: "Only ask for capture",
-            3: "Only ask for Pokéball throw",
+            3: "Only ask for Pokeball throw",
             4: "Never Ask"
         },
         default: 1,
@@ -123,15 +123,15 @@ export function LoadSystemSettings() {
 
     game.settings.register("ptu", "move-effectiveness-visible", {
         name: "Move Effectiveness",
-        hint: "Whether the players will be able to see how effective their Pokémon's moves are",
+        hint: "Whether the players will be able to see how effective their Pokemon's moves are",
         scope: "world",
         config: true,
         type: Number,
         choices: {
             1: "Disable Effectiveness",
             2: "Visible to GMs Only",
-            3: "Visible on Seen Pokémon Only (Checks Pokédex)",
-            4: "Visible on owned Pokémon Only (Checks Pokédex)",
+            3: "Visible on Seen Pokemon Only (Checks Pokedex)",
+            4: "Visible on owned Pokemon Only (Checks Pokedex)",
             5: "Always Visible"
         },
         default: 1,
@@ -228,8 +228,8 @@ export function LoadSystemSettings() {
     });
 
     game.settings.register("ptu", "insurgenceData", {
-        name: "Pokémon Insurgence Data",
-        hint: "Adds Pokémon Insurgence data to the game based on DataNinja's Homebrew Compilation's Insurgence Data.",
+        name: "Pokemon Insurgence Data",
+        hint: "Adds Pokemon Insurgence data to the game based on DataNinja's Homebrew Compilation's Insurgence Data.",
         scope: "world",
         config: true,
         type: Boolean,
@@ -238,8 +238,8 @@ export function LoadSystemSettings() {
     });
 
     game.settings.register("ptu", "sageData", {
-        name: "Pokémon Sage Data",
-        hint: "Adds Pokémon Sage data to the game based on DataNinja's Homebrew Compilation's Sage Data.",
+        name: "Pokemon Sage Data",
+        hint: "Adds Pokemon Sage data to the game based on DataNinja's Homebrew Compilation's Sage Data.",
         scope: "world",
         config: true,
         type: Boolean,
@@ -248,8 +248,8 @@ export function LoadSystemSettings() {
     });
 
     game.settings.register("ptu", "uraniumData", {
-        name: "Pokémon Uranium Data",
-        hint: "Adds Pokémon Uranium data to the game based on DataNinja's Homebrew Compilation's Uranium Data.",
+        name: "Pokemon Uranium Data",
+        hint: "Adds Pokemon Uranium data to the game based on DataNinja's Homebrew Compilation's Uranium Data.",
         scope: "world",
         config: true,
         type: Boolean,
@@ -308,7 +308,7 @@ export function LoadSystemSettings() {
 
     game.settings.register("ptu", "customSpecies", {
         name: "Custom Species json (Requires Refresh)",
-        hint: "Please specify the path of a custom species file (inside the world directory) if you wish to add Homebrew Pokémon. [Currently in Beta!]",
+        hint: "Please specify the path of a custom species file (inside the world directory) if you wish to add Homebrew Pokemon. [Currently in Beta!]",
         scope: "world",
         config: false,
         type: String,
@@ -395,8 +395,8 @@ export function LoadSystemSettings() {
     });
 
     game.settings.register("ptu", "playPokemonCriesOnDrop", {
-        name: "Play Pokémon Cry when dragged from Dex and on turn start",
-        hint: "This will play a Pokémon's cry when it is drag-and-dropped from the pokedex compendium, and in combat at the start of a Pokemon's turn.",
+        name: "Play Pokemon Cry when dragged from Dex and on turn start",
+        hint: "This will play a Pokemon's cry when it is drag-and-dropped from the pokedex compendium, and in combat at the start of a Pokemon's turn.",
         scope: "world",
         config: true,
         type: Boolean,
@@ -405,8 +405,8 @@ export function LoadSystemSettings() {
     });
 
     game.settings.register("ptu", "pokemonCryDirectory", {
-        name: "Pokémon Cry Directory",
-        hint: "The directory where the user can upload mp3 or wav files (named as the lowercase name of the pokémon).",
+        name: "Pokemon Cry Directory",
+        hint: "The directory where the user can upload mp3 or wav files (named as the lowercase name of the pokemon).",
         scope: "world",
         config: true,
         type: String,
@@ -581,7 +581,7 @@ export function LoadSystemSettings() {
         })
 
         game.settings.register("ptu", "usePokeballSoundsOnDragOut", {
-            name: "Enable Pokéball Sounds.",
+            name: "Enable Pokeball Sounds.",
             hint: "Enable/Disable pokeball related sounds like when you send out a pokemon",
             scope: "client",
             config: true,
@@ -608,8 +608,8 @@ export function LoadSystemSettings() {
                 "Clear": "Clear Weather is the default weather, conferring no innate bonuses or penalties of any sort.",
                 "Sunny": "While Sunny, Fire-Type Attacks gain a +5 bonus to Damage Rolls, and Water-Type Attacks suffer a -5 Damage penalty.",
                 "Rainy": "While Rainy, Water-Type Attacks gain a +5 bonus to Damage Rolls, and Fire-Type Attacks suffer a -5 Damage penalty.",
-                "Hail": "While it is Hailing, all non-Ice Type Pokémon lose a Tick of Hit Points at the beginning of their turn.",
-                "Sandstorm": "While it is Sandstorming, all non-Ground, Rock, or Steel Type Pokémon lose a Tick of Hit Points at the beginning of their turn.",
+                "Hail": "While it is Hailing, all non-Ice Type Pokemon lose a Tick of Hit Points at the beginning of their turn.",
+                "Sandstorm": "While it is Sandstorming, all non-Ground, Rock, or Steel Type Pokemon lose a Tick of Hit Points at the beginning of their turn.",
             },
             default: "Clear",
             category: "combat"

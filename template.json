@@ -17,15 +17,15 @@
               "value": 0,
               "mod": 0
             },
-            "spatk": {
-              "value": 0,
-              "mod": 0
-            },
-            "spdef": {
+            "spa": {
               "value": 0,
               "mod": 0
             },
             "spd": {
+              "value": 0,
+              "mod": 0
+            },
+            "spe": {
               "value": 0,
               "mod": 0
             }
@@ -332,21 +332,21 @@
             "levelUp": 0,
             "label": "Defense"
           },
-          "spatk": {
+          "spa": {
             "value": 5,
             "mod": {"value": 0, "mod": 0},
             "stage": {"value": 0, "mod": 0},
             "levelUp": 0,
             "label": "Special Attack"
           },
-          "spdef": {
+          "spd": {
             "value": 5,
             "mod": {"value": 0, "mod": 0},
             "stage": {"value": 0, "mod": 0},
             "levelUp": 0,
             "label": "Special Defense"
           },
-          "spd": {
+          "spe": {
             "value": 5,
             "mod": {"value": 0, "mod": 0},
             "stage": {"value": 0, "mod": 0},
@@ -376,7 +376,6 @@
       "money": 0,
 
       "level": {
-        "milestones": 0,
         "miscexp": 0
       },
       "health": {

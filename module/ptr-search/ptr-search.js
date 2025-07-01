@@ -156,7 +156,7 @@ export class PTRSearch extends Application {
         return list[Math.floor((Math.random() * list.length))];
     }
 
-    const list = getRandomItemFromList(["mons","moves", "abilities", "capabilities", "edges", "feats", "poke-edges", "tms"]); 
+    const list = getRandomItemFromList(["mons","moves", "abilities", "capabilities", "edges", "feats", "enhancements", "tms"]); 
     const item = getRandomItemFromList(this.getCompendium(list));
     renderTemplate("/systems/ptu/module/ptr-search/item.hbs", item).then((html) => {
         $(".data-view").replaceWith(html);
@@ -172,7 +172,7 @@ export class PTRSearch extends Application {
       case "capabilities": return this.cachedData.capabilities;
       case "edges": return this.cachedData.edges;
       case "feats": return this.cachedData.feats;
-      case "poke-edges": return this.cachedData.enhancements;
+      case "enhancements": return this.cachedData.enhancements;
       case "tms": return this.cachedData.tms;
     }
   }

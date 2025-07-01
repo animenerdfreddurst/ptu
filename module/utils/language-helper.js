@@ -668,7 +668,7 @@ export const LANG = {
     VIVILLON: "VIVILLON",
     LITLEO: "LEUFEO",
     PYROAR: "PYROLEO",
-    FLABÉBÉ: "FLABÉBÉ",
+    FLABEBE: "FLABEBE",
     FLOETTE: "FLOETTE",
     FLORGES: "FLORGES",
     SKIDDO: "MÄHIKEL",

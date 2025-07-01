@@ -10,7 +10,7 @@ export default function({actorSystem, changeDetails, name, form, knownMoves, cur
         actions: {
             async init(context, currentAbilities) {
                 await context.dispatch('changeEvolutionStatus');
-                await context.dispatch('changeStats', {"hp": 0, "atk": 0, "def": 0, "spatk": 0, "spdef": 0, "spd": 0});
+                await context.dispatch('changeStats', {"hp": 0, "atk": 0, "def": 0, "spa": 0, "spd": 0, "spe": 0});
                 await context.dispatch('initMoves');
                 await context.dispatch('initAbilities', currentAbilities);
             },
@@ -40,7 +40,7 @@ export default function({actorSystem, changeDetails, name, form, knownMoves, cur
             async changeEvolveAllowed(context, allowed) {
                 await context.commit('updateEvolveAllowed', allowed ? true : false);
                 
-                await context.dispatch('changeStats', {"hp:": 0, "atk": 0, "def": 0, "spatk": 0, "spdef": 0, "spd": 0});
+                await context.dispatch('changeStats', {"hp:": 0, "atk": 0, "def": 0, "spa": 0, "spd": 0, "spe": 0});
                 await context.dispatch('initMoves');
                 await context.dispatch('initAbilities', originalAbilities); 
             },

@@ -84,9 +84,9 @@ export class PTULevelUpForm extends FormApplication {
       statHpTotalField: new MonStatBlockTotalComponent(this.store, "hp"),
       statAtkTotalField: new MonStatBlockTotalComponent(this.store, "atk"),
       statDefTotalField: new MonStatBlockTotalComponent(this.store, "def"),
-      statSpatkTotalField: new MonStatBlockTotalComponent(this.store, "spatk"),
-      statSpdefTotalField: new MonStatBlockTotalComponent(this.store, "spdef"),
+      statSpaTotalField: new MonStatBlockTotalComponent(this.store, "spa"),
       statSpdTotalField: new MonStatBlockTotalComponent(this.store, "spd"),
+      statSpeTotalField: new MonStatBlockTotalComponent(this.store, "spe"),
       movesComponent: new MonMovesListComponent(this.store, "mon-moves-component"),
       abilitiesComponent: new MonAbilitiesListComponent(this.store, 'mon-abilities-component')
     }
@@ -136,9 +136,9 @@ export class PTULevelUpForm extends FormApplication {
           "hp.levelUp": (state.evolving.is ? 0 : state.stats.hp.levelUp) + (state.stats.hp.newLevelUp ?? 0),
           "atk.levelUp": (state.evolving.is ? 0 : state.stats.atk.levelUp) + (state.stats.atk.newLevelUp ?? 0),
           "def.levelUp": (state.evolving.is ? 0 : state.stats.def.levelUp) + (state.stats.def.newLevelUp ?? 0),
-          "spatk.levelUp": (state.evolving.is ? 0 : state.stats.spatk.levelUp) + (state.stats.spatk.newLevelUp ?? 0),
-          "spdef.levelUp": (state.evolving.is ? 0 : state.stats.spdef.levelUp) + (state.stats.spdef.newLevelUp ?? 0),
+          "spa.levelUp": (state.evolving.is ? 0 : state.stats.spa.levelUp) + (state.stats.spa.newLevelUp ?? 0),
           "spd.levelUp": (state.evolving.is ? 0 : state.stats.spd.levelUp) + (state.stats.spd.newLevelUp ?? 0),
+          "spe.levelUp": (state.evolving.is ? 0 : state.stats.spe.levelUp) + (state.stats.spe.newLevelUp ?? 0),
         },
         'health.value': newhealth
       },

@@ -49,9 +49,9 @@ export class PTUActor extends Actor {
           { label: "HP Stat", change: { type: CONST.ACTIVE_EFFECT_MODES.ADD, value: -actorSystem.stats.hp.levelUp } },
           { label: "ATK Stat", change: { type: CONST.ACTIVE_EFFECT_MODES.ADD, value: -actorSystem.stats.atk.levelUp } },
           { label: "DEF Stat", change: { type: CONST.ACTIVE_EFFECT_MODES.ADD, value: -actorSystem.stats.def.levelUp } },
-          { label: "SP.ATK Stat", change: { type: CONST.ACTIVE_EFFECT_MODES.ADD, value: -actorSystem.stats.spatk.levelUp } },
-          { label: "SP.DEF Stat", change: { type: CONST.ACTIVE_EFFECT_MODES.ADD, value: -actorSystem.stats.spdef.levelUp } },
+          { label: "SPA Stat", change: { type: CONST.ACTIVE_EFFECT_MODES.ADD, value: -actorSystem.stats.spa.levelUp } },
           { label: "SPD Stat", change: { type: CONST.ACTIVE_EFFECT_MODES.ADD, value: -actorSystem.stats.spd.levelUp } },
+          { label: "SPE Stat", change: { type: CONST.ACTIVE_EFFECT_MODES.ADD, value: -actorSystem.stats.spe.levelUp } },
           { label: "Stat Point Modifier", change: { type: CONST.ACTIVE_EFFECT_MODES.ADD, value: actorSystem.modifiers.statPoints.total } },
         ],
         evasion: {
@@ -60,16 +60,16 @@ export class PTUActor extends Actor {
             { label: "Physical Evasion Mod", change: { type: CONST.ACTIVE_EFFECT_MODES.ADD, value: actorSystem.modifiers.evasion.physical.total } },
           ],
           special: [
-            { label: "SP.DEF Stat / 5 (max 6)", change: { type: CONST.ACTIVE_EFFECT_MODES.ADD, value: Math.min(Math.floor(actorSystem.stats.spdef.total / 5), 6) } },
+            { label: "SPD Stat / 5 (max 6)", change: { type: CONST.ACTIVE_EFFECT_MODES.ADD, value: Math.min(Math.floor(actorSystem.stats.spd.total / 5), 6) } },
             { label: "Special Evasion Mod", change: { type: CONST.ACTIVE_EFFECT_MODES.ADD, value: actorSystem.modifiers.evasion.special.total } },
           ],
           speed: [
-            { label: "SPD Stat / 5 (max 6)", change: { type: CONST.ACTIVE_EFFECT_MODES.ADD, value: Math.min(Math.floor(actorSystem.stats.spd.total / 5), 6) } },
+            { label: "SPE Stat / 5 (max 6)", change: { type: CONST.ACTIVE_EFFECT_MODES.ADD, value: Math.min(Math.floor(actorSystem.stats.spe.total / 5), 6) } },
             { label: "Speed Evasion Mod", change: { type: CONST.ACTIVE_EFFECT_MODES.ADD, value: actorSystem.modifiers.evasion.speed.total } },
           ]
         },
         stats: {
-          spdef: {
+          spd: {
             stage: {
               mod: [
                 this.flags.ptu?.is_poisoned ? { label: "Poisoned", change: { type: CONST.ACTIVE_EFFECT_MODES.ADD, value: -2 } } : undefined,
@@ -245,13 +245,23 @@ export class PTUActor extends Actor {
               mod: 0
             }
           },
-          spatk: {
+          spa: {
             mod: {
-              value: stats.spatk.mod,
+              value: stats.spa.mod,
               mod: 0
             },
             stage: {
-              value: stats.spatk.stage,
+              value: stats.spa.stage,
+              mod: 0
+            }
+          },
+          spe: {
+            mod: {
+              value: stats.spe.mod,
+              mod: 0
+            },
+            stage: {
+              value: stats.spe.stage,
               mod: 0
             }
           },
@@ -262,16 +272,6 @@ export class PTUActor extends Actor {
             },
             stage: {
               value: stats.spd.stage,
-              mod: 0
-            }
-          },
-          spdef: {
-            mod: {
-              value: stats.spdef.mod,
-              mod: 0
-            },
-            stage: {
-              value: stats.spdef.stage,
               mod: 0
             }
           }
@@ -406,10 +406,10 @@ export class PTUActor extends Actor {
 
     if (dexExpEnabled) {
       data.level.dexexp = actorData.items.filter(x => x.type == "dexentry" && x.system.owned).length;
-      data.level.current = data.level.milestones + Math.trunc((data.level.dexexp + data.level.miscexp) / 10) + 1 > 50 ? 50 : data.level.milestones + Math.trunc((data.level.dexexp + data.level.miscexp) / 10) + 1;
+      data.level.current = Math.trunc((data.level.dexexp + data.level.miscexp) / 10) + 1 > 50 ? 50 : Math.trunc((data.level.dexexp + data.level.miscexp) / 10) + 1;
     }
     else {
-      data.level.current = data.level.milestones + Math.trunc(data.level.miscexp / 10) + 1 > 50 ? 50 : data.level.milestones + Math.trunc(data.level.miscexp / 10) + 1;
+      data.level.current = Math.trunc(data.level.miscexp / 10) + 1 > 50 ? 50 : Math.trunc(data.level.miscexp / 10) + 1;
     }
 
     data.levelUpPoints = data.level.current + data.modifiers.statPoints.total + 9;
@@ -424,12 +424,12 @@ export class PTUActor extends Actor {
     data.stats.atk.value = data.modifiers.baseStats.atk.total + data.stats.atk.base;
     data.stats.def.base = 5
     data.stats.def.value = data.modifiers.baseStats.def.total + data.stats.def.base;
-    data.stats.spatk.base = 5
-    data.stats.spatk.value = data.modifiers.baseStats.spatk.total + data.stats.spatk.base;
-    data.stats.spdef.base = 5
-    data.stats.spdef.value = data.modifiers.baseStats.spdef.total + data.stats.spdef.base;
+    data.stats.spa.base = 5
+    data.stats.spa.value = data.modifiers.baseStats.spa.total + data.stats.spa.base;
     data.stats.spd.base = 5
     data.stats.spd.value = data.modifiers.baseStats.spd.total + data.stats.spd.base;
+    data.stats.spe.base = 5
+    data.stats.spe.value = data.modifiers.baseStats.spe.total + data.stats.spe.base;
 
     var result = game.settings.get("ptu", "playtestStats") ?
       CalculatePTStatTotal(data.levelUpPoints, actualLevel, data.stats, { twistedPower: actorData.items.find(x => x.name.toLowerCase().replace("[playtest]") == "twisted power") != null }, data.nature?.value, true) :
@@ -444,7 +444,7 @@ export class PTUActor extends Actor {
     data.health.tick = Math.floor(data.health.total / 10);
 
     data.evasion = CalculateEvasions(data, actorData.flags?.ptu, actorData.items);
-    data.capabilities = CalculateTrainerCapabilities(data.skills, actorData.items, (data.stats.spd.stage.value + data.stats.spd.stage.mod), actorData.flags?.ptu);
+    data.capabilities = CalculateTrainerCapabilities(data.skills, actorData.items, (data.stats.spe.stage.value + data.stats.spe.stage.mod), actorData.flags?.ptu);
 
     data.feats = {
       total: actorData.items.filter(x => x.type == "feat" && !x.system.free).length,
@@ -458,7 +458,7 @@ export class PTUActor extends Actor {
 
     data.ap.max = 5 + Math.floor(data.level.current / 5);
 
-    data.initiative = { value: data.stats.spd.total + data.modifiers.initiative.total };
+    data.initiative = { value: data.stats.spe.total + data.modifiers.initiative.total };
     if (actorData.flags?.ptu?.is_paralyzed) {
       if (game.settings.get("ptu", "errata")) data.initiative.value = Math.floor(data.initiative.value * 0.5);
     }
@@ -534,7 +534,7 @@ export class PTUActor extends Actor {
 
     data.health.tick = Math.floor(data.health.total / 10);
 
-    data.initiative = { value: data.stats.spd.total + data.modifiers.initiative.total };
+    data.initiative = { value: data.stats.spe.total + data.modifiers.initiative.total };
     if (actorData.flags?.ptu?.is_paralyzed) data.initiative.value = Math.floor(data.initiative.value * 0.5);
     if (data.modifiers.flinch_count?.value > 0) {
       data.initiative.value -= (data.modifiers.flinch_count.value * 5);
@@ -547,7 +547,7 @@ export class PTUActor extends Actor {
 
     data.evasion = CalculateEvasions(data, actorData.flags?.ptu, actorData.items);
 
-    data.capabilities = CalculatePokemonCapabilities(speciesData, actorData.items.values(), (data.stats.spd.stage.value + data.stats.spd.stage.mod), Number(data.modifiers.capabilities?.total ?? 0), actorData.flags?.ptu);
+    data.capabilities = CalculatePokemonCapabilities(speciesData, actorData.items.values(), (data.stats.spe.stage.value + data.stats.spe.stage.mod), Number(data.modifiers.capabilities?.total ?? 0), actorData.flags?.ptu);
 
     if (speciesData) data.egggroup = speciesData["Breeding Information"]["Egg Group"].join(" & ");
 
@@ -595,7 +595,7 @@ export class PTUActor extends Actor {
   /**
    * Execute a move based on the Move's Item ID.
    * @param {PTUItem} moveId the ID of the move that needs to be executed.
-   * @param {PTUActor} trainerActor the trainer of the Pokémon, defaults to move.system.owner
+   * @param {PTUActor} trainerActor the trainer of the Pokemon, defaults to move.system.owner
    * @param {PTUActor} targetActor the target actor that needs to be damaged.
    * @returns 
    */
@@ -739,7 +739,7 @@ export class PTUActor extends Actor {
     bonusDamage = Number(bonusDamage);
     if (isNaN(bonusDamage)) bonusDamage = 0;
 
-    bonusDamage += (moveData.category.toLowerCase() == "physical") ? (this.system.modifiers?.damageBonus?.physical?.total + this.system.stats.atk.total) : (moveData.category.toLowerCase() == "special") ? (this.system.modifiers?.damageBonus?.special?.total + this.system.stats.spatk.total) : 0;
+    bonusDamage += (moveData.category.toLowerCase() == "physical") ? (this.system.modifiers?.damageBonus?.physical?.total + this.system.stats.atk.total) : (moveData.category.toLowerCase() == "special") ? (this.system.modifiers?.damageBonus?.special?.total + this.system.stats.spa.total) : 0;
 
     // Set other parameters
     const currentWeather = game.settings.get("ptu", "currentWeather");
@@ -1055,10 +1055,10 @@ export class PTUActor extends Actor {
     if (moveData.name.toLowerCase().includes("stored power")) {
       const dbBonusFromStages = Math.min(20 - db, (
         ((actorData.stats.atk.stage.value + actorData.stats.atk.stage.mod) < 0 ? 0 : (actorData.stats.atk.stage.value + actorData.stats.atk.stage.mod)) +
-        ((actorData.stats.spatk.stage.value + actorData.stats.spatk.stage.mod) < 0 ? 0 : (actorData.stats.spatk.stage.value + actorData.stats.spatk.stage.mod)) +
+        ((actorData.stats.spa.stage.value + actorData.stats.spa.stage.mod) < 0 ? 0 : (actorData.stats.spa.stage.value + actorData.stats.spa.stage.mod)) +
         ((actorData.stats.def.stage.value + actorData.stats.def.stage.mod) < 0 ? 0 : (actorData.stats.def.stage.value + actorData.stats.def.stage.mod)) +
-        ((actorData.stats.spdef.stage.value + actorData.stats.spdef.stage.mod) < 0 ? 0 : (actorData.stats.spdef.stage.value + actorData.stats.spdef.stage.mod)) +
-        ((actorData.stats.spd.stage.value + actorData.stats.spd.stage.mod) < 0 ? 0 : (actorData.stats.spd.stage.value + actorData.stats.spd.stage.mod))) * 2);
+        ((actorData.stats.spd.stage.value + actorData.stats.spd.stage.mod) < 0 ? 0 : (actorData.stats.spd.stage.value + actorData.stats.spd.stage.mod)) +
+        ((actorData.stats.spe.stage.value + actorData.stats.spe.stage.mod) < 0 ? 0 : (actorData.stats.spe.stage.value + actorData.stats.spe.stage.mod))) * 2);
 
       dbBonus += dbBonusFromStages;
     }
@@ -1066,10 +1066,10 @@ export class PTUActor extends Actor {
     if (moveData.name.toLowerCase().includes("punishment")) {
       const dbBonusFromStages = Math.min(12 - db,
         ((targetData?.stats?.atk.stage.value + targetData?.stats?.atk.stage.mod) < 0 ? 0 : (targetData?.stats?.atk.stage.value + targetData?.stats?.atk.stage.mod)) +
-        ((targetData?.stats?.spatk.stage.value + targetData?.stats?.spatk.stage.mod) < 0 ? 0 : (targetData?.stats?.spatk.stage.value + targetData?.stats?.spatk.stage.mod)) +
+        ((targetData?.stats?.spa.stage.value + targetData?.stats?.spa.stage.mod) < 0 ? 0 : (targetData?.stats?.spa.stage.value + targetData?.stats?.spa.stage.mod)) +
         ((targetData?.stats?.def.stage.value + targetData?.stats?.def.stage.mod) < 0 ? 0 : (targetData?.stats?.def.stage.value + targetData?.stats?.def.stage.mod)) +
-        ((targetData?.stats?.spdef.stage.value + targetData?.stats?.spdef.stage.mod) < 0 ? 0 : (targetData?.stats?.spdef.stage.value + targetData?.stats?.spdef.stage.mod)) +
-        ((targetData?.stats?.spd.stage.value + targetData?.stats?.spd.stage.mod) < 0 ? 0 : (targetData?.stats?.spd.stage.value + targetData?.stats?.spd.stage.mod)));
+        ((targetData?.stats?.spd.stage.value + targetData?.stats?.spd.stage.mod) < 0 ? 0 : (targetData?.stats?.spd.stage.value + targetData?.stats?.spd.stage.mod)) +
+        ((targetData?.stats?.spe.stage.value + targetData?.stats?.spe.stage.mod) < 0 ? 0 : (targetData?.stats?.spe.stage.value + targetData?.stats?.spe.stage.mod)));
 
       dbBonus += dbBonusFromStages;
     }
@@ -1090,7 +1090,7 @@ export class PTUActor extends Actor {
 
   /**
    * Calculate whether a Command Check is necessary, and execute it if so.
-   * @param {PTUActor} trainerActor the Trainer Actor that owns the Pokémon
+   * @param {PTUActor} trainerActor the Trainer Actor that owns the Pokemon
    * @returns True / False whether check succeeds.
    */
   async _commandCheck(trainerActor) {
@@ -1108,8 +1108,7 @@ export class PTUActor extends Actor {
     const ALTERNATE_COMMAND_SKILL_FEATURES =
       game.settings.get("ptu", "pokepsychologistCanReplaceCommand") ? {
         "Beast Master": "intimidate",
-        "PokePsychologist": "pokemonEd",
-        "PokéPsychologist": "pokemonEd"
+        "PokePsychologist": "pokemonEd"
       } :
         {
           "Beast Master": "intimidate",

@@ -141,9 +141,9 @@ export function registerHandlebars() {
         case "hp": return "HP";
         case "atk": return "Attack";
         case "def": return "Defense";
-        case "spatk": return "Special Attack";
-        case "spdef": return "Special Defense";
-        case "spd": return "Speed";
+        case "spa": return "Special Attack";
+        case "spd": return "Special Defense";
+        case "spe": return "Speed";
       }
     }
   
@@ -257,9 +257,9 @@ export function registerHandlebars() {
         "hp": "HP",
         "atk": "Attack",
         "def": "Defense",
-        "spatk": "Special Attack",
-        "spdef": "Special Defense",
-        "spd": "Speed"
+        "spa": "Special Attack",
+        "spd": "Special Defense",
+        "spe": "Speed"
       };
 
       let key = renamingDict[statKey];
@@ -320,7 +320,7 @@ export function registerHandlebars() {
   
     function _calcMoveDb(move, bool = false) {
       if (move.category === "Status") return;
-      let bonus = (move.owner ? move.category === "Physical" ? (move.owner.stats.atk.total + (move.owner.damageBonus?.physical?.total ?? 0)) : (move.owner.stats.spatk.total + (move.owner.damageBonus?.special?.total ?? 0)) : 0) + (move.damageBonus ?? 0);
+      let bonus = (move.owner ? move.category === "Physical" ? (move.owner.stats.atk.total + (move.owner.damageBonus?.physical?.total ?? 0)) : (move.owner.stats.spa.total + (move.owner.damageBonus?.special?.total ?? 0)) : 0) + (move.damageBonus ?? 0);
       if (move.damageBase.toString().match(/^[0-9]+$/) != null) {
         let db = game.ptu.data.DbData[move.stab ? parseInt(move.damageBase) + 2 : move.damageBase];
         if (db) return db + (bool ? " + " : "#") + bonus;

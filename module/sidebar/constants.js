@@ -154,7 +154,7 @@ export const EffectivenessColors = {
 export const nature_flavor_table =
 {
 	"Cuddly": ["salty", "spicy"],
-	"Distracted": ["salty", "sour"],
+	"Inattentive": ["salty", "sour"],
 	"Proud": ["salty", "dry"],
 	"Decisive": ["salty", "bitter"],
 	"Patient": ["salty", "sweet"],
@@ -196,7 +196,7 @@ export const digestionsBuffs =
 	"candy bar": { "description": "Snack. Grants a Digestion Buff that heals 5 Hit Points.", "self_effects": { "healing": 5 } },
 	"honey": { "description": "Snack. Grants a Digestion Buff that heals 5 Hit Points. May be used as Bait.", "self_effects": { "healing": 5 } },
 	"leftovers": { "description": "Snack. When their Digestion Buff is traded in, the user recovers 1/16th of their max Hit Points at the beginning of each turn for the rest of the encounter.", "self_effects": { "healing_fraction": 16 }, "duration": { "scene": true } },
-	"black sludge": { "description": "Poison-Type Pokémon may consume the Black Sludge as a Snack Item; when the Digestion Buff is traded in, they recover 1/8th of their Max Hit Points at the beginning of each turn for the rest of the encounter.", "self_effects": { "healing_fraction": 8 }, "duration": { "scene": true } },
+	"black sludge": { "description": "Poison-Type Pokemon may consume the Black Sludge as a Snack Item; when the Digestion Buff is traded in, they recover 1/8th of their Max Hit Points at the beginning of each turn for the rest of the encounter.", "self_effects": { "healing_fraction": 8 }, "duration": { "scene": true } },
 
 	"salty surprise": { "description": "The user may trade in this Snack’s Digestion Buff when being hit by an attack to gain 5 Temporary Hit Points. If the user likes Salty Flavors, they gain 10 Temporary Hit Points Instead. If the user dislikes Salty Food, they become Enraged.", "flavor": "salty", "self_effects": { "healing": 5 }, "enjoyed_effects": { "healing": 10 }, "disliked_effects": { "condition_inflict": "Rage" }, },
 	"spicy wrap": { "description": "The user may trade in this Snack’s Digestion Buff when making a Physical attack to deal +5 additional Damage. If the user prefers Spicy Food, it deals +10 additional Damage instead. If the user dislikes Spicy Food, they become Enraged.", "flavor": "spicy", "self_effects": { "physical_damage_mod": 5 }, "enjoyed_effects": { "physical_damage_mod": 10 }, "disliked_effects": { "condition_inflict": "Rage" }, },
@@ -230,9 +230,9 @@ export const digestionsBuffs =
 	"iapapa berry": { "description": "Sour Treat, Tough Poffin Ingredient.", "flavor": "sour", "self_effects": { "healing_fraction_divisor": 8 }, "enjoyed_effects": { "healing_fraction_divisor": 6 }, "disliked_effects": { "condition_inflict": "Confused" }, },
 	"liechi berry": { "description": "+1 Attack CS.", "self_effects": { "stage_change": { "atk": 1 }, } },
 	"ganlon berry": { "description": "+1 Defense CS.", "self_effects": { "stage_change": { "def": 1 }, } },
-	"salac berry": { "description": "+1 Speed CS.", "self_effects": { "stage_change": { "spd": 1 }, } },
-	"petaya berry": { "description": "+1 Special Attack CS.", "self_effects": { "stage_change": { "spatk": 1 }, } },
-	"apicot berry": { "description": "+1 Special Defense CS.", "self_effects": { "stage_change": { "spdef": 1 }, } },
+	"salac berry": { "description": "+1 Speed CS.", "self_effects": { "stage_change": { "spe": 1 }, } },
+	"petaya berry": { "description": "+1 Special Attack CS.", "self_effects": { "stage_change": { "spa": 1 }, } },
+	"apicot berry": { "description": "+1 Special Defense CS.", "self_effects": { "stage_change": { "spd": 1 }, } },
 	"lansat berry": { "description": "Increases Critical Range by +1 for the remainder of the encounter.", "self_effects": { "crit_mod": { "value": 1, "duration": { "scene": true } }, } },
 	"starf berry": { "description": "+2 CS to a random Stat. May be used only at 25% HP or lower.", "self_effects": { "stage_change": { "random": 2 }, } },
 	"enigma berry": { "description": "User gains Temporary HP equal to 1/6th of their Max HP when hit by a Super Effective Move", "self_effects": { "temp_pct_HP_divisor": 6, } },
@@ -275,7 +275,7 @@ export const digestionsBuffs =
 	"roseli berry": { "description": "Weakens foe’s super effective Fairy-type move.", "self_effects": { "resist_SE_move_of_type": "fairy" } },
 	"custap berry": { "description": "Grants the Priority keyword to any Move. May only be used at 25% HP or lower.", "self_effects": { "grant_priority": true } },
 	"kee berry": { "description": "+1 Defense CS. Activates as a Free Action when hit by a Physical Move.", "self_effects": { "stage_change": { "def": 1 }, } },
-	"maranga berry": { "description": "+1 Special Defense CS. Activates as a Free Action when hit by a Special Move.", "self_effects": { "stage_change": { "spdef": 1 }, } },
+	"maranga berry": { "description": "+1 Special Defense CS. Activates as a Free Action when hit by a Special Move.", "self_effects": { "stage_change": { "spd": 1 }, } },
 
 };
 

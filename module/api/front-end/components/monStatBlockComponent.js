@@ -51,9 +51,9 @@ export default class monStatBlockComponent extends Component {
                 "HP": "hp",
                 "Attack": "atk",
                 "Defense": "def",
-                "Special Attack": "spatk",
-                "Special Defense": "spdef",
-                "Speed": "spd"
+                "Special Attack": "spa",
+                "Special Defense": "spd",
+                "Speed": "spe"
             };
 
             evoBaseStats = Object.keys(evoBaseStats).reduce((acc, key) => Object.assign(acc, { [renamingDict[key] || key]: evoBaseStats[key] }), {});

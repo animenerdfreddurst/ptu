@@ -542,7 +542,7 @@ Hooks.on("canvasInit", function () {
 
 /* -------------------------------------------- */
 /*  Allow Limited/Observer permissions          */
-/*  to see in Pokémon Sheet Tabs                */
+/*  to see in Pokemon Sheet Tabs                */
 /* -------------------------------------------- */
 
 Hooks.on("renderActorSheet", function (sheet, element, settings) {
@@ -632,7 +632,7 @@ function rollItemMacro(actorId, itemId, sceneId, tokenId) {
       return game.ptu.utils.macros.move(actor, isTokenActor ? item : item.data);
     }
     case 'item': {
-      if (item.data.name == "Pokédex") {
+      if (item.data.name == "Pokedex") {
         return game.ptu.utils.macros.pokedex();
       }
 
@@ -886,9 +886,6 @@ Hooks.on("preUpdateActor", async (oldActor, changes, options, sender) => {
   
   //exp
   changes.system.level.exp = changeValue(changes.system?.level?.exp, oldActor.system.level.exp);
-  
-  //milestones
-  changes.system.level.milestones = changeValue(changes.system?.level?.milestones, oldActor.system.level.milestones);
   
   //miscExp
   changes.system.level.miscExp = changeValue(changes.system?.level?.miscExp, oldActor.system.level.miscExp);

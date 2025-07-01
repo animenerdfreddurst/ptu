@@ -294,23 +294,23 @@ a.item {
 }
 .stat-block .row .key.hp,
 .stat-block .row .key.def,
-.stat-block .row .key.spdef {
+.stat-block .row .key.spd {
   background: #788898;
 }
 .stat-block .row .key.atk,
-.stat-block .row .key.spatk,
-.stat-block .row .key.spd,
+.stat-block .row .key.spa,
+.stat-block .row .key.spe,
 .stat-block .row .key.stat-header {
   background: #8898a8;
 }
 .stat-block .row.hp,
 .stat-block .row.def,
-.stat-block .row.spdef {
+.stat-block .row.spd {
   background: #c8d0d8;
 }
 .stat-block .row.atk,
-.stat-block .row.spatk,
-.stat-block .row.spd {
+.stat-block .row.spa,
+.stat-block .row.spe {
   background: #e0e8e8;
 }
 .stats {
@@ -332,10 +332,10 @@ a.item {
   padding: 3px 10px;
 }
 .stats.grid.pokemon {
-  grid-template: [row1-start] "stats-header base-header mod-header levelUp-header stage-header total-header" 25px [row1-end] [row2-start] "hp hp-base hp-mod hp-levelUp . hp-total" 25px [row2-end] [row3-start] "atk atk-base atk-mod atk-levelUp atk-stage atk-total" 25px [row3-end] [row4-start] "def def-base def-mod def-levelUp def-stage def-total" 25px [row4-end] [row5-start] "spatk spatk-base spatk-mod spatk-levelUp spatk-stage spatk-total" 25px [row5-end] [row6-start] "spdef spdef-base spdef-mod spdef-levelUp spdef-stage spdef-total" 25px [row6-end] [row7-start] "spd spd-base spd-mod spd-levelUp spd-stage spd-total" 25px [row7-end] / 15% 15% 15% 15% 15% 25%;
+  grid-template: [row1-start] "stats-header base-header mod-header levelUp-header stage-header total-header" 25px [row1-end] [row2-start] "hp hp-base hp-mod hp-levelUp . hp-total" 25px [row2-end] [row3-start] "atk atk-base atk-mod atk-levelUp atk-stage atk-total" 25px [row3-end] [row4-start] "def def-base def-mod def-levelUp def-stage def-total" 25px [row4-end] [row5-start] "spa spa-base spa-mod spa-levelUp spa-stage spa-total" 25px [row5-end] [row6-start] "spd spd-base spd-mod spd-levelUp spd-stage spd-total" 25px [row6-end] [row7-start] "spe spe-base spe-mod spe-levelUp spe-stage spe-total" 25px [row7-end] / 15% 15% 15% 15% 15% 25%;
 }
 .stats.grid.player {
-  grid-template: [row1-start] "stats-header base-header mod-header levelUp-header total-header" 25px [row1-end] [row2-start] "hp hp-base hp-mod hp-levelUp hp-total" 25px [row2-end] [row3-start] "atk atk-base atk-mod atk-levelUp atk-total" 25px [row3-end] [row4-start] "def def-base def-mod def-levelUp def-total" 25px [row4-end] [row5-start] "spatk spatk-base spatk-mod spatk-levelUp spatk-total" 25px [row5-end] [row6-start] "spdef spdef-base spdef-mod spdef-levelUp spdef-total" 25px [row6-end] [row7-start] "spd spd-base spd-mod spd-levelUp spd-total" 25px [row7-end] / 15% 20% 20% 20% 25%;
+  grid-template: [row1-start] "stats-header base-header mod-header levelUp-header total-header" 25px [row1-end] [row2-start] "hp hp-base hp-mod hp-levelUp hp-total" 25px [row2-end] [row3-start] "atk atk-base atk-mod atk-levelUp atk-total" 25px [row3-end] [row4-start] "def def-base def-mod def-levelUp def-total" 25px [row4-end] [row5-start] "spa spa-base spa-mod spa-levelUp spa-total" 25px [row5-end] [row6-start] "spd spd-base spd-mod spd-levelUp spd-total" 25px [row6-end] [row7-start] "spe spe-base spe-mod spe-levelUp spe-total" 25px [row7-end] / 15% 20% 20% 20% 25%;
 }
 .stats.header {
   text-align: center;
@@ -419,41 +419,23 @@ a.item {
 .stats.def.levelUp {
   grid-area: def-levelUp;
 }
-.stats.spatk {
-  grid-area: spatk;
+.stats.spa {
+  grid-area: spa;
 }
-.stats.spatk.base {
-  grid-area: spatk-base;
+.stats.spa.base {
+  grid-area: spa-base;
 }
-.stats.spatk.mod {
-  grid-area: spatk-mod;
+.stats.spa.mod {
+  grid-area: spa-mod;
 }
-.stats.spatk.stage {
-  grid-area: spatk-stage;
+.stats.spa.stage {
+  grid-area: spa-stage;
 }
-.stats.spatk.total {
-  grid-area: spatk-total;
+.stats.spa.total {
+  grid-area: spa-total;
 }
-.stats.spatk.levelUp {
-  grid-area: spatk-levelUp;
-}
-.stats.spdef {
-  grid-area: spdef;
-}
-.stats.spdef.base {
-  grid-area: spdef-base;
-}
-.stats.spdef.mod {
-  grid-area: spdef-mod;
-}
-.stats.spdef.stage {
-  grid-area: spdef-stage;
-}
-.stats.spdef.total {
-  grid-area: spdef-total;
-}
-.stats.spdef.levelUp {
-  grid-area: spdef-levelUp;
+.stats.spa.levelUp {
+  grid-area: spa-levelUp;
 }
 .stats.spd {
   grid-area: spd;
@@ -472,6 +454,24 @@ a.item {
 }
 .stats.spd.levelUp {
   grid-area: spd-levelUp;
+}
+.stats.spe {
+  grid-area: spe;
+}
+.stats.spe.base {
+  grid-area: spe-base;
+}
+.stats.spe.mod {
+  grid-area: spe-mod;
+}
+.stats.spe.stage {
+  grid-area: spe-stage;
+}
+.stats.spe.total {
+  grid-area: spe-total;
+}
+.stats.spe.levelUp {
+  grid-area: spe-levelUp;
 }
 .levelUpPoints {
   align-items: center;
@@ -849,23 +849,23 @@ span.readable {
 }
 .actor.gen8 .stat-block .row .key.hp,
 .actor.gen8 .stat-block .row .key.def,
-.actor.gen8 .stat-block .row .key.spdef {
+.actor.gen8 .stat-block .row .key.spd {
   background: #e6e6e6;
 }
 .actor.gen8 .stat-block .row .key.atk,
-.actor.gen8 .stat-block .row .key.spatk,
-.actor.gen8 .stat-block .row .key.spd,
+.actor.gen8 .stat-block .row .key.spa,
+.actor.gen8 .stat-block .row .key.spe,
 .actor.gen8 .stat-block .row .key.stat-header {
   background: #d3d3d1;
 }
 .actor.gen8 .stat-block .row.hp,
 .actor.gen8 .stat-block .row.def,
-.actor.gen8 .stat-block .row.spdef {
+.actor.gen8 .stat-block .row.spd {
   background: #fefefe;
 }
 .actor.gen8 .stat-block .row.atk,
-.actor.gen8 .stat-block .row.spatk,
-.actor.gen8 .stat-block .row.spd {
+.actor.gen8 .stat-block .row.spa,
+.actor.gen8 .stat-block .row.spe {
   background: #e1ecf2;
 }
 .actor.gen8 .levelUpPoints input {
@@ -1196,12 +1196,12 @@ a.hover-button.resist-damage-button {
   background: #272727;
   background: linear-gradient(90deg, #272727 0%, #272727 72%, #3d3d3d 100%);
 }
-.charactermancer .bar.spatk,
-.charactermancer .bar.spdef {
+.charactermancer .bar.spa,
+.charactermancer .bar.spd {
   background: #272727;
   background: linear-gradient(90deg, #272727 0%, #272727 72%, #3d2e1b 100%);
 }
-.charactermancer .bar.spd {
+.charactermancer .bar.spe {
   background: #272727;
   background: linear-gradient(90deg, #272727 0%, #272727 72%, #3d3c1b 100%);
 }
@@ -1731,7 +1731,7 @@ h3 {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 40px;
+  height: 35px;
 }
 .move-sheet .header .lock-img {
   width: 30px;
@@ -1806,7 +1806,6 @@ h3 {
   margin-left: -1rem;
 }
 .move-sheet .sheet-body .move-info .move-name input {
-  padding: 0.5rem;
   width: 100%;
   height: 100%;
   border: none;
@@ -2334,12 +2333,12 @@ h3 {
   background: #272727;
   background: linear-gradient(90deg, #272727 0%, #272727 72%, #3d3d3d 100%);
 }
-.level-up .content .bar.spatk,
-.level-up .content .bar.spdef {
+.level-up .content .bar.spa,
+.level-up .content .bar.spd {
   background: #272727;
   background: linear-gradient(90deg, #272727 0%, #272727 72%, #3d2e1b 100%);
 }
-.level-up .content .bar.spd {
+.level-up .content .bar.spe {
   background: #272727;
   background: linear-gradient(90deg, #272727 0%, #272727 72%, #3d3c1b 100%);
 }
@@ -2965,7 +2964,6 @@ body.messages-dark-theme .message {
     font-size: 11px;
     -ms-interpolation-mode: nearest-neighbor;
     image-rendering: -webkit-optimize-contrast;
-    image-rendering: -moz-crisp-edges;
   } */
 /* .message-content {
     padding-left: 10px !important;
@@ -3269,7 +3267,7 @@ body.messages-dark-theme .chat-controls .roll-type-select {
   width: 180px;
   margin: 0.2rem 0;
   height: 25px;
-  font-size: 22px;
+  font-size: 18px;
   font-family: "FTY SKORZHEN NCV";
   display: flex;
   justify-content: center;
@@ -5338,7 +5336,6 @@ body {
   font-size: 14px;
   -ms-interpolation-mode: nearest-neighbor;
   image-rendering: -webkit-optimize-contrast;
-  image-rendering: -moz-crisp-edges;
 }
 h1,
 h2,

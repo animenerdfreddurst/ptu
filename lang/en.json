@@ -1,8 +1,8 @@
 {
     "ACTOR.TypeCharacter": "Character",
     "ACTOR.TypeCharacterPlural": "Characters",
-    "ACTOR.TypePokemon": "Pokémon",
-    "ACTOR.TypePokemonPlural": "Pokémon",
+    "ACTOR.TypePokemon": "Pokemon",
+    "ACTOR.TypePokemonPlural": "Pokemon",
     "ITEM.TypeFeat": "Feature",
     "ITEM.TypeFeatPlural": "Features",
     "ITEM.TypeEdge": "Edge",
@@ -28,7 +28,7 @@
     "ITEM.Prerequisites": "Prerequisites",
     "ITEM.Tags": "Tags",
 
-    "PTU.Title": "Pokémon Tabletop United",
+    "PTU.Title": "Pokemon Tabletop United",
     
     "PTU.TabsCharacter":"Character & Skills",
     "PTU.TabsInventory": "Inventory",
@@ -112,7 +112,7 @@
     "PTU.Inheritance": "Inheritance List",
 
     "PTU.ItemEffect": "Item Effect",
-    "PTU.FoodBuff": "Food Buff",
+    "PTU.FoodBuff": "Snack Buff",
     "PTU.HpGuidelines": "Health Guidelines",
     "PTU.16th": "6.25%",
     "PTU.10th": "10%",
@@ -179,7 +179,7 @@
     "PTU.EffectPriority": "Priority",
 
     "PTU.ActionPoints" : "Action Points",
-    "PTU.LevelMilestones" : "Milestones",
+    "PTU.LevelExpBank" : "Exp Bank",
     "PTU.LevelDexExp" : "Dex Exp",
     "PTU.LevelMiscExp" : "Trainer Exp",
 
@@ -229,9 +229,9 @@
     "PTU.AutomationRangeIncrease.NONE":"None",
     "PTU.AutomationRangeIncrease.EFFECT_RANGE":"Effect Range",
 
-    "PTU.DexScan.Off":"DM has turned off the Pokédex Scan feature.",
+    "PTU.DexScan.Off":"DM has turned off the Pokedex Scan feature.",
     "PTU.DexScan.Description":"Description Only",
     "PTU.DexScan.Full":"Full Scan",
-    "PTU.DexScan.Denied":"You are unable to use your Pokédex at this time.",
-    "PTU.DexScan.Timeout":"Request to DM for Pokédex Scan timed out."
+    "PTU.DexScan.Denied":"You are unable to use your Pokedex at this time.",
+    "PTU.DexScan.Timeout":"Request to DM for Pokedex Scan timed out."
 }
