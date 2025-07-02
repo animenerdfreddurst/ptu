@@ -4,16 +4,16 @@ import { RollCaptureChance, applyCapture } from "../../utils/pokeball-capture-ca
 import { timeout, capitalizeFirstLetter } from "../../utils/generic-helpers.js";
 
 export const pokeball_sound_paths = {
-    "miss": "systems/ptu/sounds/pokeball_sounds/pokeball_miss.mp3",
-    "hit": "systems/ptu/sounds/pokeball_sounds/pokeball_hit.mp3",
-    "wiggle": "systems/ptu/sounds/pokeball_sounds/pokeball_escape_attempt.mp3",
-    "capture_attempt": "systems/ptu/sounds/pokeball_sounds/pokeball_catch_attempt.mp3",
-    "capture_success": "systems/ptu/sounds/pokeball_sounds/pokeball_catch_confirmed.mp3",
-    "capture_jingle": "systems/ptu/sounds/pokeball_sounds/pokeball_success_jingle.wav",
-    "menu_open": "systems/ptu/sounds/pokeball_sounds/pokeball_grow.mp3",
-    "menu_close": "systems/ptu/sounds/pokeball_sounds/pokeball_shrink.mp3",
-    "return": "systems/ptu/sounds/pokeball_sounds/pokeball_return.mp3",
-    "release": "systems/ptu/sounds/pokeball_sounds/pokeball_release.mp3",
+    "miss": "systems/ptu/assets/sounds/pokeball_sounds/pokeball_miss.mp3",
+    "hit": "systems/ptu/assets/sounds/pokeball_sounds/pokeball_hit.mp3",
+    "wiggle": "systems/ptu/assets/sounds/pokeball_sounds/pokeball_escape_attempt.mp3",
+    "capture_attempt": "systems/ptu/assets/sounds/pokeball_sounds/pokeball_catch_attempt.mp3",
+    "capture_success": "systems/ptu/assets/sounds/pokeball_sounds/pokeball_catch_confirmed.mp3",
+    "capture_jingle": "systems/ptu/assets/sounds/pokeball_sounds/pokeball_success_jingle.wav",
+    "menu_open": "systems/ptu/assets/sounds/pokeball_sounds/pokeball_grow.mp3",
+    "menu_close": "systems/ptu/assets/sounds/pokeball_sounds/pokeball_shrink.mp3",
+    "return": "systems/ptu/assets/sounds/pokeball_sounds/pokeball_return.mp3",
+    "release": "systems/ptu/assets/sounds/pokeball_sounds/pokeball_release.mp3",
 };
 
 const pokeball_return_beam_FX_path = "modules/jb2a_patreon/Library/Generic/Energy/EnergyBeam_02_Regular_Red_30ft_1600x400.webm";

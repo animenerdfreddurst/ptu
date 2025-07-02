@@ -4,12 +4,12 @@ import { pokeball_sound_paths } from '../../combat/effects/pokeball_effects.js';
 import { timeout } from '../../utils/generic-helpers.js';
 
 export const ui_sound_paths = {
-    "button": "systems/ptu/sounds/ui_sounds/ui_button.wav",
-    "flip": "systems/ptu/sounds/ui_sounds/ui_cardflip.wav",
-    "check_on": "systems/ptu/sounds/ui_sounds/ui_checkbox_on.wav",
-    "check_off": "systems/ptu/sounds/ui_sounds/ui_checkbox_off.wav",
-    "pokedex_scan": "systems/ptu/sounds/ui_sounds/ui_pokedex_ding.wav",
-    "warning": "systems/ptu/sounds/ui_sounds/ui_warning.wav",
+    "button": "systems/ptu/assets/sounds/ui_sounds/ui_button.wav",
+    "flip": "systems/ptu/assets/sounds/ui_sounds/ui_cardflip.wav",
+    "check_on": "systems/ptu/assets/sounds/ui_sounds/ui_checkbox_on.wav",
+    "check_off": "systems/ptu/assets/sounds/ui_sounds/ui_checkbox_off.wav",
+    "pokedex_scan": "systems/ptu/assets/sounds/ui_sounds/ui_pokedex_ding.wav",
+    "warning": "systems/ptu/assets/sounds/ui_sounds/ui_warning.wav",
 };
 
 export default class MenuComponent extends Component {
