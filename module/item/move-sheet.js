@@ -12,7 +12,7 @@ export class PTUMoveSheet extends ItemSheet {
 			classes: ['ptu', 'sheet', 'item', 'move'],
 			template: 'systems/ptu/templates/item/item-move-sheet.hbs',
 			width: 600,
-			height: 500,
+			// height: 500,
 			tabs: [
 				{
 					navSelector: '.sheet-tabs',

@@ -795,7 +795,7 @@ async function _onPokedexMacro() {
   //ding
   AudioHelper.play(
     {
-      src: "systems/ptu/sounds/ui_sounds/ui_pokedex_ding.wav",
+      src: "systems/ptu/assets/sounds/ui_sounds/ui_pokedex_ding.wav",
       volume: 0.8,
       autoplay: true,
       loop: false,
