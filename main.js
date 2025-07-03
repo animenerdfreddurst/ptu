@@ -1109,13 +1109,8 @@ function changeValue(newValue = null, oldValue) {
 }
 Hooks.on("preUpdateActor", async (oldActor, changes, options, sender) => {
   //exp
-<<<<<<< HEAD
-<<<<<<< HEAD:module/ptu.js
   changes.system.level.exp = changeValue(changes.system?.level?.exp, oldActor.system.level.exp);
-  
-=======
-=======
->>>>>>> a487294a4f51536f806637f75a8ea084d4413ca5
+
   changes.system.level.exp = changeValue(
     changes.system?.level?.exp,
     oldActor.system.level.exp
