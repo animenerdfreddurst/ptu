@@ -321,12 +321,10 @@ function registerSheets() {
     makeDefault: true,
   });
   Items.unregisterSheet("core", ItemSheet);
-<<<<<<< HEAD:module/ptu.js
   Items.registerSheet("ptu", ptu.config.Item.sheetClasses.item, { types: ["item", "ability", "capability", "enhancement", "dexentry"], makeDefault: true });
   Items.registerSheet("ptu", ptu.config.Item.sheetClasses.move, { types: ["move"], makeDefault: true });
   Items.registerSheet("ptu", ptu.config.Item.sheetClasses.edge, { types: ["edge"], makeDefault: true });
   Items.registerSheet("ptu", ptu.config.Item.sheetClasses.feat, { types: ["feat"], makeDefault: true });
-=======
   Items.registerSheet("ptu", ptu.config.Item.sheetClasses.item, {
     types: ["item", "ability", "capability", "pokeedge", "dexentry"],
     makeDefault: true,
@@ -343,7 +341,6 @@ function registerSheets() {
     types: ["feat"],
     makeDefault: true,
   });
->>>>>>> e51766e (mv module/ptu.js main.js & fixed references):main.js
 
   DocumentSheetConfig.registerSheet(
     ActiveEffect,
@@ -768,13 +765,8 @@ function rollItemMacro(actorId, itemId, sceneId, tokenId) {
     case "move": {
       return game.ptu.utils.macros.move(actor, isTokenActor ? item : item.data);
     }
-<<<<<<< HEAD:module/ptu.js
     case 'item': {
       if (item.data.name == "Pokedex") {
-=======
-    case "item": {
-      if (item.data.name == "Pokédex") {
->>>>>>> e51766e (mv module/ptu.js main.js & fixed references):main.js
         return game.ptu.utils.macros.pokedex();
       }
 
@@ -1117,10 +1109,13 @@ function changeValue(newValue = null, oldValue) {
 }
 Hooks.on("preUpdateActor", async (oldActor, changes, options, sender) => {
   //exp
+<<<<<<< HEAD
 <<<<<<< HEAD:module/ptu.js
   changes.system.level.exp = changeValue(changes.system?.level?.exp, oldActor.system.level.exp);
   
 =======
+=======
+>>>>>>> a487294a4f51536f806637f75a8ea084d4413ca5
   changes.system.level.exp = changeValue(
     changes.system?.level?.exp,
     oldActor.system.level.exp
@@ -1132,7 +1127,6 @@ Hooks.on("preUpdateActor", async (oldActor, changes, options, sender) => {
     oldActor.system.level.milestones
   );
 
->>>>>>> e51766e (mv module/ptu.js main.js & fixed references):main.js
   //miscExp
   changes.system.level.miscExp = changeValue(
     changes.system?.level?.miscExp,
