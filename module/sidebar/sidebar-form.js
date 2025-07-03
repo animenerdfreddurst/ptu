@@ -32,7 +32,7 @@ export class PTUSidebar extends FormApplication {
 
   /** @override */
   getData() {
-    const data = super.getData();
+    // const data = super.getData(); //Data is never used
 
     // Get current value
     const x = $(window).width();
@@ -41,9 +41,9 @@ export class PTUSidebar extends FormApplication {
     let alternate_style = false//game.settings.get("PTUMoveMaster", "useAlternateChatStyling");
 
     this.position.left = alternate_style ? (x - 455) : (x - 510);
-    this.position.top = 2 //Math.round(y * 0.005);
+    this.position.top = 2
     this.position.width = 200;
-    this.position.height = y - 10;//Math.round(y * 0.990);
+    this.position.height = Math.round(y * 0.9);
 
     var obj = this;
     $(window).resize(function () {
