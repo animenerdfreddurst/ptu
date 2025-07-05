@@ -2,7 +2,9 @@
   "scripts": {
     "dev": "vite serve",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "link-system": "node scripts/make_foundry_symlink.js",
+    "dev-setup": "npm run build && npm run link-system"
   },
   "devDependencies": {
     "@types/node": "^24.0.10",
