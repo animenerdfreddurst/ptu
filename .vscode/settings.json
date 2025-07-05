@@ -1,7 +1,4 @@
 {
-    "less.compile": {
-        "main": ["main.less"]
-    },
     "cSpell.words": [
         "bgcolor",
         "cameraframe",
