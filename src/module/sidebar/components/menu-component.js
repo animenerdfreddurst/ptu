@@ -35,7 +35,7 @@ export default class MenuComponent extends Component {
 
         switch (this.state.menuOption) {
             case "struggle":
-                output += await renderTemplate("/systems/ptu/module/sidebar/components/menu-component.hbs", {
+                output += await renderTemplate("/systems/ptu/templates/sidebar/components/menu-component.hbs", {
                     menu: "struggle",
                     struggles: await this._getStruggles(this.state.actor)
                 })
@@ -43,19 +43,19 @@ export default class MenuComponent extends Component {
             case "pokeball":
                 if (this.state.actor.type == "pokemon") return this.store.dispatch('changeMenuOption', "none");
 
-                output += await renderTemplate("/systems/ptu/module/sidebar/components/menu-component.hbs", {
+                output += await renderTemplate("/systems/ptu/templates/sidebar/components/menu-component.hbs", {
                     menu: "pokeball",
                     ball: await this._getTrainerPokeballArray(this.state.actor)
                 })
                 break;
             case "maneuver":
-                output += await renderTemplate("/systems/ptu/module/sidebar/components/menu-component.hbs", {
+                output += await renderTemplate("/systems/ptu/templates/sidebar/components/menu-component.hbs", {
                     menu: "maneuver",
                     maneuvers: await game.packs.get("ptu.maneuvers").getDocuments()
                 })
                 break;
             default:
-                output += await renderTemplate("/systems/ptu/module/sidebar/components/menu-component.hbs", {
+                output += await renderTemplate("/systems/ptu/templates/sidebar/components/menu-component.hbs", {
                     menu: "none"
                 })
                     break;

@@ -58,7 +58,7 @@ export default class FeaturesList extends Component {
             // 'changed feature data' during every re-render, causing infinite re-render loops.
             const featureData = duplicate(feature);
             const frequencyIconPath = this._getFrequencyIcons(featureData.system.frequency);
-            const featureHtml = await renderTemplate('/systems/ptu/module/sidebar/components/features-component.hbs', {
+            const featureHtml = await renderTemplate('/systems/ptu/templates/sidebar/components/features-component.hbs', {
                 name: featureData.name,
                 img: frequencyIconPath,
                 id: featureData._id,

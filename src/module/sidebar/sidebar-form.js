@@ -21,7 +21,7 @@ export class PTUSidebar extends FormApplication {
     return mergeObject(super.defaultOptions, {
       id: "ptu-sidebar",
       classes: ["ptu", "sidebar", "ptu-sidebar", "pokemon"],
-      template: "systems/ptu/module/sidebar/sidebar-form.hbs",
+      template: "systems/ptu/templates/sidebar/sidebar-form.hbs",
       title: "PTU Sidebar",
       dragDrop: [{ dragSelector: ".directory-item.belt-pokeball", dropSelector: null }],
 

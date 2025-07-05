@@ -25,7 +25,7 @@ export default class FoodBuffComponent extends Component {
                 {
                     const foodBuffItem = game.ptu.data.items.find(i => i.name.toLowerCase().includes(foodBuff.toLowerCase()));
                     if (foodBuffItem) {
-                        output += await renderTemplate("/systems/ptu/module/sidebar/components/food-buff-component.hbs", {
+                        output += await renderTemplate("/systems/ptu/templates/sidebar/components/food-buff-component.hbs", {
                             name: foodBuffItem.name,
                             img: foodBuffItem.img,
                             id: foodBuffItem.id,

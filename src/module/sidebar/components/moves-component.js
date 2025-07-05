@@ -126,7 +126,7 @@ export default class MovesList extends Component {
                     
                 }
 
-            const moveHtml = await renderTemplate('/systems/ptu/module/sidebar/components/moves-component.hbs', moveData);
+            const moveHtml = await renderTemplate('/systems/ptu/templates/sidebar/components/moves-component.hbs', moveData);
             output += moveHtml;
         }
 
