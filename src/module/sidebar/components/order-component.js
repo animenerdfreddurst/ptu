@@ -29,7 +29,7 @@ export default class OrderComponent extends Component {
 
                 if(trainingType != "agility" && trainingType != "brutal" && trainingType != "focused" && trainingType != "inspired") continue;
 
-                output += await renderTemplate("/systems/ptu/module/sidebar/components/order-component.hbs", {
+                output += await renderTemplate("/systems/ptu/templates/sidebar/components/order-component.hbs", {
                     name: item.data.name,
                     img: item.data.img,
                     id: item.id,

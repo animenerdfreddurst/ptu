@@ -42,7 +42,7 @@ export default class BeltComponent extends Component {
         if (beltMons.length > 0) {
             output += dividerIcon;
             for (const mon of beltMons) {
-                output += await renderTemplate("/systems/ptu/module/sidebar/components/belt-component.hbs", {
+                output += await renderTemplate("/systems/ptu/templates/sidebar/components/belt-component.hbs", {
                     name: mon.name,
                     img: mon.img,
                     id: mon.id,

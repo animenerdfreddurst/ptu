@@ -57,7 +57,7 @@ export default class AbilitiesList extends Component {
             // 'changed ability data' during every re-render, causing infinite re-render loops.
             const abilityData = duplicate(ability);
             const frequencyIconPath = this._getFrequencyIcons(abilityData.system.frequency);
-            const abilityHtml = await renderTemplate('/systems/ptu/module/sidebar/components/abilities-component.hbs', {
+            const abilityHtml = await renderTemplate('/systems/ptu/templates/sidebar/components/abilities-component.hbs', {
                 name: abilityData.name,
                 img: frequencyIconPath,
                 id: abilityData._id,
