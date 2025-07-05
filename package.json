@@ -1,0 +1,13 @@
+{
+  "scripts": {
+    "dev": "vite serve",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.10",
+    "fs-extra": "^11.3.0",
+    "prettier": "^3.6.2",
+    "vite": "^7.0.2"
+  }
+}
