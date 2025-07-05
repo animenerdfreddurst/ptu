@@ -43,10 +43,7 @@
   ],
   "socket": true,
   "styles": [
-    "css/bootstrap-grid.css",
-    "css/styles.css",
-    "css/jquery-ui.css",
-    "css/autocomplete.css"
+    "main.css"
   ],
   "scripts": [
     "js/jquery-ui.js",

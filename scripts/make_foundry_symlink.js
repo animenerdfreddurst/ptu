@@ -11,7 +11,7 @@ const foundryPaths = Object.freeze({
     linux: path.join(os.homedir(), '.local/share/FoundryVTT/Data/systems/'),
 })
 
-const systemName = 'ptu' //Change this to use a different system folder name
+const systemName = 'ptu'
 const foundrySystemsPath = foundryPaths[os.platform()]
 const symlinkTarget = path.join(foundrySystemsPath, systemName)
 const distPath = path.resolve(__dirname, '../dist/') //link source is our dist folder
