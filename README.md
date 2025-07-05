@@ -37,6 +37,7 @@ If you just want to use the system in your Foundry game:
 #### Development Setup
 
 1. **Clone the repository**:
+Important: You must clone this repo to somewhere other than your foundry systems folder or step 3 will not work.  
 
     ```
     git clone https://github.com/animenerdfreddurst/ptu
