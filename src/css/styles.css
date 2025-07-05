@@ -3394,11 +3394,12 @@ body.messages-dark-theme .chat-controls .roll-type-select {
   flex: 86px 0 0;
 }
 #ptu-sidebar .ptu-sidebar .sidebar-content {
-  z-index: 11;
+  /* z-index: 11; */
   background-color: #272727;
   flex: 100% 0 1;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: auto;
+  scrollbar-gutter: stable;
 }
 #ptu-sidebar .ptu-sidebar .sidebar-content::-webkit-scrollbar {
   width: 0;
