@@ -302,7 +302,7 @@ export class PTUActor extends Actor {
       if (isNaN(actorSystem.modifiers.initiative.value)) {
         const modifiers = duplicate(actorSystem.modifiers);
         for (let [key, value] of Object.entries(modifiers)) {
-          if (key == "hardened" || key == "flinch_count" || key == 'immuneToEffectDamage' || key == 'skillBonus') continue;
+          if (key == "hardened" || key == "flinched_count" || key == 'immuneToEffectDamage' || key == 'skillBonus') continue;
           if (key == "evasion") {
             for (let [evasion, actualValue] of Object.entries(value)) {
               modifiers[key][evasion] = {
@@ -390,7 +390,7 @@ export class PTUActor extends Actor {
     }
 
     for (let [key, mod] of Object.entries(data.modifiers)) {
-      if (key == "hardened" || key == "flinch_count" || key == 'immuneToEffectDamage') continue;
+      if (key == "hardened" || key == "flinched_count" || key == 'immuneToEffectDamage') continue;
       if (key == "damageBonus" || key == "damageReduction" || key == "evasion" || key == "baseStats") {
         for (let [subkey, value] of Object.entries(mod)) {
           data.modifiers[key][subkey]["total"] = (value["value"] ?? 0) + (value["mod"] ?? 0);
@@ -462,7 +462,7 @@ export class PTUActor extends Actor {
     if (actorData.flags?.ptu?.is_paralyzed) {
       if (game.settings.get("ptu", "errata")) data.initiative.value = Math.floor(data.initiative.value * 0.5);
     }
-    if (data.modifiers.flinch_count?.value > 0) {
+    if (data.modifiers.flinched_count?.value > 0) {
       data.initiative.value -= (data.modifiers.flinch_count.value * 5);
     }
     Hooks.call("updateInitiative", this);

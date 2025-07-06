@@ -170,10 +170,9 @@ export async function RollCaptureChance(trainer, target, pokeball, to_hit_roll, 
 		if (flags.is_poisoned == "true") {
 			targetData.conditions.persistentCount++;
 		}
-		if (flags.is_badly_poisoned == "true") {
+		if (flags.is_toxified == "true") {
 			targetData.conditions.persistentCount++;
 		}
-
 		if (flags.is_confused == "true") {
 			targetData.conditions.volatileCount++;
 		}
@@ -183,7 +182,7 @@ export async function RollCaptureChance(trainer, target, pokeball, to_hit_roll, 
 		if (flags.is_disabled == "true") {
 			targetData.conditions.volatileCount++;
 		}
-		if (flags.is_raging == "true") {
+		if (flags.is_enraged == "true") {
 			targetData.conditions.volatileCount++;
 		}
 		if (flags.is_flinched == "true") {
@@ -192,20 +191,18 @@ export async function RollCaptureChance(trainer, target, pokeball, to_hit_roll, 
 		if (flags.is_infatuated == "true") {
 			targetData.conditions.volatileCount++;
 		}
-		if (flags.is_sleeping == "true") {
+		if (flags.is_asleep == "true") {
 			targetData.conditions.volatileCount++;
 		}
-		if (flags.is_badly_sleeping == "true") {
+		if (flags.is_haunted == "true") {
 			targetData.conditions.volatileCount++;
 		}
 		if (flags.is_suppressed == "true") {
 			targetData.conditions.volatileCount++;
 		}
-
-		if (flags.is_stuck == "true") {
+		if (flags.is_immobilzied == "true") {
 			captureData.rate += 10;
 		}
-
 		if (flags.is_slowed == "true") {
 			captureData.rate += 5;
 		}

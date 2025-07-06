@@ -205,7 +205,7 @@ export const digestionsBuffs =
 	"bitter treat": { "description": "The user may trade in this Snack’s Digestion Buff when being hit by a Special Attack to increase their Damage Reduction by +5 against that attack. If the user prefers Bitter Food, they gain +10 Damage Reduction instead. If the user dislikes Bitter Food, they become Enraged.", "flavor": "bitter", "self_effects": { "special_damage_reduction_mod": 5 }, "enjoyed_effects": { "special_damage_reduction_mod": 10 }, "disliked_effects": { "condition_inflict": "Rage" }, },
 	"sweet confection": { "description": "The user may trade in this Snack’s Digestion Buff to gain +4 Evasion until the end of their next turn. If the user prefers Sweet Food, they gain +4 Accuracy as well. If the user dislikes Sweet Food, they become Enraged.", "flavor": "sweet", "self_effects": { "evasion_mod": 4 }, "enjoyed_effects": { "evasion_mod": 4, "accuracy_mod": 4 }, "disliked_effects": { "condition_inflict": "Rage" }, "duration": { "rounds": 1 } },
 
-	"mental herb": { "description": "Cures all Volatile Status Effects.", "self_effects": { "cure_condition": "BadSleep", "cure_condition": "Sleep", "cure_condition": "Flinch", "cure_condition": "Cursed", "cure_condition": "Confused", "cure_condition": "Disabled", "cure_condition": "Infatuation", "cure_condition": "Rage", "cure_condition": "Suppressed", } },
+	"mental herb": { "description": "Cures all Volatile Status Effects.", "self_effects": { "cure_condition": "Haunted", "cure_condition": "Asleep", "cure_condition": "Flinched", "cure_condition": "Cursed", "cure_condition": "Confused", "cure_condition": "Disabled", "cure_condition": "Infatuated", "cure_condition": "Enraged", "cure_condition": "Suppressed", } },
 	"power herb": { "description": "Eliminates the Set-Up turn of Moves with the Set-Up Keyword.", "self_effects": { "negate_setup": true } },
 	"white herb": { "description": "Any negative Combat Stages are set to 0.", "self_effects": { "reset_negative_combat_stages": true } },
 
@@ -375,14 +375,14 @@ export const SkillRankNumberColors = {
 };
 
 export const VolatileAfflictions = [
-	"Flinch",
-	"Sleep",
+	"Flinched",
+	"Asleep",
 	"Cursed",
 	"Confused",
 	"Disabled",
-	"Infatuation",
-	"Rage",
-	"BadSleep",
+	"Infatuated",
+	"Enraged",
+	"Haunted",
 	"Suppressed",
 ];
 

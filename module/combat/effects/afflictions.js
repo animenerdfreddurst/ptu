@@ -31,9 +31,9 @@ export const Afflictions = [
         ]
     },
     {
-        id: "effect.persistent.badly_poisoned", label: "Badly Poisoned", icon: 'icons/svg/biohazard.svg', changes: [
+        id: "effect.persistent.toxified", label: "Toxified", icon: 'icons/svg/biohazard.svg', changes: [
             { key: "flags.ptu.is_poisoned", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
-            { key: "flags.ptu.is_badly_poisoned", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
+            { key: "flags.ptu.is_toxified", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
         ], duration: {rounds: Number.MAX_SAFE_INTEGER, turns: 1}
     },
     {
@@ -52,31 +52,31 @@ export const Afflictions = [
         ]
     },
     {
-        id: "effect.volatile.flinch", label: "Flinch", icon: 'icons/svg/paralysis.svg', changes: [
+        id: "effect.volatile.flinched", label: "Flinched", icon: 'icons/svg/paralysis.svg', changes: [
             { key: "flags.ptu.is_vulnerable", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
             { key: "flags.ptu.is_flinched", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
-            { key: "system.modifiers.flinch_count", value: 1, mode: CONST.ACTIVE_EFFECT_MODES.CUSTOM, priority: 0 },
+            { key: "system.modifiers.flinched_count", value: 1, mode: CONST.ACTIVE_EFFECT_MODES.CUSTOM, priority: 0 },
         ]
     },
     {
-        id: "effect.volatile.infatuation", label: "Infatuation", icon: 'icons/svg/heal.svg', changes: [
+        id: "effect.volatile.infatuated", label: "Infatuated", icon: 'icons/svg/heal.svg', changes: [
             { key: "flags.ptu.is_infatuated", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
         ]
     },
     {
-        id: "effect.volatile.rage", label: "Rage", icon: 'icons/svg/terror.svg', changes: [
-            { key: "flags.ptu.is_raging", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
+        id: "effect.volatile.enrage", label: "Enraged", icon: 'icons/svg/terror.svg', changes: [
+            { key: "flags.ptu.is_enraged", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
         ]
     },
     {
-        id: "effect.volatile.sleep", label: "Sleep", icon: 'icons/svg/sleep.svg', changes: [
-            { key: "flags.ptu.is_sleeping", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
+        id: "effect.volatile.asleep", label: "Asleep", icon: 'icons/svg/sleep.svg', changes: [
+            { key: "flags.ptu.is_asleep", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
             { key: "flags.ptu.is_vulnerable", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 }
         ]
     },
     {
-        id: "effect.volatile.bad_sleep", label: "BadSleep", icon: 'icons/svg/unconscious.svg', changes: [
-            { key: "flags.ptu.is_badly_sleeping", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
+        id: "effect.volatile.bad_sleep", label: "Haunted", icon: 'icons/svg/unconscious.svg', changes: [
+            { key: "flags.ptu.is_haunted", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
         ]
     },
     {
@@ -85,16 +85,16 @@ export const Afflictions = [
         ]
     },
     {
-        id: "effect.other.blindness", label: "Blindness", icon: 'icons/svg/eye.svg', changes: [
-            { key: "flags.ptu.is_blind", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
+        id: "effect.other.dimmed", label: "Dimmed", icon: 'icons/svg/eye.svg', changes: [
+            { key: "flags.ptu.is_dimmed", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
             { key: "flags.ptu.is_vulnerable", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
             { key: "system.modifiers.acBonus.mod", value: -6, mode: CONST.ACTIVE_EFFECT_MODES.ADD, priority: 30 }
         ]
     },
     {
-        id: "effect.other.total_blindness", label: "Total Blindness", icon: 'icons/svg/blind.svg', changes: [
-            { key: "flags.ptu.is_blind", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
-            { key: "flags.ptu.is_totally_blind", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
+        id: "effect.other.blinded", label: "Blinded", icon: 'icons/svg/blind.svg', changes: [
+            { key: "flags.ptu.is_dimmed", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
+            { key: "flags.ptu.is_blinded", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
             { key: "flags.ptu.is_vulnerable", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
             { key: "system.modifiers.acBonus.mod", value: -10, mode: CONST.ACTIVE_EFFECT_MODES.ADD, priority: 30 }
         ]
@@ -105,8 +105,8 @@ export const Afflictions = [
         ]
     },
     {
-        id: "effect.other.stuck", label: "Stuck", icon: 'icons/svg/net.svg', changes: [
-            { key: "flags.ptu.is_stuck", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
+        id: "effect.other.immobilized", label: "Immobilized", icon: 'icons/svg/net.svg', changes: [
+            { key: "flags.ptu.is_immobilized", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
         ]
     },
     {
@@ -115,8 +115,8 @@ export const Afflictions = [
         ]
     },
     {
-        id: "effect.other.tripped", label: "Tripped", icon: 'icons/svg/falling.svg', changes: [
-            { key: "flags.ptu.is_tripped", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
+        id: "effect.other.prone", label: "Prone", icon: 'icons/svg/falling.svg', changes: [
+            { key: "flags.ptu.is_prone", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 },
             { key: "flags.ptu.is_vulnerable", value: true, mode: CONST.ACTIVE_EFFECT_MODES.OVERRIDE, priority: 50 }
         ]
     },
@@ -196,7 +196,7 @@ export const EffectFns = new Map([
         if (options.round.direction == CONFIG.PTUCombat.DirectionOptions.FORWARD) return; // If new round already started don't register EoT effect.
         await combat.update({ [`flags.ptu.applied.${tokenId}.${effect}`]: true })
     }],
-    ["badly_poisoned", async function (tokenId, combat, lastCombatant, roundData, options, sender, effect, isStartOfTurn) {
+    ["toxified", async function (tokenId, combat, lastCombatant, roundData, options, sender, effect, isStartOfTurn) {
         if (isStartOfTurn) return;
         if (!IsSameTokenAndNotAlreadyApplied(effect, tokenId, combat, lastCombatant)) return;
 
@@ -206,9 +206,9 @@ export const EffectFns = new Map([
 
         let applyPoison = async () => {
             const token = canvas.tokens.get(lastCombatant.token.id);
-            const badly_poisoned_effect = token.actor.effects.find(x => x.label == "Badly Poisoned");
+            const toxified_effect = token.actor.effects.find(x => x.label == "Toxified");
             const toxicDamage = (a,b=5) => a > 0 ? toxicDamage(a-1,b+b) : b;
-            await ApplyFlatDamage([token], "Toxic Damage", toxicDamage(badly_poisoned_effect.flags.ptu?.roundsElapsed ?? 0));
+            await ApplyFlatDamage([token], "Toxic Damage", toxicDamage(toxified_effect.flags.ptu?.roundsElapsed ?? 0));
         }
 
         const actions_taken = actor.flags.ptu?.actions_taken;
@@ -547,7 +547,7 @@ export const EffectFns = new Map([
     ["infatuated", async function (tokenId, combat, lastCombatant, roundData, options, sender, effect, isStartOfTurn) {
         if (isStartOfTurn) return;
         if (!IsSameTokenAndNotAlreadyApplied(effect, tokenId, combat, lastCombatant)) return;
-        debug("Infatuation Trigger!");
+        debug("Infatuated Trigger!");
 
         /** Actually apply Affliction */
         const actor = lastCombatant.actor;
@@ -559,21 +559,21 @@ export const EffectFns = new Map([
         let messageData = {};
 
         if (isErrata) {
-            const DC = CONFIG.PTUCombat.DC.INFATUATION;
+            const DC = CONFIG.PTUCombat.DC.INFATUATED;
 
             if (roll.total >= DC) {
                 messageData = {
-                    title: `${actor.name}'s<br>Infatuation Save!`,
+                    title: `${actor.name}'s<br>Infatuated Save!`,
                     roll: roll,
                     description: `Save Success!<br>${actor.name} got back to it's senses!`,
                     success: true
                 }
 
-                await actor.effects.find(x => x.label == "Infatuation").delete();
+                await actor.effects.find(x => x.label == "Infatuated").delete();
             }
             else {
                 messageData = {
-                    title: `${actor.name}'s<br>Infatuation Save!`,
+                    title: `${actor.name}'s<br>Infatuated Save!`,
                     roll: roll,
                     description: `Save Failed!`,
                     success: false
@@ -581,17 +581,17 @@ export const EffectFns = new Map([
             }
         }
         else {
-            if (roll.total < CONFIG.PTUCombat.DC.INFATUATION_AFFLICTED) {
+            if (roll.total < CONFIG.PTUCombat.DC.INFATUATIED_AFFLICTED) {
                 messageData = {
-                    title: `${actor.name}'s<br>Infatuation Save!`,
+                    title: `${actor.name}'s<br>Infatuated Save!`,
                     roll: roll,
                     description: `Save Failed!`,
                     success: false
                 }
             }
-            else if (roll.total > CONFIG.PTUCombat.DC.INFATUATION_AFFLICTED && roll.total <= CONFIG.PTUCombat.DC.INFATUATION_NORMAL) {
+            else if (roll.total > CONFIG.PTUCombat.DC.INFATUATED_AFFLICTED && roll.total <= CONFIG.PTUCombat.DC.INFATUATED_NORMAL) {
                 messageData = {
-                    title: `${actor.name}'s<br>Infatuation Save!`,
+                    title: `${actor.name}'s<br>Infatuated Save!`,
                     roll: roll,
                     description: `Save Success!<br>${actor.name} may act normally!`,
                     success: true
@@ -599,13 +599,13 @@ export const EffectFns = new Map([
             }
             else {
                 messageData = {
-                    title: `${actor.name}'s<br>Infatuation Save!`,
+                    title: `${actor.name}'s<br>Infatuated Save!`,
                     roll: roll,
                     description: `Save Success!<br>${actor.name} got back to it's senses!`,
                     success: true
                 }
 
-                await actor.effects.find(x => x.label == "Infatuation").delete();
+                await actor.effects.find(x => x.label == "Infatuated").delete();
             }
         }
         const content = await renderTemplate('/systems/ptu/templates/chat/save-check.hbs', messageData);
@@ -615,10 +615,10 @@ export const EffectFns = new Map([
         if (options.round.direction == CONFIG.PTUCombat.DirectionOptions.FORWARD) return; // If new round already started don't register EoT effect.
         await combat.update({ [`flags.ptu.applied.${tokenId}.${effect}`]: true })
     }],
-    ["raging", async function (tokenId, combat, lastCombatant, roundData, options, sender, effect, isStartOfTurn) {
+    ["enraged", async function (tokenId, combat, lastCombatant, roundData, options, sender, effect, isStartOfTurn) {
         if (isStartOfTurn) return;
         if (!IsSameTokenAndNotAlreadyApplied(effect, tokenId, combat, lastCombatant)) return;
-        debug("Rage Trigger!");
+        debug("Enraged Trigger!");
 
         /** Actually apply Affliction */
         const actor = lastCombatant.actor;
@@ -632,17 +632,17 @@ export const EffectFns = new Map([
 
         if (roll.total >= DC) {
             messageData = {
-                title: `${actor.name}'s<br>Rage Save!`,
+                title: `${actor.name}'s<br>Enrage Save!`,
                 roll: roll,
                 description: `Save Success!<br>${actor.name} calmed down!`,
                 success: true
             }
 
-            await actor.effects.find(x => x.label == "Rage").delete();
+            await actor.effects.find(x => x.label == "Enrage").delete();
         }
         else {
             messageData = {
-                title: `${actor.name}'s<br>Rage Save!`,
+                title: `${actor.name}'s<br>Enraged Save!`,
                 roll: roll,
                 description: `Save Failed!`,
                 success: false
@@ -655,7 +655,7 @@ export const EffectFns = new Map([
         if (options.round.direction == CONFIG.PTUCombat.DirectionOptions.FORWARD) return; // If new round already started don't register EoT effect.
         await combat.update({ [`flags.ptu.applied.${tokenId}.${effect}`]: true })
     }],
-    ["sleeping", async function (tokenId, combat, lastCombatant, roundData, options, sender, effect, isStartOfTurn) {
+    ["asleep", async function (tokenId, combat, lastCombatant, roundData, options, sender, effect, isStartOfTurn) {
         if (isStartOfTurn) return;
         if (!IsSameTokenAndNotAlreadyApplied(effect, tokenId, combat, lastCombatant)) return;
         debug("Sleep Trigger!");
@@ -679,7 +679,7 @@ export const EffectFns = new Map([
             }
 
             await actor.effects.find(x => x.label == "Sleep").delete();
-            const bad_sleep = actor.effects.find(x => x.label == "BadSleep");
+            const bad_sleep = actor.effects.find(x => x.label == "Haunted");
             if (bad_sleep) await bad_sleep.delete();
         }
         else {
@@ -697,17 +697,17 @@ export const EffectFns = new Map([
         if (options.round.direction == CONFIG.PTUCombat.DirectionOptions.FORWARD) return; // If new round already started don't register EoT effect.
         await combat.update({ [`flags.ptu.applied.${tokenId}.${effect}`]: true })
     }],
-    ["badly_sleeping", async function (tokenId, combat, lastCombatant, roundData, options, sender, effect, isStartOfTurn) {
+    ["haunted", async function (tokenId, combat, lastCombatant, roundData, options, sender, effect, isStartOfTurn) {
         if (isStartOfTurn) return;
         if (!IsSameTokenAndNotAlreadyApplied(effect, tokenId, combat, lastCombatant)) return;
-        debug("Bad Sleep Trigger!");
+        debug("Haunted Trigger!");
 
         /** Actually apply Affliction */
         const actor = lastCombatant.actor;
         if (actor.system.modifiers.immuneToEffectDamage) return;
 
         const token = canvas.tokens.get(lastCombatant.token.id);
-        await ApplyFlatDamage([token], "Nightmare (Bad Sleep)", actor.system.health.tick * 2);
+        await ApplyFlatDamage([token], "Nightmare (Haunted)", actor.system.health.tick * 2);
 
         /** If affliction can only be triggered once per turn, make sure it shows as applied. */
         if (options.round.direction == CONFIG.PTUCombat.DirectionOptions.FORWARD) return; // If new round already started don't register EoT effect.
@@ -788,7 +788,7 @@ export const EffectFns = new Map([
 ]);
 
 Hooks.on("applyActiveEffect", function (actorData, change) {
-    if (change.key == "data.modifiers.flinch_count") {
+    if (change.key == "data.modifiers.flinched_count") {
         const isErrata = game.settings.get("ptu", "errata");
         if (!isErrata) return;
         let actor;
@@ -808,11 +808,11 @@ Hooks.on("applyActiveEffect", function (actorData, change) {
         count.value++;
 
 
-        actor.update({ "data.modifiers.flinch_count": count });
+        actor.update({ "data.modifiers.flinched_count": count });
     }
 })
 
-// Set combat details on active effects for duration based calculations like Badly Poisoned
+// Set combat details on active effects for duration based calculations like Toxified
 Hooks.on("preCreateActiveEffect", function (effect, effectData, options, sender) {
     effect.updateSource(applyPreCreateActiveEffectChanges(effectData));
 })

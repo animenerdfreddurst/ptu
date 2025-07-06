@@ -4,14 +4,14 @@ import {cleanInjuryTokenSplash} from "../combat/effects/move_animations.js";
 export async function cureActorAffliction(actor, affliction_name, silent=false)
 {
 	const affliction_table = {
-		"paralysis":	"is_paralyzed",
-		"flinch":		"is_flinched",
-		"infatuation":	"is_infatuated",
-		"rage":			"is_raging",
-		"sleep":		"is_sleeping",
-		"badsleep":	"is_badly_sleeping",
-		"blindness":	"is_blind",
-		"total_blindness":"is_totally_blind",
+		"paralyzed":	"is_paralyzed",
+		"flinched":		"is_flinched",
+		"infatuated":	"is_infatuated",
+		"enraged":			"is_enraged",
+		"asleep":		"is_asleep",
+		"haunted":	"is_haunted",
+		"dimmed":	"is_dimmed",
+		"blinded":"is_blinded",
 		"fainted":		"is_fainted"
 	};
 
@@ -96,7 +96,7 @@ export async function healActorRest(actor, hours=8, bandage_used=false, pokecent
 		// await game.PTUMoveMaster.resetSceneMoves(actor, true);
 		// await game.PTUMoveMaster.resetDailyMoves(actor, true);
 
-		let conditions = ["Burned", "Frozen", "Paralysis", "Poisoned", "Badly Poisoned", "Flinch", "Sleep", "Cursed", "Confused", "Disabled", "Infatuation", "Rage", "BadSleep", "Suppressed", "Fainted"];
+		let conditions = ["Burned", "Frozen", "Paralyzed", "Poisoned", "Toxified", "Flinched", "Asleep", "Cursed", "Confused", "Disabled", "Infatuated", "Enraged", "Haunted", "Suppressed", "Fainted"];
 
 		for(let affliction of conditions)
 		{

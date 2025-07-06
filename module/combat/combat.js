@@ -23,11 +23,11 @@ CONFIG.PTUCombat = {
     FROZEN_FIRE_MOD: -5,
     FROZEN_HAIL_MOD: 2,
     FROZEN_SUNNY_MOD: -4,
-    INFATUATION: 16,
-    INFATUATION_AFFLICTED: 10,
-    INFATUATION_NORMAL: 18,
-    RAGE: 15,
-    SLEEP: 16,
+    INFATUATED: 16,
+    INFATUATED_AFFLICTED: 10,
+    INFATUATED_NORMAL: 18,
+    ENRAGED: 15,
+    ASLEEP: 16,
     CONFUSED: 16,
     CONFUSED_HIT_ITSELF: 8,
     CONFUSED_NORMAL: 15,
@@ -55,9 +55,9 @@ Hooks.on("endOfCombat", async function (combat, participants) {
       }
     }
 
-    if (actor.system.modifiers.flinch_count.value > 0) {
-      log(`Reseting ${actor.name} (${actor.id})'s flinch count.`);
-      await actor.update({ "system.modifiers.flinch_count": { value: 0, keys: [] } })
+    if (actor.system.modifiers.flinched_count.value > 0) {
+      log(`Reseting ${actor.name} (${actor.id})'s flinched count.`);
+      await actor.update({ "system.modifiers.flinched_count": { value: 0, keys: [] } })
     }
     if (game.settings.get("ptu", "removeVolatileConditionsAfterCombat") && effectIdsToDelete.length > 0) {
       log(`Deleting Volatile conditions for ${actor.name} (${actor.id}).`);
@@ -512,21 +512,21 @@ export default class PTUCombat {
     for (let affliction of afflictions) {
       // Do not deal double poison damage
       if (affliction == "poisoned") {
-        if (afflictions.includes("badly_poisoned")) continue;
+        if (afflictions.includes("toxified")) continue;
       }
 
-      // If asleep ignore Rage/Infatuate/Confusion checks & damage
+      // If asleep ignore Enraged/Infatuated/Confused checks & damage
       if (
-        affliction == "raging" ||
+        affliction == "enraged" ||
         affliction == "infatuated" ||
         affliction == "confused"
       ) {
-        if (afflictions.includes("sleeping")) continue;
+        if (afflictions.includes("asleep")) continue;
       }
 
-      // If badly sleeping but not sleeping, ignore.
-      if (affliction == "badly_sleeping") {
-        if (!afflictions.includes("sleeping")) continue;
+      // If haunted but not asleep, ignore.
+      if (affliction == "haunted") {
+        if (!afflictions.includes("asleep")) continue;
       }
 
       const effect = EffectFns.get(affliction);

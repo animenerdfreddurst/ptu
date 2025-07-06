@@ -72,7 +72,7 @@
             "value": 0,
             "mod": 0
           },
-          "flinch_count": {
+          "flinched_count": {
             "value": 0,
             "keys": []
           },

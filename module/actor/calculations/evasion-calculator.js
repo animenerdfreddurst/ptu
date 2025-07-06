@@ -19,7 +19,7 @@ export function CalculateEvasions(data, ptuFlags, actor_items) {
         "speed": Math.max(Math.min(Math.floor(data.stats.spe.total / 5),6) + data.modifiers.evasion.speed.total + tangled_feet_modifier, 0)
     };
 
-    if(ptuFlags?.is_stuck) evasion.speed = 0;
+    if(ptuFlags?.is_immobilized) evasion.speed = 0;
 
     return evasion;
 }
