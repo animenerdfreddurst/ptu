@@ -11,9 +11,9 @@
   "templateVersion": 2,
   "authors": [
     {
-      "name": "Ashe Piera",
-      "email": "ptu@soaringnetwork.com",
-      "url": "https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System"
+      "name": "animenerdfreddurst",
+      "email": "nope@gmail.com",
+      "url": "https://github.com/animenerdfreddurst/ptu"
     },
     {
       "name": "GSV A Nest of Kindled Embers"
@@ -39,11 +39,11 @@
     }
   ],
   "esmodules": [
-    "main.mjs"
+    "main.js"
   ],
   "socket": true,
   "styles": [
-    "main.css"
+    "styles.css"
   ],
   "scripts": [
     "js/jquery-ui.js",

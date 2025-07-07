@@ -1,3 +1,7 @@
+@import 'jquery-ui.css';
+@import 'bootstrap-grid.css';
+@import 'autocomplete.css';
+
 :root {
     --pkmnFontStyle: 'Pokemon GB';
 }
