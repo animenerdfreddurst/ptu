@@ -128,6 +128,18 @@
             },
             "type": "body"
           },
+          "biochemistry": {
+            "value": {
+              "value": 2,
+              "mod": 0
+            },
+            "label": "Biochemistry",
+            "modifier": {
+              "value": 0,
+              "mod": 0
+            },
+            "type": "mind"
+          },
           "charm": {
             "value": {
               "value": 2,
@@ -164,78 +176,30 @@
             },
             "type": "spirit"
           },
-          "generalEd": {
+          "education": {
             "value": {
               "value": 2,
               "mod": 0
             },
-            "label": "General Ed",
+            "label": "Education",
             "modifier": {
               "value": 0,
               "mod": 0
             },
             "type": "mind"
           },
-          "medicineEd": {
+          "engineering": {
             "value": {
               "value": 2,
               "mod": 0
             },
-            "label": "Medicine Ed",
+            "label": "Engineering",
             "modifier": {
               "value": 0,
               "mod": 0
             },
             "type": "mind"
           },
-          "occultEd": {
-            "value": {
-              "value": 2,
-              "mod": 0
-            },
-            "label": "Occult Ed",
-            "modifier": {
-              "value": 0,
-              "mod": 0
-            },
-            "type": "mind"
-          },
-          "pokemonEd": {
-            "value": {
-              "value": 2,
-              "mod": 0
-            },
-            "label": "Pokemon Ed",
-            "modifier": {
-              "value": 0,
-              "mod": 0
-            },
-            "type": "mind"
-          },
-          "techEd": {
-            "value": {
-              "value": 2,
-              "mod": 0
-            },
-            "label": "Technology Ed",
-            "modifier": {
-              "value": 0,
-              "mod": 0
-            },
-            "type": "mind"
-          },
-          "willpower": {
-            "value": {
-              "value": 2,
-              "mod": 0
-            },
-            "label": "Willpower",
-            "modifier": {
-              "value": 0,
-              "mod": 0
-            },
-            "type": "spirit"
-          }, 
           "guile": {
             "value": {
               "value": 2,
@@ -272,6 +236,18 @@
             },
             "type": "spirit"
           },
+          "occultism": {
+            "value": {
+              "value": 2,
+              "mod": 0
+            },
+            "label": "Occultism",
+            "modifier": {
+              "value": 0,
+              "mod": 0
+            },
+            "type": "mind"
+          },
           "perception": {
             "value": {
               "value": 2,
@@ -307,6 +283,30 @@
               "mod": 0
             },
             "type": "body"
+          },
+          "willpower": {
+            "value": {
+              "value": 2,
+              "mod": 0
+            },
+            "label": "Willpower",
+            "modifier": {
+              "value": 0,
+              "mod": 0
+            },
+            "type": "spirit"
+          }, 
+          "zoology": {
+            "value": {
+              "value": 2,
+              "mod": 0
+            },
+            "label": "Zoology",
+            "modifier": {
+              "value": 0,
+              "mod": 0
+            },
+            "type": "mind"
           }
         }
       },

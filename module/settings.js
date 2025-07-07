@@ -543,7 +543,7 @@ export function LoadSystemSettings() {
         });
 
         game.settings.register("ptu", "pokepsychologistCanReplaceCommand", {
-            name: "Pokepsychologist allows replacing Command with Pokemon Education for Loyalty checks.",
+            name: "Pokepsychologist allows replacing Command with Zoology for Loyalty checks.",
             hint: "As written, Pokepsychologist is relatively worthless, and technically does not allow for one of the uses a casual reading of it might imply. This homebrew option allows trainers with Pokepsychologist to use Pokemon Education in place of Command for Loyalty checks.",
             scope: "world",
             config: true,
