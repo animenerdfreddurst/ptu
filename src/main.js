@@ -1,8 +1,7 @@
-//Import CSS so that vite hot reload works
+//import css so its included in build
+//best to include here as including it by adding to vite config leads to some weird css issues
+//probably due to the current css being a mess and minification breaking it
 import './css/styles.css'
-import './css/autocomplete.css'
-import './css/bootstrap-grid.css'
-import './css/jquery-ui.css'
 // Import Modules
 import { PTUActor } from "./module/actor/actor.js";
 import { GetSpeciesData } from "./module/actor/actor.js";

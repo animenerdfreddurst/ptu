@@ -27,7 +27,7 @@ export default class ItemsComponent extends Component {
                 output += dividerIcon
 
                 for (const item of items.sort(this._sort)) {
-                    output += await renderTemplate("/systems/ptu/module/sidebar/components/items-component.hbs", {
+                    output += await renderTemplate("/systems/ptu/templates/sidebar/components/items-component.hbs", {
                         name: item.name,
                         img: item.img,
                         id: item.id,
@@ -46,7 +46,7 @@ export default class ItemsComponent extends Component {
                 let item = game.ptu.data.items.find(i => i.name.toLowerCase().includes(itemName.toLowerCase()));
                 if (item) {
                     output += dividerIcon             
-                    output += await renderTemplate("/systems/ptu/module/sidebar/components/items-component.hbs", {
+                    output += await renderTemplate("/systems/ptu/templates/sidebar/components/items-component.hbs", {
                         name: item.name,
                         img: item.img,
                         id: item.id,
