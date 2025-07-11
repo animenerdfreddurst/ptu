@@ -25,7 +25,7 @@ import {
 } from '../combat/damage-calc-tools.js'
 import { timeout } from '../utils/generic-helpers.js'
 import transform from '../utils/transform-helper.js'
-import SystemPaths from '../config/paths.js'
+import SystemPaths from "../config/paths.js";
 
 /**
  * Extend the base Actor entity by defining a custom roll data structure which is ideal for the Simple system.
