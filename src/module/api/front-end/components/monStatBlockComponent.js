@@ -66,7 +66,7 @@ export default class monStatBlockComponent extends Component {
             stats[stat].newLevelUp = stats[stat].newLevelUp ? stats[stat].newLevelUp : 0; 
         }
 
-        content = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/partials/levelUp/stat-block-partial.hbs`, {isEvolving, evolution: this.state.evolving.into, stats, nature})
+        content = await renderTemplate(`/systems/ptu/templates/partials/levelUp/stat-block-partial.hbs`, {isEvolving, evolution: this.state.evolving.into, stats, nature})
 
         //level up points
         const levelUpPoints = `

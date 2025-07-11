@@ -10,7 +10,7 @@ import SystemPaths from "../config/paths";
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["ptu", "combat", "settings"],
-      template: `systems/${SystemPaths.systemId()}/templates/forms/combat-settings.hbs`,
+      template: `systems/ptu/templates/forms/combat-settings.hbs`,
       width: 600,
       //height: 800,
       title: "PTU Combat Settings"

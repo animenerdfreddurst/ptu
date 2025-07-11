@@ -54,7 +54,7 @@ export default class EvolutionBlock extends Component {
         
         const shouldRender = game.settings.get("ptu", "showCharactermancerEvolutions") ? true : game.user.isGM;
 
-        const content = await renderTemplate(`systems/${SystemPaths.systemId()}/templates/partials/charactermancer-evolution-partial.hbs`, shouldRender ? {stages: this.stages} : {})
+        const content = await renderTemplate(`systems/ptu/templates/partials/charactermancer-evolution-partial.hbs`, shouldRender ? {stages: this.stages} : {})
 
         this.element.html(content);
 

@@ -3,14 +3,14 @@ import path from 'path'
 
 const config: UserConfig = {
     root: 'src/',
-    base: '/systems/pokemon_carbon/',
+    base: '/systems/ptu/',
     publicDir: path.resolve(__dirname, 'static'),
 
     server: {
         port: 30001,
         open: false,
         proxy: {
-            '^(?!/systems/pokemon_carbon)': 'http://localhost:30000/', //calls to the system are handled by vite
+            '^(?!/systems/ptu)': 'http://localhost:30000/', //calls to the system are handled by vite
             '/socket.io': { //all other calls are passed to foundry
                 target: 'ws://localhost:30000',
                 ws: true,

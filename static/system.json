@@ -1,6 +1,6 @@
 {
-  "id": "pokemon_carbon",
-  "title": "Pokemon Carbon",
+  "id": "ptu",
+  "title": "ptu",
   "description": "A re-imagining of the Pokemon Tabletop United TTRPG System now made with FoundryVTT as a central pilar.",
   "compatibility": {
     "minimum": 10,
@@ -124,7 +124,7 @@
   "gridUnits": "m",
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "exp",
-  "url": "https://github.com/animenerdfreddurst/pokemon_carbon",
+  "url": "https://github.com/animenerdfreddurst/ptu",
   "manifest": "",
   "changelog": "",
   "download": "",

@@ -1423,19 +1423,31 @@ export class PTUActor extends Actor {
       actorImage: this.img,
     }, attack);
 
-    messageData.content = await renderTemplate('/systems/ptu/templates/chat/moves/full-attack.hbs', messageData);
+        messageData.content = await renderTemplate(
+            `/systems/ptu/templates/chat/moves/full-attack.hbs`,
+            messageData
+        )
 
     setTimeout(async () => {
       const msg = await ChatMessage.create(messageData, {});
 
-      if (messageData.targetAmount >= 1 && attack.crit != CritOptions.CRIT_MISS) {
-        const applicatorMessageData = duplicate(messageData);
-        applicatorMessageData.damageRolls = messageData.damageRolls;
-        applicatorMessageData.attackId = randomID();
-        applicatorMessageData.content = await renderTemplate('/systems/ptu/templates/chat/moves/damage-application.hbs', applicatorMessageData);
-        timeout(100);
-        const applicatorMsg = await ChatMessage.create(applicatorMessageData, {});
-      }
+                if (
+                    messageData.targetAmount >= 1 &&
+                    attack.crit != CritOptions.CRIT_MISS
+                ) {
+                    const applicatorMessageData = duplicate(messageData)
+                    applicatorMessageData.damageRolls = messageData.damageRolls
+                    applicatorMessageData.attackId = randomID()
+                    applicatorMessageData.content = await renderTemplate(
+                        `/systems/ptu/templates/chat/moves/damage-application.hbs`,
+                        applicatorMessageData
+                    )
+                    timeout(100)
+                    const applicatorMsg = await ChatMessage.create(
+                        applicatorMessageData,
+                        {}
+                    )
+                }
 
                 // If auto combat is turned on automatically apply damage based on result
                 // TODO: Apply Attack (+ effects)

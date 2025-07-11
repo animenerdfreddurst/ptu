@@ -172,7 +172,7 @@ export async function displayAppliedDamageToTargets(appliedDamage) {
     let messageData = {
         user: game.user.id,
         content: await renderTemplate(
-            `/systems/${SystemPaths.systemId()}/templates/chat/automation/applied-damage.hbs`,
+            `/systems/ptu/templates/chat/automation/applied-damage.hbs`,
             appliedDamage
         ),
         type: CONST.CHAT_MESSAGE_TYPES.WHISPER,
@@ -329,7 +329,7 @@ export async function applyEffectsToTargets(event) {
         //display applied effects to chat
         if (effectData.length > 0) {
             const content = await renderTemplate(
-                `/systems/${SystemPaths.systemId()}/templates/chat/automation/applied-effect.hbs`,
+                `/systems/ptu/templates/chat/automation/applied-effect.hbs`,
                 { effectData }
             )
             let messageData = {

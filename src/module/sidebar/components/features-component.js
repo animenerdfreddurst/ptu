@@ -50,14 +50,14 @@ export default class FeaturesList extends Component {
 
         let output = "";
         if(this.state.features.length > 0)
-            output += `<img class='divider-image' src='systems/${SystemPaths.systemId()}/assets/images/icons/DividerIcon_Features.png' style='border:none; width:200px;'>`
+            output += `<img class='divider-image' src='systems/ptu/assets/images/icons/DividerIcon_Features.png' style='border:none; width:200px;'>`
 
         for (const feature of this.state.features?.sort(this._sort.bind(this)) ?? []) {
             // Feature data is prepared on a duplicate entry, otherwise the preperation data will be flagged as 
             // 'changed feature data' during every re-render, causing infinite re-render loops.
             const featureData = duplicate(feature);
             const frequencyIconPath = this._getFrequencyIcons(featureData.system.frequency);
-            const featureHtml = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/sidebar/components/features-component.hbs`, {
+            const featureHtml = await renderTemplate(`/systems/ptu/templates/sidebar/components/features-component.hbs`, {
                 name: featureData.name,
                 img: frequencyIconPath,
                 id: featureData._id,
@@ -110,7 +110,7 @@ export default class FeaturesList extends Component {
         
         function getIconPath(frequency) {
             if(!frequency) return;
-            const basePath = `systems/${SystemPaths.systemId()}/assets/images/icons/`
+            const basePath = `systems/ptu/assets/images/icons/`
             switch (true) {
                 case frequency.includes("swift action"): return basePath + "SwiftActionBackground.png";
                 case frequency.includes("standard action"): return basePath + "StandardActionBackground.png";

@@ -22,7 +22,7 @@ export default class FoodBuffComponent extends Component {
             .split(', ')
             .filter((s) => s.trim().length > 0)
         if (foodBuffs.length > 0) {
-            output = `<img class='divider-image' src='systems/${SystemPaths.systemId()}/assets/images/icons/DividerIcon_FoodBuff.png' style='border:none; width:200px;'>`
+            output = `<img class='divider-image' src='systems/ptu/assets/images/icons/DividerIcon_FoodBuff.png' style='border:none; width:200px;'>`
             for (const foodBuff of foodBuffs) {
                 if (foodBuff != 'None' && foodBuff != '') {
                     const foodBuffItem = game.ptu.data.items.find((i) =>
@@ -30,7 +30,7 @@ export default class FoodBuffComponent extends Component {
                     )
                     if (foodBuffItem) {
                         output += await renderTemplate(
-                            `/systems/${SystemPaths.systemId()}/templates/sidebar/components/food-buff-component.hbs`,
+                            `/systems/ptu/templates/sidebar/components/food-buff-component.hbs`,
                             {
                                 name: foodBuffItem.name,
                                 img: foodBuffItem.img,

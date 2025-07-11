@@ -49,14 +49,14 @@ export default class AbilitiesList extends Component {
 
         let output = "";
         if(this.state.abilities.length > 0)
-            output += `<img class='divider-image' src='systems/${SystemPaths.systemId()}/assets/images/icons/DividerIcon_Abilities.png' style='border:none; width:200px;'>`
+            output += `<img class='divider-image' src='systems/ptu/assets/images/icons/DividerIcon_Abilities.png' style='border:none; width:200px;'>`
 
         for (const ability of this.state.abilities?.sort(this._sort.bind(this)) ?? []) {
             // Ability data is prepared on a duplicate entry, otherwise the preparation data will be flagged as 
             // 'changed ability data' during every re-render, causing infinite re-render loops.
             const abilityData = duplicate(ability);
             const frequencyIconPath = this._getFrequencyIcons(abilityData.system.frequency);
-            const abilityHtml = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/sidebar/components/abilities-component.hbs`, {
+            const abilityHtml = await renderTemplate(`/systems/ptu/templates/sidebar/components/abilities-component.hbs`, {
                 name: abilityData.name,
                 img: frequencyIconPath,
                 id: abilityData._id,
@@ -109,7 +109,7 @@ export default class AbilitiesList extends Component {
         
         function getIconPath(frequency) {
             if(!frequency) return;
-            const basePath = `systems/${SystemPaths.systemId()}/assets/images/icons/`
+            const basePath = `systems/ptu/assets/images/icons/`
             switch (true) {
                 case frequency.includes("swift action"): return basePath + "SwiftActionBackground.png";
                 case frequency.includes("standard action"): return basePath + "StandardActionBackground.png";

@@ -385,7 +385,7 @@ export async function applyCapture(trainer, target, pokeball, speciesData)
 async function failedCapture(trainer, target, pokeball, speciesData) {
 	const messageData = {
         user: game.user.id,
-        content: await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/chat/automation/capture-redo.hbs`, {trainer, target, pokeball: pokeball?.name ?? pokeball}),
+        content: await renderTemplate(`/systems/ptu/templates/chat/automation/capture-redo.hbs`, {trainer, target, pokeball: pokeball?.name ?? pokeball}),
         type: CONST.CHAT_MESSAGE_TYPES.WHISPER,
         whisper: game.users.filter(x => x.isGM)
     }

@@ -509,7 +509,7 @@ Hooks.once("ready", async function () {
     // And listen to it
     scriptTag.onload = async function (loadEvent) {
       new ChangeLog(
-        await (await fetch(`systems/${SystemPaths.systemId()}changelog.md`)).text()
+        await (await fetch(`systems/ptu/changelog.md`)).text()
       ).render(true);
     };
 
@@ -717,7 +717,7 @@ async function createPTUMacro(data, slot) {
       type: "script",
       img:
         item.type == "move" && item.img === "icons/svg/mystery-man.svg"
-          ? `/systems/${SystemPaths.systemId()}/assets/images/types2/${item.data.type}IC_Icon.png`
+          ? `/systems/ptu/assets/images/types2/${item.data.type}IC_Icon.png`
           : item.img,
       command: command,
       flags: { "ptu.itemMacro": true },
@@ -788,7 +788,7 @@ async function _onPokedexMacro() {
   //ding
   AudioHelper.play(
     {
-      src: `systems/${SystemPaths.systemId()}/assets/sounds/ui_sounds/ui_pokedex_ding.wav`,
+      src: `systems/ptu/assets/sounds/ui_sounds/ui_pokedex_ding.wav`,
       volume: 0.8,
       autoplay: true,
       loop: false,

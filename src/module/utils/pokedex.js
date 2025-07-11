@@ -11,7 +11,7 @@ export default async function RenderDex(species, type = "desc") {
 
     const pokedexDialog = new Dialog({
         title: "Pokedex information for " + speciesData._id.toLowerCase(),
-        content: await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/pokedex.hbs`, {img: await game.ptu.utils.generator.GetSpeciesArt(speciesData, imageBasePath),speciesData, dexEntry, type}),
+        content: await renderTemplate(`/systems/ptu/templates/pokedex.hbs`, {img: await game.ptu.utils.generator.GetSpeciesArt(speciesData, imageBasePath),speciesData, dexEntry, type}),
         buttons: {}
     });
     pokedexDialog.position.width = 800;

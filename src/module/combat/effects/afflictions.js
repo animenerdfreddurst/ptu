@@ -321,7 +321,7 @@ export const EffectFns = new Map([
                 success: coinFlip.result == "2"
             };
 
-            coinFlipMessageData.content = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/chat/save-check.hbs`, coinFlipMessageData);
+            coinFlipMessageData.content = await renderTemplate(`/systems/ptu/templates/chat/save-check.hbs`, coinFlipMessageData);
             await ChatMessage.create(coinFlipMessageData, {});
 
             if (actor.system.modifiers.immuneToEffectDamage || coinFlipMessageData.success) return;
@@ -453,7 +453,7 @@ export const EffectFns = new Map([
                 await actor.effects.find(x => x.label == "Confused").delete();
             }
         }
-        const content = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/chat/save-check.hbs`, messageData);
+        const content = await renderTemplate(`/systems/ptu/templates/chat/save-check.hbs`, messageData);
         await saveCheck.update({ content: content });
 
         /** If affliction can only be triggered once per turn, make sure it shows as applied. */
@@ -498,7 +498,7 @@ export const EffectFns = new Map([
                 await actor.createEmbeddedDocuments("ActiveEffect", [aeAffliction]);
             }
         }
-        const content = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/chat/save-check.hbs`, messageData);
+        const content = await renderTemplate(`/systems/ptu/templates/chat/save-check.hbs`, messageData);
         await saveCheck.update({ content: content });
 
         /** If affliction can only be triggered once per turn, make sure it shows as applied. */
@@ -538,7 +538,7 @@ export const EffectFns = new Map([
                 success: false
             }
         }
-        const content = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/chat/save-check.hbs`, messageData);
+        const content = await renderTemplate(`/systems/ptu/templates/chat/save-check.hbs`, messageData);
         await saveCheck.update({ content: content });
 
         /** If affliction can only be triggered once per turn, make sure it shows as applied. */
@@ -609,7 +609,7 @@ export const EffectFns = new Map([
                 await actor.effects.find(x => x.label == "Infatuated").delete();
             }
         }
-        const content = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/chat/save-check.hbs`, messageData);
+        const content = await renderTemplate(`/systems/ptu/templates/chat/save-check.hbs`, messageData);
         await saveCheck.update({ content: content });
 
         /** If affliction can only be triggered once per turn, make sure it shows as applied. */
@@ -649,7 +649,7 @@ export const EffectFns = new Map([
                 success: false
             }
         }
-        const content = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/chat/save-check.hbs`, messageData);
+        const content = await renderTemplate(`/systems/ptu/templates/chat/save-check.hbs`, messageData);
         await saveCheck.update({ content: content });
 
         /** If affliction can only be triggered once per turn, make sure it shows as applied. */
@@ -691,7 +691,7 @@ export const EffectFns = new Map([
                 success: false
             }
         }
-        const content = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/chat/save-check.hbs`, messageData);
+        const content = await renderTemplate(`/systems/ptu/templates/chat/save-check.hbs`, messageData);
         await saveCheck.update({ content: content });
 
         /** If affliction can only be triggered once per turn, make sure it shows as applied. */
@@ -760,7 +760,7 @@ export const EffectFns = new Map([
                     success: false
                 }
             }
-            const content = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/chat/save-check.hbs`, messageData);
+            const content = await renderTemplate(`/systems/ptu/templates/chat/save-check.hbs`, messageData);
             await saveCheck.update({ content: content });
 
 

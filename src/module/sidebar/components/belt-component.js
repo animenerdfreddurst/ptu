@@ -25,7 +25,7 @@ export default class BeltComponent extends Component {
         }
         // Else display this component
 
-        const dividerIcon = `<img class='divider-image' src='systems/${SystemPaths.systemId()}/assets/images/icons/DividerIcon_PokeballBelt.png' style='border:none; width:200px;'>`
+        const dividerIcon = `<img class='divider-image' src='systems/ptu/assets/images/icons/DividerIcon_PokeballBelt.png' style='border:none; width:200px;'>`
         const beltMons = [];
         let output = "";
 
@@ -42,7 +42,7 @@ export default class BeltComponent extends Component {
         if (beltMons.length > 0) {
             output += dividerIcon;
             for (const mon of beltMons) {
-                output += await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/sidebar/components/belt-component.hbs`, {
+                output += await renderTemplate(`/systems/ptu/templates/sidebar/components/belt-component.hbs`, {
                     name: mon.name,
                     img: mon.img,
                     id: mon.id,

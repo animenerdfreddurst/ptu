@@ -10,7 +10,7 @@ export class PTRSearch extends Application {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["ptr", "search"],
-      template: `systems/${SystemPaths.systemId()}/templates/ptr-search/ptr-search.hbs`,
+      template: `systems/ptu/templates/ptr-search/ptr-search.hbs`,
       width: 700,
       height: 800,
       title: "PTR Search",
@@ -160,7 +160,7 @@ export class PTRSearch extends Application {
 
     const list = getRandomItemFromList(["mons","moves", "abilities", "capabilities", "edges", "feats", "enhancements", "tms"]); 
     const item = getRandomItemFromList(this.getCompendium(list));
-    renderTemplate(`/systems/${SystemPaths.systemId()}/templates/ptr-search/item.hbs`, item).then((html) => {
+    renderTemplate(`/systems/ptu/templates/ptr-search/item.hbs`, item).then((html) => {
         $(".data-view").replaceWith(html);
         this.tmLinks();
     });
@@ -185,7 +185,7 @@ export class PTRSearch extends Application {
       const tm = event.currentTarget.dataset.tmNumber;
       const tmName = that.getCompendium("tms").find(x => x.tmNumber == tm).name.replace("(tm)", "").trim();
       const data = that.getCompendium("moves").find(x => x.name == tmName);
-      const html = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/ptr-search/item.hbs`, data);
+      const html = await renderTemplate(`/systems/ptu/templates/ptr-search/item.hbs`, data);
       $(".data-view").replaceWith(html);
     });
   }
@@ -210,7 +210,7 @@ export class PTRSearch extends Application {
             ...that.fuse.tms.search(input),
             ].sort((a, b) => a.score - b.score);
 
-            const html = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/ptr-search/list.hbs`, {
+            const html = await renderTemplate(`/systems/ptu/templates/ptr-search/list.hbs`, {
                 total: results.length > 12 ? 12 : results.length,
                 items: results.length > 12 ? results.slice(0, 12).map(x => x.item) : results.map((x) => x.item),
             });
@@ -219,7 +219,7 @@ export class PTRSearch extends Application {
             $(".result-item").on("click", async function (event) {
             const { name, id, compendium } = event.currentTarget.dataset;
             const data = that.getCompendium(compendium).find((x) => name ? x.name == name : x.ptuNumber == id);
-            const html = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/ptr-search/item.hbs`, data);
+            const html = await renderTemplate(`/systems/ptu/templates/ptr-search/item.hbs`, data);
             $(".data-view").replaceWith(html);
             
             that.tmLinks();

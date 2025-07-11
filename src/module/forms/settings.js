@@ -16,7 +16,7 @@ export class PTUSettings extends FormApplication {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["ptu", "settings"],
-            template: `systems/${SystemPaths.systemId()}/templates/forms/settings.hbs`,
+            template: `systems/ptu/templates/forms/settings.hbs`,
             width: 800,
             height: "auto",
             title: "PTU Settings",

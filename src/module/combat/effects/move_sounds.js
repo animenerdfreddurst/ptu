@@ -2,29 +2,29 @@ import SystemPaths from "../../config/paths";
 
 export const battle_sound_paths = {
 	"miss":{
-		"physical":	`systems/${SystemPaths.systemId()}/assets/sounds/battle_sounds/miss.mp3`,
-		"special":	`systems/${SystemPaths.systemId()}/assets/sounds/battle_sounds/miss.mp3`,
-		"status":	`systems/${SystemPaths.systemId()}/assets/sounds/battle_sounds/miss.mp3`
+		"physical":	`systems/ptu/assets/sounds/battle_sounds/miss.mp3`,
+		"special":	`systems/ptu/assets/sounds/battle_sounds/miss.mp3`,
+		"status":	`systems/ptu/assets/sounds/battle_sounds/miss.mp3`
 	},
 	"hit":{
-		"physical":	`systems/${SystemPaths.systemId()}/assets/sounds/battle_sounds/hit_physical_damage.mp3`,
-		"special":	`systems/${SystemPaths.systemId()}/assets/sounds/battle_sounds/hit_special_damage.mp3`,
-		"status":	`systems/${SystemPaths.systemId()}/assets/sounds/battle_sounds/hit_status.mp3`
+		"physical":	`systems/ptu/assets/sounds/battle_sounds/hit_physical_damage.mp3`,
+		"special":	`systems/ptu/assets/sounds/battle_sounds/hit_special_damage.mp3`,
+		"status":	`systems/ptu/assets/sounds/battle_sounds/hit_status.mp3`
 	},
 	"crit":{
-		"physical":	`systems/${SystemPaths.systemId()}/assets/sounds/battle_sounds/crit_physical_damage.mp3`,
-		"special":	`systems/${SystemPaths.systemId()}/assets/sounds/battle_sounds/crit_special_damage.mp3`,
-		"status":	`systems/${SystemPaths.systemId()}/assets/sounds/battle_sounds/hit_status.mp3`
+		"physical":	`systems/ptu/assets/sounds/battle_sounds/crit_physical_damage.mp3`,
+		"special":	`systems/ptu/assets/sounds/battle_sounds/crit_special_damage.mp3`,
+		"status":	`systems/ptu/assets/sounds/battle_sounds/hit_status.mp3`
 	},
 	"weak":{
-		"physical":	`systems/${SystemPaths.systemId()}/assets/sounds/battle_sounds/weak_physical_damage.mp3`,
-		"special":	`systems/${SystemPaths.systemId()}/assets/sounds/battle_sounds/weak_special_damage.mp3`,
-		"status":	`systems/${SystemPaths.systemId()}/assets/sounds/battle_sounds/hit_status.mp3`
+		"physical":	`systems/ptu/assets/sounds/battle_sounds/weak_physical_damage.mp3`,
+		"special":	`systems/ptu/assets/sounds/battle_sounds/weak_special_damage.mp3`,
+		"status":	`systems/ptu/assets/sounds/battle_sounds/hit_status.mp3`
 	},
 	"heal":{
-		"item": `systems/${SystemPaths.systemId()}/assets/sounds/battle_sounds/heal.mp3`,
-		"rest": `systems/${SystemPaths.systemId()}/assets/sounds/battle_sounds/heal.mp3`,
-		"pokecenter": `systems/${SystemPaths.systemId()}/assets/sounds/battle_sounds/pokecenter_heal.mp3`,
+		"item": `systems/ptu/assets/sounds/battle_sounds/heal.mp3`,
+		"rest": `systems/ptu/assets/sounds/battle_sounds/heal.mp3`,
+		"pokecenter": `systems/ptu/assets/sounds/battle_sounds/pokecenter_heal.mp3`,
 	}
 }
 

@@ -26,9 +26,9 @@ export default class TypeBar extends Component {
     generateHtml(types) {
         let html = "";
         for (const [index, type] of types.entries()) {
-            html += `<img id="type${index + 1}" src="/systems/${SystemPaths.systemId()}/assets/images/types2/${type}${index % 2 == 0 ? "IC" : "IC_Flipped"}.png"/>`
+            html += `<img id="type${index + 1}" src="/systems/ptu/assets/images/types2/${type}${index % 2 == 0 ? "IC" : "IC_Flipped"}.png"/>`
         }
-        if (types.length == 1) html += `<img id="type2" src="/systems/${SystemPaths.systemId()}/assets/images/types2/IC_Flipped.png"/>`
+        if (types.length == 1) html += `<img id="type2" src="/systems/ptu/assets/images/types2/IC_Flipped.png"/>`
 
         return html;
     }

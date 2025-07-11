@@ -16,7 +16,7 @@ export class SystemPaths {
     static PATHS = Object.freeze({
         // Base directories
         FOUNDRY_BASE: 'systems',
-        SYSTEM_ID: 'pokemon_carbon', // or 'pokemon_carbon' if renaming
+        SYSTEM_ID: 'ptu', // or 'ptu' if renaming
 
         // Asset directories
         ASSETS: 'assets',

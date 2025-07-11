@@ -215,7 +215,7 @@ export default class Api {
                 if (allowed == "timeout") {
                     let messageData = {
                         user: game.user.id,
-                        content: await renderTemplate(`systems/${SystemPaths.systemId()}/templates/chat/dex-scan-request.hbs`, {trainerName, pokemonName}),
+                        content: await renderTemplate(`systems/ptu/templates/chat/dex-scan-request.hbs`, {trainerName, pokemonName}),
                         type: CONST.CHAT_MESSAGE_TYPES.WHISPER,
                         whisper: game.users.filter(x => x.isGM)
                     }

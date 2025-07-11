@@ -17,7 +17,7 @@ export class PTUAutomationForm extends FormApplication {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["ptu", "automation"],
-      template: `systems/${SystemPaths.systemId()}/templates/forms/automation.hbs`,
+      template: `systems/ptu/templates/forms/automation.hbs`,
       width: 650,
       height: 600,
       title: "Automation Editor",
