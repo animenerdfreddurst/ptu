@@ -1,10 +1,10 @@
 {
-  "id": "ptu",
-  "title": "Pokemon Tabletop Reunited",
+  "id": "pokemon_carbon",
+  "title": "Pokemon Carbon",
   "description": "A re-imagining of the Pokemon Tabletop United TTRPG System now made with FoundryVTT as a central pilar.",
   "compatibility": {
     "minimum": 10,
-    "verified": "10.291",
+    "verified": "10.312",
     "maximum": 10
   },
   "version": "3.2.3.9",
@@ -14,28 +14,6 @@
       "name": "animenerdfreddurst",
       "email": "nope@gmail.com",
       "url": "https://github.com/animenerdfreddurst/ptu"
-    },
-    {
-      "name": "GSV A Nest of Kindled Embers"
-    },
-    {
-      "name": "Ellam Fox"
-    },
-    {
-      "name": "Muhsigbokz"
-    },
-    {
-      "name": "Tymo Wessel"
-    },
-    {
-      "name": "Jeffrey Hollander"
-    },
-    {
-      "name": "Efren A. Mariño"
-    },
-    {
-      "name": "Cody Swendrowski",
-      "url": "https://swendrowski.us"
     }
   ],
   "esmodules": [
@@ -146,10 +124,10 @@
   "gridUnits": "m",
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "exp",
-  "url": "https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System",
-  "manifest": "https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System/raw/development/system.json",
-  "changelog": "https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System/raw/development/changelog.md",
-  "download": "https://github.com/dylanpiera/Foundry-Pokemon-Tabletop-United-System/archive/development.zip",
+  "url": "https://github.com/animenerdfreddurst/pokemon_carbon",
+  "manifest": "",
+  "changelog": "",
+  "download": "",
   "initiative": "",
-  "license": "LICENSE.txt"
+  "license": "LICENSE.md"
 }

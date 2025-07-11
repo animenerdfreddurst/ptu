@@ -1,7 +1,7 @@
 import { debug, error, log, PrepareMoveData, warn } from '../../main.js'
 import { HardenedChanges } from '../data/training-data.js'
 import { sendItemMessage } from '../item/item-sheet.js';
-import { CSS } from '../utils/css-constants.js';
+import { CSS } from '../config/css.js';
 
 /**
  * Extend the basic ActorSheet with some very simple modifications

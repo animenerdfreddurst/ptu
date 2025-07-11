@@ -484,7 +484,7 @@ a.item {
     color: white;
 }
 input[name='data.money'] {
-    background-image: url(/systems/ptu/assets/images/1200px-All-currency-symbol.png);
+    background-image: url(../assets/images/1200px-All-currency-symbol.png);
     padding-left: 20px;
     background-size: 12px 12px;
     background-repeat: no-repeat;
@@ -564,7 +564,7 @@ input[name='data.money'] {
     background: #93c47d;
 }
 .itemBox {
-    background: url(/systems/ptu/assets/images/item-box.svg);
+    background: url(../assets/images/item-box.svg);
     background-repeat: no-repeat;
     background-size: auto 100%;
     position: relative;
@@ -5934,7 +5934,7 @@ h6 {
     padding-bottom: 10px;
 }
 input[name='totalwealth'] {
-    background-image: url(/systems/ptu/assets/images/1200px-All-currency-symbol.png);
+    background-image: url(../assets/images/1200px-All-currency-symbol.png);
     padding-left: 20px;
     background-size: 18px 18px;
     background-repeat: no-repeat;
