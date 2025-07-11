@@ -25,7 +25,7 @@ import {
 } from '../combat/damage-calc-tools.js'
 import { timeout } from '../utils/generic-helpers.js'
 import transform from '../utils/transform-helper.js'
-import SystemPaths from '../config/paths.js'
+import SystemPaths from "../config/paths.js";
 
 /**
  * Extend the base Actor entity by defining a custom roll data structure which is ideal for the Simple system.
@@ -1408,50 +1408,34 @@ export class PTUActor extends Actor {
         //TODO: Implement Move Effect Parser direclty into PTU.
         Hooks.call('ptu.moveUsed', this, move)
 
-        // After effects have been parsed, display chat message with all info.
-        const messageData = mergeObject(
-            {
-                title: `${this.name}'s<br>${move.name}`,
-                user: game.user.id,
-                sound: CONFIG.sounds.dice,
-                templateType: 'move',
-                description: `${this.name}'s<br>${move.name}`,
-                hasAC: !(moveData.ac == '' || moveData.ac == '--'),
-                move: moveData,
-                moveName: move.name,
-                moveUuid: move.uuid,
-                targetAmount: Object.keys(attack.data).length,
-                actorImage: this.img,
-            },
-            attack
-        )
+    // After effects have been parsed, display chat message with all info.
+    const messageData = mergeObject({
+      title: `${this.name}'s<br>${move.name}`,
+      user: game.user.id,
+      sound: CONFIG.sounds.dice,
+      templateType: 'move',
+      description: `${this.name}'s<br>${move.name}`,
+      hasAC: !(moveData.ac == "" || moveData.ac == "--"),
+      move: moveData,
+      moveName: move.name,
+      moveUuid: move.uuid,
+      targetAmount: Object.keys(attack.data).length,
+      actorImage: this.img,
+    }, attack);
 
-        messageData.content = await renderTemplate(
-            `/systems/${SystemPaths.systemId()}/templates/chat/moves/full-attack.hbs`,
-            messageData
-        )
+    messageData.content = await renderTemplate('/systems/ptu/templates/chat/moves/full-attack.hbs', messageData);
 
-        setTimeout(
-            async () => {
-                const msg = await ChatMessage.create(messageData, {})
+    setTimeout(async () => {
+      const msg = await ChatMessage.create(messageData, {});
 
-                if (
-                    messageData.targetAmount >= 1 &&
-                    attack.crit != CritOptions.CRIT_MISS
-                ) {
-                    const applicatorMessageData = duplicate(messageData)
-                    applicatorMessageData.damageRolls = messageData.damageRolls
-                    applicatorMessageData.attackId = randomID()
-                    applicatorMessageData.content = await renderTemplate(
-                        `/systems/${SystemPaths.systemId()}/templates/chat/moves/damage-application.hbs`,
-                        applicatorMessageData
-                    )
-                    timeout(100)
-                    const applicatorMsg = await ChatMessage.create(
-                        applicatorMessageData,
-                        {}
-                    )
-                }
+      if (messageData.targetAmount >= 1 && attack.crit != CritOptions.CRIT_MISS) {
+        const applicatorMessageData = duplicate(messageData);
+        applicatorMessageData.damageRolls = messageData.damageRolls;
+        applicatorMessageData.attackId = randomID();
+        applicatorMessageData.content = await renderTemplate('/systems/ptu/templates/chat/moves/damage-application.hbs', applicatorMessageData);
+        timeout(100);
+        const applicatorMsg = await ChatMessage.create(applicatorMessageData, {});
+      }
 
                 // If auto combat is turned on automatically apply damage based on result
                 // TODO: Apply Attack (+ effects)
