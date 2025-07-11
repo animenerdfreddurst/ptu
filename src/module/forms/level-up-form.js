@@ -21,7 +21,7 @@ export class PTULevelUpForm extends FormApplication {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["ptu", "level-up", "pokemon"],
-      template: `systems/${SystemPaths.systemId()}/templates/forms/level-up.hbs`,
+      template: `systems/ptu/templates/forms/level-up.hbs`,
       width: 560,
       height: 890,
       title: "Level-Up Menu!"

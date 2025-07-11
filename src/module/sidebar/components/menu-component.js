@@ -5,12 +5,12 @@ import { timeout } from '../../utils/generic-helpers.js';
 import SystemPaths from '../../config/paths.js';
 
 export const ui_sound_paths = {
-    "button": `systems/${SystemPaths.systemId()}/assets/sounds/ui_sounds/ui_button.wav`,
-    "flip": `systems/${SystemPaths.systemId()}/assets/sounds/ui_sounds/ui_cardflip.wav`,
-    "check_on": `systems/${SystemPaths.systemId()}/assets/sounds/ui_sounds/ui_checkbox_on.wav`,
-    "check_off": `systems/${SystemPaths.systemId()}/assets/sounds/ui_sounds/ui_checkbox_off.wav`,
-    "pokedex_scan": `systems/${SystemPaths.systemId()}/assets/sounds/ui_sounds/ui_pokedex_ding.wav`,
-    "warning": `systems/${SystemPaths.systemId()}/assets/sounds/ui_sounds/ui_warning.wav`,
+    "button": `systems/ptu/assets/sounds/ui_sounds/ui_button.wav`,
+    "flip": `systems/ptu/assets/sounds/ui_sounds/ui_cardflip.wav`,
+    "check_on": `systems/ptu/assets/sounds/ui_sounds/ui_checkbox_on.wav`,
+    "check_off": `systems/ptu/assets/sounds/ui_sounds/ui_checkbox_off.wav`,
+    "pokedex_scan": `systems/ptu/assets/sounds/ui_sounds/ui_pokedex_ding.wav`,
+    "warning": `systems/ptu/assets/sounds/ui_sounds/ui_warning.wav`,
 };
 
 export default class MenuComponent extends Component {
@@ -31,12 +31,12 @@ export default class MenuComponent extends Component {
         if (!this.state.actor) return;
 
 
-        const dividerIcon = `<img class='divider-image' src='systems/${SystemPaths.systemId()}/assets/images/icons/Divider.png' style='border:none; width:200px;'>`
+        const dividerIcon = `<img class='divider-image' src='systems/ptu/assets/images/icons/Divider.png' style='border:none; width:200px;'>`
         let output = dividerIcon;
 
         switch (this.state.menuOption) {
             case "struggle":
-                output += await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/sidebar/components/menu-component.hbs`, {
+                output += await renderTemplate(`/systems/ptu/templates/sidebar/components/menu-component.hbs`, {
                     menu: "struggle",
                     struggles: await this._getStruggles(this.state.actor)
                 })
@@ -44,19 +44,19 @@ export default class MenuComponent extends Component {
             case "pokeball":
                 if (this.state.actor.type == "pokemon") return this.store.dispatch('changeMenuOption', "none");
 
-                output += await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/sidebar/components/menu-component.hbs`, {
+                output += await renderTemplate(`/systems/ptu/templates/sidebar/components/menu-component.hbs`, {
                     menu: "pokeball",
                     ball: await this._getTrainerPokeballArray(this.state.actor)
                 })
                 break;
             case "maneuver":
-                output += await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/sidebar/components/menu-component.hbs`, {
+                output += await renderTemplate(`/systems/ptu/templates/sidebar/components/menu-component.hbs`, {
                     menu: "maneuver",
                     maneuvers: await game.packs.get("ptu.maneuvers").getDocuments()
                 })
                 break;
             default:
-                output += await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/sidebar/components/menu-component.hbs`, {
+                output += await renderTemplate(`/systems/ptu/templates/sidebar/components/menu-component.hbs`, {
                     menu: "none"
                 })
                     break;
@@ -340,7 +340,7 @@ export default class MenuComponent extends Component {
             sound: CONFIG.sounds.dice,
             templateType: 'maneuver',
         }
-        messageData.content = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/chat/maneuver.hbs`, messageData)
+        messageData.content = await renderTemplate(`/systems/ptu/templates/chat/maneuver.hbs`, messageData)
         await ChatMessage.create(messageData, {});
     }
 }

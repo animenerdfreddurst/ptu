@@ -16,7 +16,7 @@ export class PTUCustomSpeciesEditor extends FormApplication {
     static get defaultOptions() {
       return mergeObject(super.defaultOptions, {
         classes: ["ptu", "cse", "pokemon"],
-        template: `systems/${SystemPaths.systemId()}/templates/forms/cse.hbs`,
+        template: `systems/ptu/templates/forms/cse.hbs`,
         width: 950,
         height: 1000,
         title: "Custom Species Editor",

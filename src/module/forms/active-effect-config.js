@@ -14,7 +14,7 @@ import SystemPaths from "../config/paths";
       return mergeObject(super.defaultOptions, {
         classes: ["sheet", "active-effect-sheet"],
         title: "EFFECT.ConfigTitle",
-        template: `systems/${SystemPaths.systemId()}/templates/forms/active-effect-config.hbs`,
+        template: `systems/ptu/templates/forms/active-effect-config.hbs`,
         width: 560,
         height: "auto",
         tabs: [{navSelector: ".tabs", contentSelector: "form", initial: "details"}]

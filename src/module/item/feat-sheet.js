@@ -19,7 +19,7 @@ export class PTUFeatSheet extends ItemSheet {
 
   /** @override */
   get template() {
-    const path = `systems/${SystemPaths.systemId()}/templates/item`;
+    const path = `systems/ptu/templates/item`;
     // Return a single sheet for all item types.
     return `${path}/item-feat-sheet.hbs`;
 

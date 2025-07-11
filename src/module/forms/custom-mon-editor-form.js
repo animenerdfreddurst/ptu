@@ -13,7 +13,7 @@ export class PTUCustomMonEditor extends FormApplication {
     static get defaultOptions() {
       return mergeObject(super.defaultOptions, {
         classes: ["ptu", "custom-species-editor", "mon-editor", "pokemon"],
-        template: `systems/${SystemPaths.systemId()}/templates/forms/custom-mon-editor.hbs`,
+        template: `systems/ptu/templates/forms/custom-mon-editor.hbs`,
         width: 800,
         height: 550,
         title: this.object ? `Editing ${this.object.id}` : "Creating Custom Species",

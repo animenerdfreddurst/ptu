@@ -1198,7 +1198,7 @@ export class PTUActor extends Actor {
         )
 
         messageData.content = await renderTemplate(
-            `/systems/${SystemPaths.systemId()}/templates/chat/moves/full-attack.hbs`,
+            `/systems/ptu/templates/chat/moves/full-attack.hbs`,
             messageData
         )
 
@@ -1214,7 +1214,7 @@ export class PTUActor extends Actor {
                     applicatorMessageData.damageRolls = messageData.damageRolls
                     applicatorMessageData.attackId = randomID()
                     applicatorMessageData.content = await renderTemplate(
-                        `/systems/${SystemPaths.systemId()}/templates/chat/moves/damage-application.hbs`,
+                        `/systems/ptu/templates/chat/moves/damage-application.hbs`,
                         applicatorMessageData
                     )
                     timeout(100)

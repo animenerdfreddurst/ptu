@@ -12,7 +12,7 @@ export class PTUCustomTypingEditor extends FormApplication {
     static get defaultOptions() {
       return mergeObject(super.defaultOptions, {
         classes: ["ptu", "cte", "pokemon"],
-        template: `systems/${SystemPaths.systemId()}/templates/forms/cte.hbs`,
+        template: `systems/ptu/templates/forms/cte.hbs`,
         width: 950,
         height: 1000,
         title: "Custom Typing Editor",

@@ -10,7 +10,7 @@ export class PTUCharacterNotesForm extends FormApplication {
     static get defaultOptions() {
       return mergeObject(super.defaultOptions, {
         classes: ["ptu", "notes", "form"],
-        template: `systems/${SystemPaths.systemId()}/templates/forms/notes-form.hbs`,
+        template: `systems/ptu/templates/forms/notes-form.hbs`,
         width: 600,
         height: 450,
         title: "Notes"

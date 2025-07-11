@@ -240,7 +240,7 @@ export class PTUCombatOverrides extends Combat {
 export class PTUCombatTrackerOverrides extends CombatTracker {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      template: `systems/${SystemPaths.systemId()}/templates/sidebar/combat-tracker.hbs`,
+      template: `systems/ptu/templates/sidebar/combat-tracker.hbs`,
     });
   }
 

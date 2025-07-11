@@ -290,7 +290,7 @@ export default class PTUCombat {
     if (!combat.started) return;
 
     if (options.turn.direction == CONFIG.PTUCombat.DirectionOptions.FORWARD) {
-      await AudioHelper.play({src: (`systems/${SystemPaths.systemId()}/assets/sounds/ui_sounds/ui_button.wav`), volume: 0.5, autoplay: true, loop: false}, true);
+      await AudioHelper.play({src: (`systems/ptu/assets/sounds/ui_sounds/ui_button.wav`), volume: 0.5, autoplay: true, loop: false}, true);
       await game.ptu.utils.species.playCry(combatant?.actor?.system?.species);
     }
 
