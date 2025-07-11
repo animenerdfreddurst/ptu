@@ -1,6 +1,5 @@
 // Initiative revamp sort code
-
-import { debug } from "../../main.js";
+import SystemPaths from "../config/paths.js";
 
 export class PTUCombatOverrides extends Combat {
   async startCombat() {
@@ -241,7 +240,7 @@ export class PTUCombatOverrides extends Combat {
 export class PTUCombatTrackerOverrides extends CombatTracker {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
-      template: "systems/ptu/templates/sidebar/combat-tracker.hbs",
+      template: `systems/${SystemPaths.systemId()}/templates/sidebar/combat-tracker.hbs`,
     });
   }
 

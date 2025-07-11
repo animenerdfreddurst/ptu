@@ -1,5 +1,5 @@
-import { debug, log } from "../../main.js";
-import { timeout } from "./generic-helpers.js";
+import { debug } from "../../main.js";
+import SystemPaths from "../config/paths.js";
 
 export function ActorHasItemWithName(actor, initial_item_name, item_category = "Any", precise_naming = false) {
 	let item_name = initial_item_name.replace("é", "e").toLowerCase();
@@ -385,7 +385,7 @@ export async function applyCapture(trainer, target, pokeball, speciesData)
 async function failedCapture(trainer, target, pokeball, speciesData) {
 	const messageData = {
         user: game.user.id,
-        content: await renderTemplate("/systems/ptu/templates/chat/automation/capture-redo.hbs", {trainer, target, pokeball: pokeball?.name ?? pokeball}),
+        content: await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/chat/automation/capture-redo.hbs`, {trainer, target, pokeball: pokeball?.name ?? pokeball}),
         type: CONST.CHAT_MESSAGE_TYPES.WHISPER,
         whisper: game.users.filter(x => x.isGM)
     }

@@ -1,5 +1,5 @@
-import { log, debug } from "../../main.js";
 import { getRandomNormIntInclusive } from '../utils/generic-helpers.js';
+import SystemPaths from '../config/paths.js';
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -11,7 +11,7 @@ export class PTUDexDragOptions extends FormApplication {
     static get defaultOptions() {
       return mergeObject(super.defaultOptions, {
         classes: ["ptu", "charactermancer", "pokemon", "dex_drag_in"],
-        template: "systems/ptu/templates/forms/dex-drag-options-form.hbs",
+        template: `systems/${SystemPaths.systemId()}/templates/forms/dex-drag-options-form.hbs`,
         width: 250,
         height: 450, //changed from 375 to 500 to accommodate the gender ratio setting
         title: "Dex Drag-In",

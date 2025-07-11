@@ -3,6 +3,7 @@ import { LATEST_VERSION } from '../../main.js'
 import { debug, log } from '../../main.js';
 import { addStepsToEffectiveness, dataFromPath } from '../utils/generic-helpers.js';
 import { PlayPokeballReturnAnimation } from '../combat/effects/pokeball_effects.js';
+import SystemPaths from '../config/paths.js';
 
 class ApiError {
     constructor({ message, type }) {
@@ -214,7 +215,7 @@ export default class Api {
                 if (allowed == "timeout") {
                     let messageData = {
                         user: game.user.id,
-                        content: await renderTemplate("systems/ptu/templates/chat/dex-scan-request.hbs", {trainerName, pokemonName}),
+                        content: await renderTemplate(`systems/${SystemPaths.systemId()}/templates/chat/dex-scan-request.hbs`, {trainerName, pokemonName}),
                         type: CONST.CHAT_MESSAGE_TYPES.WHISPER,
                         whisper: game.users.filter(x => x.isGM)
                     }

@@ -1,4 +1,5 @@
 import Component from '../../api/front-end/lib/component.js';
+import SystemPaths from '../../config/paths.js';
 
 export default class OrderComponent extends Component {
     constructor(store) {
@@ -19,7 +20,7 @@ export default class OrderComponent extends Component {
 
         const trainings = this.state.actor.itemTypes.feat.filter(x => x.name.toLowerCase().includes("training"));
 
-        const dividerIcon = "<img class='divider-image' src='systems/ptu/assets/images/icons/DividerIcon_Orders.png' style='border:none; width:200px;'>"
+        const dividerIcon = `<img class='divider-image' src='systems/${SystemPaths.systemId()}/assets/images/icons/DividerIcon_Orders.png' style='border:none; width:200px;'>`
         let output = "";
         if (trainings.length > 0) {
             output += dividerIcon
@@ -29,7 +30,7 @@ export default class OrderComponent extends Component {
 
                 if(trainingType != "agility" && trainingType != "brutal" && trainingType != "focused" && trainingType != "inspired") continue;
 
-                output += await renderTemplate("/systems/ptu/templates/sidebar/components/order-component.hbs", {
+                output += await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/sidebar/components/order-component.hbs`, {
                     name: item.data.name,
                     img: item.data.img,
                     id: item.id,

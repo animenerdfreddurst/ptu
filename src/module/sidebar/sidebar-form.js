@@ -1,14 +1,14 @@
 import initStore from "./sidebarStore.js";
-import { log, debug } from "../../main.js";
+import { debug } from "../../main.js";
 import MoveList from './components/moves-component.js';
 import AbilitiesList from './components/abilities-component.js';
 import FeaturesList from './components/features-component.js';
 import BeltComponent from './components/belt-component.js';
 import ItemsComponent from './components/items-component.js';
 import FoodBuffComponent from "./components/food-buff-component.js";
-import OrdersComponent from './components/order-component.js';
 import MenuComponent from './components/menu-component.js';
 import { ui_sound_paths } from "./components/menu-component.js";
+import SystemPaths from "../config/paths.js";
 
 /**
  * Extend the basic FormApplication with some very simple modifications
@@ -21,7 +21,7 @@ export class PTUSidebar extends FormApplication {
     return mergeObject(super.defaultOptions, {
       id: "ptu-sidebar",
       classes: ["ptu", "sidebar", "ptu-sidebar", "pokemon"],
-      template: "systems/ptu/templates/sidebar/sidebar-form.hbs",
+      template: `systems/${SystemPaths.systemId()}/templates/sidebar/sidebar-form.hbs`,
       title: "PTU Sidebar",
       dragDrop: [{ dragSelector: ".directory-item.belt-pokeball", dropSelector: null }],
 

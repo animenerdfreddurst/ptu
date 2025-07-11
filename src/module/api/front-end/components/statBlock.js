@@ -1,5 +1,6 @@
 import { debug } from '../../../../main.js';
 import Component from '../lib/component.js';
+import SystemPaths from '../../../config/paths.js';
 
 export default class StatBlock extends Component {
     constructor(store) {
@@ -26,7 +27,7 @@ export default class StatBlock extends Component {
 
         if(!stats || !nature) return;
 
-        const content = await renderTemplate("/systems/ptu/templates/partials/charactermancer/stat-block-partial.hbs", {stats, nature})
+        const content = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/partials/charactermancer/stat-block-partial.hbs`, {stats, nature})
 
         this.element.html(content);
 
