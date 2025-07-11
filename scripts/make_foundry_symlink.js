@@ -11,7 +11,7 @@ const foundryPaths = Object.freeze({
     linux: path.join(os.homedir(), '.local/share/FoundryVTT/Data/systems/'),
 })
 
-const systemName = 'ptu'
+const systemName = 'pokemon_carbon'
 const foundrySystemsPath = foundryPaths[os.platform()]
 const symlinkTarget = path.join(foundrySystemsPath, systemName)
 const distPath = path.resolve(__dirname, '../dist/') //link source is our dist folder
@@ -42,5 +42,5 @@ try {
 } catch (error) {
     console.error(error);
     console.error(`ERROR: failed to create symlink between ${distPath} and ${symlinkTarget}`);
-    confirm.log(`You may need to run this script as ${os.platform() === 'win32' ? 'administrator' : 'sudo'}`)
+    console.log(`You may need to run this script as ${os.platform() === 'win32' ? 'administrator' : 'sudo'}`)
 }

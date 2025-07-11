@@ -100,6 +100,7 @@ import { PTRSearch } from "./module/ptr-search/ptr-search.js";
 import { PTUAutomationForm } from "./module/forms/automation-form.js";
 import { CalcLevel } from "./module/actor/calculations/level-up-calculator.js";
 import { PTULevelUpForm } from "./module/forms/level-up-form.js";
+import SystemPaths from './module/config/paths.js';
 
 export let debug = logging.debug;
 export let log = logging.log;
@@ -512,7 +513,7 @@ Hooks.once("ready", async function () {
     // And listen to it
     scriptTag.onload = async function (loadEvent) {
       new ChangeLog(
-        await (await fetch("/systems/ptu/changelog.md")).text()
+        await (await fetch(`systems/${SystemPaths.systemId()}changelog.md`)).text()
       ).render(true);
     };
 
@@ -720,7 +721,7 @@ async function createPTUMacro(data, slot) {
       type: "script",
       img:
         item.type == "move" && item.img === "icons/svg/mystery-man.svg"
-          ? `/systems/ptu/assets/images/types2/${item.data.type}IC_Icon.png`
+          ? `/systems/${SystemPaths.systemId()}/assets/images/types2/${item.data.type}IC_Icon.png`
           : item.img,
       command: command,
       flags: { "ptu.itemMacro": true },

@@ -3,15 +3,15 @@ import path from 'path'
 
 const config: UserConfig = {
     root: 'src/',
-    base: '/systems/ptu/',
+    base: '/systems/pokemon_carbon/',
     publicDir: path.resolve(__dirname, 'static'),
 
     server: {
         port: 30001,
         open: false,
         proxy: {
-            '^(?!/systems/ptu)': 'http://localhost:30000/',
-            '/socket.io': {
+            '^(?!/systems/pokemon_carbon)': 'http://localhost:30000/', //calls to the system are handled by vite
+            '/socket.io': { //all other calls are passed to foundry
                 target: 'ws://localhost:30000',
                 ws: true,
             },
@@ -30,7 +30,7 @@ const config: UserConfig = {
             },
             output: {
                 entryFileNames: 'main.js',
-                // assetFileNames: 'styles.css',
+                assetFileNames: 'styles.css',
             },
             external: (id) => {
                 // don't try to bundle assets as they are in the public folder

@@ -1,7 +1,7 @@
 import { sendItemMessage } from '../item/item-sheet.js';
 import { debug, error, log, PrepareMoveData } from '../../main.js'
 import { ui_sound_paths } from '../sidebar/components/menu-component.js';
-import { CSS } from '../utils/css-constants.js';
+import { CSS } from '../config/css.js';
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
