@@ -1,4 +1,3 @@
-import { debug } from '../../../../main.js';
 import { GetSpeciesArt } from '../../../utils/species-command-parser.js';
 import Component from '../lib/component.js';
 

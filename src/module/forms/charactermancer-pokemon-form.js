@@ -1,4 +1,4 @@
-import { log, debug } from "../../main.js";
+import { log} from "../../main.js";
 import LevelField from "../api/front-end/components/levelField.js";
 import initStore from "../api/front-end/charactermancerStore.js";
 import LevelExpField from "../api/front-end/components/levelExpField.js";
@@ -9,11 +9,11 @@ import SpeciesImage from "../api/front-end/components/speciesImg.js";
 import TypeBar from "../api/front-end/components/typeBar.js";
 import NatureSelect from "../api/front-end/components/natureSelect.js";
 import NatureStatSelect from "../api/front-end/components/natureStatSelect.js";
-import { CalcBaseStats, CalculateStatTotal } from "../actor/calculations/stats-calculator.js";
 import StatBlock from "../api/front-end/components/statBlock.js";
 import StatBlockTotal from "../api/front-end/components/statBlockTotal.js";
 import StatBlockLevelUpPoints from "../api/front-end/components/statBlockLevelUpPoints.js";
 import EvolutionBlock from "../api/front-end/components/evolutionBlock.js";
+import SystemPaths from "../config/paths.js";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -25,7 +25,7 @@ export class PTUPokemonCharactermancer extends FormApplication {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["ptu", "charactermancer", "pokemon", "gen8"],
-      template: "systems/ptu/templates/forms/charactermancer-pokemon.hbs",
+      template: `systems/${SystemPaths.systemId()}/templates/forms/charactermancer-pokemon.hbs`,
       width: 452,
       height: 1050,
       title: "Charactermancer",

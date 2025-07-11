@@ -2,6 +2,7 @@ import { debug, error, log, PrepareMoveData, warn } from '../../main.js'
 import { HardenedChanges } from '../data/training-data.js'
 import { sendItemMessage } from '../item/item-sheet.js';
 import { CSS } from '../config/css.js';
+import SystemPaths from '../config/paths.js';
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -12,7 +13,7 @@ export class PTUGen8PokemonSheet extends ActorSheet {
 	static get defaultOptions() {
 		return mergeObject(super.defaultOptions, {
 			classes: CSS.POKEMON_SHEET,
-			template: 'systems/ptu/templates/actor/pokemon-sheet-gen8.hbs',
+			template: `systems/${SystemPaths.systemId()}/templates/actor/pokemon-sheet-gen8.hbs`,
 			width: 1200,
 			height: 675,
 			tabs: [{
@@ -466,7 +467,7 @@ export class PTUGen8PokemonSheet extends ActorSheet {
 			description: `Save check of ${roll._total}!`
 		}
 
-		messageData.content = await renderTemplate('/systems/ptu/templates/chat/save-check.hbs', messageData);
+		messageData.content = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/chat/save-check.hbs`, messageData);
 
 		return ChatMessage.create(messageData, {});
 	}

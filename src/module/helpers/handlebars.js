@@ -1,4 +1,5 @@
 import { PrepareMoveData } from "../../main.js";
+import SystemPaths from "../config/paths.js";
 import { TypeEffectiveness } from "../data/effectiveness-data.js";
 
 const validTypeImageExtensions = ["webp", "png"];
@@ -36,13 +37,13 @@ export async function preloadHandlebarsTemplates() {
     return loadTemplates([
         
         // Actor Sheet Partials
-        "systems/ptu/templates/partials/active-effects.hbs",
-        "systems/ptu/templates/partials/mod-field.hbs",
-        "systems/ptu/templates/partials/item-display-partial.hbs",
+        `systems/${SystemPaths.systemId()}/templates/partials/active-effects.hbs`,
+        `systems/${SystemPaths.systemId()}/templates/partials/mod-field.hbs`,
+        `systems/${SystemPaths.systemId()}/templates/partials/item-display-partial.hbs`,
         
         // Charactermancer Partials
-        "systems/ptu/templates/partials/charactermancer-evolution-partial.hbs",
-        "/systems/ptu/templates/partials/charactermancer/stat-block-partial.hbs"
+        `systems/${SystemPaths.systemId()}/templates/partials/charactermancer-evolution-partial.hbs`,
+        `/systems/${SystemPaths.systemId()}/templates/partials/charactermancer/stat-block-partial.hbs`
     ]);
   };
 
@@ -113,7 +114,7 @@ export function registerHandlebars() {
     })
   
     Handlebars.registerHelper("calcFrequencyIconPath", function (frequency, currentUseCount) {
-      const basePath = "systems/ptu/assets/images/icons/";
+      const basePath = `systems/${SystemPaths.systemId()}/assets/images/icons/`;
       const useCount = Number(currentUseCount);
       switch (frequency) {
         case "At-Will":
@@ -167,7 +168,7 @@ export function registerHandlebars() {
       return types.reduce((html, type, index, array) => {
         if (type == "null") type = "Untyped";
         if (isTypeDefaultType(type)) {
-          return html += `<img class="mr-1 ml-1" src="/systems/ptu/assets/images/types/${type}IC.webp">` + (includeSlash ? (index != (array.length - 1) ? "<span>/</span>" : "") : "");
+          return html += `<img class="mr-1 ml-1" src="/systems/${SystemPaths.systemId()}/assets/images/types/${type}IC.webp">` + (includeSlash ? (index != (array.length - 1) ? "<span>/</span>" : "") : "");
         } else {
           const path = findCustomTypeImagePath(type);
           return html += `<img class="mr-1 ml-1" src="${path}">` + (includeSlash ? (index != (array.length - 1) ? "<span>/</span>" : "") : "");
@@ -177,7 +178,7 @@ export function registerHandlebars() {
   
     Handlebars.registerHelper("loadTypeImage", function (type) {
       if (isTypeDefaultType(type)) {
-        return `<img src="/systems/ptu/assets/images/types/${type}IC.webp">`;
+        return `<img src="/systems/${SystemPaths.systemId()}/assets/images/types/${type}IC.webp">`;
       } else {
         const path = findCustomTypeImagePath(type);
         return `<img src="${path}">`;

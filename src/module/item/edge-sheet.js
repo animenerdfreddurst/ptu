@@ -1,4 +1,5 @@
 import { sendItemMessage } from './item-sheet.js'
+import SystemPaths from '../config/paths.js';
 
 /**
  * Extend the basic ItemSheet with some very simple modifications
@@ -18,7 +19,7 @@ export class PTUEdgeSheet extends ItemSheet {
 
   /** @override */
   get template() {
-    const path = "systems/ptu/templates/item";
+    const path = `systems/${SystemPaths.systemId()}/templates/item`;
     // Return a single sheet for all item types.
     return `${path}/item-edge-sheet.hbs`;
 

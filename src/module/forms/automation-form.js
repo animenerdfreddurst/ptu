@@ -1,10 +1,11 @@
 import initStore from "../api/front-end/automationStore.js";
-import { log, debug } from "../../main.js";
+import { debug } from "../../main.js";
 import TabsComponent from "../api/front-end/components/tabs-component.js";
 import TargetsComponent from "../api/front-end/components/targets-component.js";
 import ConditionsComponent from "../api/front-end/components/conditions-component.js";
 import EffectsComponent from "../api/front-end/components/effects-component.js";
 import SettingsComponent from "../api/front-end/components/settings-component.js";
+import SystemPaths from "../config/paths.js";
 
 /**
  * Extend the basic FormApplication with some very simple modifications
@@ -16,7 +17,7 @@ export class PTUAutomationForm extends FormApplication {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["ptu", "automation"],
-      template: "systems/ptu/templates/forms/automation.hbs",
+      template: `systems/${SystemPaths.systemId()}/templates/forms/automation.hbs`,
       width: 650,
       height: 600,
       title: "Automation Editor",

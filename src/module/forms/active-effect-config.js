@@ -1,4 +1,4 @@
-import { debug } from "../../main.js";
+import SystemPaths from "../config/paths";
 
 /**
  * A form designed for creating and editing an Active Effect on an Actor or Item entity.
@@ -14,7 +14,7 @@ import { debug } from "../../main.js";
       return mergeObject(super.defaultOptions, {
         classes: ["sheet", "active-effect-sheet"],
         title: "EFFECT.ConfigTitle",
-        template: "systems/ptu/templates/forms/active-effect-config.hbs",
+        template: `systems/${SystemPaths.systemId()}/templates/forms/active-effect-config.hbs`,
         width: 560,
         height: "auto",
         tabs: [{navSelector: ".tabs", contentSelector: "form", initial: "details"}]

@@ -1,6 +1,7 @@
-import { PrepareMoveData, warn, debug } from '../../main.js';
+import { warn, debug } from '../../main.js';
 import { sendMoveMessage } from '../actor/pokemon-sheet-gen8.js'
 import { GetItemArt } from '../utils/item-piles-compatibility-handler.js';
+import SystemPaths from '../config/paths.js';
 
 /**
  * Extend the basic ItemSheet with some very simple modifications
@@ -29,7 +30,7 @@ export class PTUItemSheet extends ItemSheet {
 
 	/** @override */
 	get template() {
-		const path = 'systems/ptu/templates/item';
+		const path = `systems/${SystemPaths.systemId()}/templates/item`;
 		// Return a single sheet for all item types.
 		// return `${path}/item-sheet.html`;
 
@@ -53,7 +54,7 @@ export class PTUItemSheet extends ItemSheet {
 				this.object.update({"img": `/systems/ptu/assets/images/icons/poke_edge_icon.png`});
 			else if (this.object.type == "item")
 				GetItemArt(this.object.name).then((img) => {
-					if(img === "systems/ptu/assets/images/item_icons/generic item.webp")
+					if(img === `systems/${SystemPaths.systemId()}/assets/images/item_icons/generic item.webp`)
 						this.object.update({"img": `/systems/ptu/assets/images/icons/item_icon.png`});
 					else
 						this.object.update({"img": img});
