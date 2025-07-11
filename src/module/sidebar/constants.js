@@ -1,3 +1,5 @@
+import SystemPaths from "../config/paths";
+
 export const soot_splash_params =
 	[{
 		filterType: "splash",
@@ -78,10 +80,10 @@ export const TypeIconSuffix = "IC.png";
 export const TypeIconSuffixFlipped = "IC_Flipped.png";
 export const CategoryIconSuffix = ".png";
 
-// export const TypeIconPath = "systems/ptu/assets/images/types/";
-// export const CategoryIconPath = "systems/ptu/assets/images/categories/";
+// export const TypeIconPath = `systems/${SystemPaths.systemId()}/assets/images/types/`;
+// export const CategoryIconPath = `systems/${SystemPaths.systemId()}/assets/images/categories/`;
 
-export const AlternateIconPath = "systems/ptu/assets/images/icons/";
+export const AlternateIconPath = `systems/${SystemPaths.systemId()}/assets/images/icons/`;
 
 // export const AtWillReadyMark = "∞";
 

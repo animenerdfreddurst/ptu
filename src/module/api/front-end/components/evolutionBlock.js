@@ -1,6 +1,7 @@
 import { debug } from '../../../../main.js';
 import { GetSpeciesArt } from '../../../utils/species-command-parser.js';
 import Component from '../lib/component.js';
+import SystemPaths from '../../../config/paths.js';
 
 export default class EvolutionBlock extends Component {
     constructor(store) {
@@ -53,7 +54,7 @@ export default class EvolutionBlock extends Component {
         
         const shouldRender = game.settings.get("ptu", "showCharactermancerEvolutions") ? true : game.user.isGM;
 
-        const content = await renderTemplate("systems/ptu/templates/partials/charactermancer-evolution-partial.hbs", shouldRender ? {stages: this.stages} : {})
+        const content = await renderTemplate(`systems/${SystemPaths.systemId()}/templates/partials/charactermancer-evolution-partial.hbs`, shouldRender ? {stages: this.stages} : {})
 
         this.element.html(content);
 

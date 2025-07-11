@@ -6,10 +6,10 @@ import MonMovesListComponent from "../api/front-end/components/monMovesListCompo
 import MonAbilitiesListComponent from "../api/front-end/components/monAbilitiesListComponent.js";
 import initStore from "../api/front-end/levelupStore.js";
 import { log, debug } from "../../main.js";
-import { pokemonData } from '../data/species-data.js';
 import { GetSpeciesArt } from '../utils/species-command-parser.js';
 import { GetOrCacheAbilities } from "../utils/cache-helper.js";
 import { timeout } from "../utils/generic-helpers.js";
+import SystemPaths from "../config/paths.js";
 
 /**
  * Extend the basic FormApplication with some very simple modifications
@@ -21,7 +21,7 @@ export class PTULevelUpForm extends FormApplication {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["ptu", "level-up", "pokemon"],
-      template: "systems/ptu/templates/forms/level-up.hbs",
+      template: `systems/${SystemPaths.systemId()}/templates/forms/level-up.hbs`,
       width: 560,
       height: 890,
       title: "Level-Up Menu!"

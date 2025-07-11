@@ -1,10 +1,10 @@
-import CustomSpeciesFolder from "../entities/custom-species-folder.js"
 import initStore from "../api/front-end/cseStore.js";
 import TypeList from "../api/front-end/components/typeList.js";
 import { log, debug } from "../../main.js";
 import NewMonComponent from "../api/front-end/components/newMonComponent.js";
 import CseCapabilities from "../api/front-end/components/cse-capabilities.js";
 import CseDragAndDropList from "../api/front-end/components/cse-dad-list.js";
+import SystemPaths from "../config/paths.js";
 
 /**
  * Extend the basic FormApplication with some very simple modifications
@@ -16,7 +16,7 @@ export class PTUCustomSpeciesEditor extends FormApplication {
     static get defaultOptions() {
       return mergeObject(super.defaultOptions, {
         classes: ["ptu", "cse", "pokemon"],
-        template: "systems/ptu/templates/forms/cse.hbs",
+        template: `systems/${SystemPaths.systemId()}/templates/forms/cse.hbs`,
         width: 950,
         height: 1000,
         title: "Custom Species Editor",

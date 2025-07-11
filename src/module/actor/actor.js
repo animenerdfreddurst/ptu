@@ -11,6 +11,7 @@ import { PlayMoveSounds } from "../combat/effects/move_sounds.js";
 import { ActionTypes, FiveStrikeHitsDictionary } from "../combat/damage-calc-tools.js";
 import { timeout } from "../utils/generic-helpers.js";
 import transform from "../utils/transform-helper.js";
+import SystemPaths from "../config/paths.js";
 
 /**
  * Extend the base Actor entity by defining a custom roll data structure which is ideal for the Simple system.
@@ -694,7 +695,7 @@ export class PTUActor extends Actor {
       actorImage: this.img,
     }, attack);
 
-    messageData.content = await renderTemplate('/systems/ptu/templates/chat/moves/full-attack.hbs', messageData);
+    messageData.content = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/chat/moves/full-attack.hbs`, messageData);
 
     setTimeout(async () => {
       const msg = await ChatMessage.create(messageData, {});
@@ -703,7 +704,7 @@ export class PTUActor extends Actor {
         const applicatorMessageData = duplicate(messageData);
         applicatorMessageData.damageRolls = messageData.damageRolls;
         applicatorMessageData.attackId = randomID();
-        applicatorMessageData.content = await renderTemplate('/systems/ptu/templates/chat/moves/damage-application.hbs', applicatorMessageData);
+        applicatorMessageData.content = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/chat/moves/damage-application.hbs`, applicatorMessageData);
         timeout(100);
         const applicatorMsg = await ChatMessage.create(applicatorMessageData, {});
       }

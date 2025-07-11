@@ -792,7 +792,7 @@ async function _onPokedexMacro() {
   //ding
   AudioHelper.play(
     {
-      src: "systems/ptu/assets/sounds/ui_sounds/ui_pokedex_ding.wav",
+      src: `systems/${SystemPaths.systemId()}/assets/sounds/ui_sounds/ui_pokedex_ding.wav`,
       volume: 0.8,
       autoplay: true,
       loop: false,
@@ -905,12 +905,12 @@ export async function PlayPokemonCry(species) {
     let SpeciesCryFilename = species.toString().toLowerCase();
 
     const response_mp3 = await fetch(
-      CryDirectory + SpeciesCryFilename + ".mp3"
+      `${CryDirectory}${SpeciesCryFilename}.mp3`
     );
     if (response_mp3.status >= 200 && response_mp3.status <= 299) {
       AudioHelper.play(
         {
-          src: CryDirectory + SpeciesCryFilename + ".mp3",
+          src: `${CryDirectory}${SpeciesCryFilename}.mp3`,
           volume: 0.8,
           autoplay: true,
           loop: false,
@@ -919,12 +919,12 @@ export async function PlayPokemonCry(species) {
       );
     } else {
       const response_wav = await fetch(
-        CryDirectory + SpeciesCryFilename + ".wav"
+        `${CryDirectory}${SpeciesCryFilename}.wav`
       );
       if (response_wav.status >= 200 && response_wav.status <= 299) {
         AudioHelper.play(
           {
-            src: CryDirectory + SpeciesCryFilename + ".wav",
+            src: `${CryDirectory}${SpeciesCryFilename}.wav`,
             volume: 0.8,
             autoplay: true,
             loop: false,

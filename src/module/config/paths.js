@@ -1,34 +1,3 @@
-// const path = require('path')
-
-// const paths = Object.freeze({
-//     FOUNDRY_BASE: 'systems',
-//     SYSTEM_BASE: 'pokemon_carbon',
-//     MODULE: 'module',
-//     CSS: 'css',
-//     IMAGES: 'assets/images',
-//     FONTS: 'assets/fonts',
-//     SOUNDS: 'assets/sounds',
-//     DATA: 'data',
-//     JS: 'js',
-//     JSON: 'json',
-//     LANG: 'lang',
-//     PACKS: 'packs',
-//     TEMPLATES: 'templates',
-// })
-
-// export class systemPaths {
-//     get systemBase() {
-//         return path.resolve(paths.FOUNDRY_BASE, paths.SYSTEM_BASE)
-//     }
-//     get module() {
-//         return path.resolve(this.systemBase(), paths.module)
-//     }
-//     get images() {
-//         return path.resolve(paths.systemBase, paths.IMAGES)
-//     }
-// }
-
-// from claude.
 //TODO look over and implement
 import path from 'path'
 

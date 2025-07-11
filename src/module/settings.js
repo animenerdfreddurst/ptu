@@ -2,6 +2,8 @@
 /*  System Setting Initialization               */
 /* -------------------------------------------- */
 
+import SystemPaths from "./config/paths";
+
 export function LoadSystemSettings() {
     game.settings.register("ptu", "errata", {
         name: "PTU Errata",
@@ -164,7 +166,7 @@ export function LoadSystemSettings() {
         scope: "world",
         config: true,
         type: String,
-        default: "systems/ptu/assets/images/pokemon_sprites/",
+        default: `systems/${SystemPaths.systemId()}/assets/images/pokemon_sprites/`,
         filePicker: true,
         category: "general"
     });

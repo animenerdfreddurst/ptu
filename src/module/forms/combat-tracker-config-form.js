@@ -1,4 +1,4 @@
-import { log } from "../../main.js";
+import SystemPaths from "../config/paths";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -10,7 +10,7 @@ import { log } from "../../main.js";
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["ptu", "combat", "settings"],
-      template: "systems/ptu/templates/forms/combat-settings.hbs",
+      template: `systems/${SystemPaths.systemId()}/templates/forms/combat-settings.hbs`,
       width: 600,
       //height: 800,
       title: "PTU Combat Settings"

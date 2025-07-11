@@ -1,10 +1,6 @@
-import CustomSpeciesFolder from "../entities/custom-species-folder.js"
-import initStore from "../api/front-end/cseStore.js";
-import TypeList from "../api/front-end/components/typeList.js";
-import { log, debug } from "../../main.js";
-import NewMonComponent from "../api/front-end/components/newMonComponent.js";
-import CseDragAndDropList from "../api/front-end/components/cse-dad-list.js";
+import { log} from "../../main.js";
 import { InitCustomTypings } from "../custom-typings.js";
+import SystemPaths from "../config/paths.js";
 
 /**
  * Extend the basic FormApplication with some very simple modifications
@@ -16,7 +12,7 @@ export class PTUCustomTypingEditor extends FormApplication {
     static get defaultOptions() {
       return mergeObject(super.defaultOptions, {
         classes: ["ptu", "cte", "pokemon"],
-        template: "systems/ptu/templates/forms/cte.hbs",
+        template: `systems/${SystemPaths.systemId()}/templates/forms/cte.hbs`,
         width: 950,
         height: 1000,
         title: "Custom Typing Editor",

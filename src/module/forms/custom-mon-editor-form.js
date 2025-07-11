@@ -1,6 +1,7 @@
 import {BlankPTUSpecies} from "../data/species-template.js"
 import CustomSpeciesFolder from "../entities/custom-species-folder.js"
 import { log } from "../../main.js";
+import SystemPaths from "../config/paths.js";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -12,7 +13,7 @@ export class PTUCustomMonEditor extends FormApplication {
     static get defaultOptions() {
       return mergeObject(super.defaultOptions, {
         classes: ["ptu", "custom-species-editor", "mon-editor", "pokemon"],
-        template: "systems/ptu/templates/forms/custom-mon-editor.hbs",
+        template: `systems/${SystemPaths.systemId()}/templates/forms/custom-mon-editor.hbs`,
         width: 800,
         height: 550,
         title: this.object ? `Editing ${this.object.id}` : "Creating Custom Species",
@@ -52,7 +53,7 @@ export class PTUCustomMonEditor extends FormApplication {
       let journalEntry = CustomSpeciesFolder.findEntry(this.object);
       if(journalEntry === undefined) journalEntry = CustomSpeciesFolder.findEntry(this.object.ptuNumber);
       if(journalEntry === undefined) {
-        log("No entry found for " + this.object.id + " creating new entry");
+        log(`No entry found for ${this.object.id}creating new entry`);
         await JournalEntry.create({name: this.object.ptuNumber, content: JSON.stringify(this.object), folder: CustomSpeciesFolder._dirId})
       } else {
         await journalEntry.update({content: JSON.stringify(this.object)});

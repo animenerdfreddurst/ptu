@@ -1,7 +1,7 @@
 import Component from '../../api/front-end/lib/component.js';
 import { sendMoveMessage } from '../../actor/pokemon-sheet-gen8.js'
-import { PrepareMoveData } from '../../../main.js';
 import { CoatIcon, FullActionIcon, ShiftActionIcon, BlastIcon, BlessingIcon, BurstIcon, LineIcon, MeleeIcon, SelfIcon, RangeIcon, TriggerIcon, FieldIcon, SwiftActionIcon, HealingIcon, FriendlyIcon, SonicIcon, InterruptIcon, ShieldIcon, SocialIcon, FiveStrikeIcon, DoubleStrikeIcon, GroundsourceIcon, SmiteIcon, ExhaustIcon, PassIcon, SetupIcon, IllusionIcon } from '../constants.js';
+import SystemPaths from '../../config/paths.js';
 
 export default class MovesList extends Component {
     constructor(store) {
@@ -53,7 +53,7 @@ export default class MovesList extends Component {
 
         let output = "";
         if(this.state.moves.length > 0)
-            output += "<img class='divider-image' src='systems/ptu/assets/images/icons/DividerIcon_Moves.png' style='border:none; width:200px;'>"
+            output += `<img class='divider-image' src='systems/${SystemPaths.systemId()}/assets/images/icons/DividerIcon_Moves.png' style='border:none; width:200px;'>`
 
         for (const move of this.state.moves.sort(this._sort) ?? []) {
             // Move data is prepared on a duplicate entry, otherwise the preperation data will be flagged as 
@@ -126,7 +126,7 @@ export default class MovesList extends Component {
                     
                 }
 
-            const moveHtml = await renderTemplate('/systems/ptu/templates/sidebar/components/moves-component.hbs', moveData);
+            const moveHtml = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/sidebar/components/moves-component.hbs`, moveData);
             output += moveHtml;
         }
 

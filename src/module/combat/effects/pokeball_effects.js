@@ -1,19 +1,19 @@
-import { debug, log } from "../../../main.js";
 import { PlayMissDodgeAnimation, PlayHitShakeAnimation } from "./move_animations.js";
 import { RollCaptureChance, applyCapture } from "../../utils/pokeball-capture-calculations.js"
 import { timeout, capitalizeFirstLetter } from "../../utils/generic-helpers.js";
+import SystemPaths from "../../config/paths.js";
 
 export const pokeball_sound_paths = {
-    "miss": "systems/ptu/assets/sounds/pokeball_sounds/pokeball_miss.mp3",
-    "hit": "systems/ptu/assets/sounds/pokeball_sounds/pokeball_hit.mp3",
-    "wiggle": "systems/ptu/assets/sounds/pokeball_sounds/pokeball_escape_attempt.mp3",
-    "capture_attempt": "systems/ptu/assets/sounds/pokeball_sounds/pokeball_catch_attempt.mp3",
-    "capture_success": "systems/ptu/assets/sounds/pokeball_sounds/pokeball_catch_confirmed.mp3",
-    "capture_jingle": "systems/ptu/assets/sounds/pokeball_sounds/pokeball_success_jingle.wav",
-    "menu_open": "systems/ptu/assets/sounds/pokeball_sounds/pokeball_grow.mp3",
-    "menu_close": "systems/ptu/assets/sounds/pokeball_sounds/pokeball_shrink.mp3",
-    "return": "systems/ptu/assets/sounds/pokeball_sounds/pokeball_return.mp3",
-    "release": "systems/ptu/assets/sounds/pokeball_sounds/pokeball_release.mp3",
+    "miss": `systems/${SystemPaths.systemId()}/assets/sounds/pokeball_sounds/pokeball_miss.mp3`,
+    "hit": `systems/${SystemPaths.systemId()}/assets/sounds/pokeball_sounds/pokeball_hit.mp3`,
+    "wiggle": `systems/${SystemPaths.systemId()}/assets/sounds/pokeball_sounds/pokeball_escape_attempt.mp3`,
+    "capture_attempt": `systems/${SystemPaths.systemId()}/assets/sounds/pokeball_sounds/pokeball_catch_attempt.mp3`,
+    "capture_success": `systems/${SystemPaths.systemId()}/assets/sounds/pokeball_sounds/pokeball_catch_confirmed.mp3`,
+    "capture_jingle": `systems/${SystemPaths.systemId()}/assets/sounds/pokeball_sounds/pokeball_success_jingle.wav`,
+    "menu_open": `systems/${SystemPaths.systemId()}/assets/sounds/pokeball_sounds/pokeball_grow.mp3`,
+    "menu_close": `systems/${SystemPaths.systemId()}/assets/sounds/pokeball_sounds/pokeball_shrink.mp3`,
+    "return": `systems/${SystemPaths.systemId()}/assets/sounds/pokeball_sounds/pokeball_return.mp3`,
+    "release": `systems/${SystemPaths.systemId()}/assets/sounds/pokeball_sounds/pokeball_release.mp3`,
 };
 
 const pokeball_return_beam_FX_path = "modules/jb2a_patreon/Library/Generic/Energy/EnergyBeam_02_Regular_Red_30ft_1600x400.webm";
@@ -305,7 +305,7 @@ export async function ThrowPokeball(thrower, target, pokeball) {
     ui.notifications.info("Removed 1 quantity from Pokeball in inventory.")
     pokeball.update({"system.quantity": Number(duplicate(pokeball.system.quantity)) - 1});
 
-    const POKEBALL_IMAGE_PATH = pokeball?.img ?? "systems/ptu/assets/images/item_icons/basic ball.webp";
+    const POKEBALL_IMAGE_PATH = pokeball?.img ?? `systems/${SystemPaths.systemId()}/assets/images/item_icons/basic ball.webp`;
 
     let accuracyBonus = thrower?.data?.data?.modifiers?.acBonus?.total ?? 0;
     // The only thing I know of that gives a bonus would be Tools of the Trade, +2AC
@@ -459,7 +459,7 @@ export async function PlayReleaseOwnedPokemonAnimation(token) {
     let actor = game.actors.get(tokenData.actorId);
     if(actor.type != "pokemon") {return false}
     
-    let item_icon_path = "systems/ptu/assets/images/item_icons/"
+    let item_icon_path = `systems/${SystemPaths.systemId()}/assets/images/item_icons/`
     let pokeball = (actor?.data?.data?.pokeball.toLowerCase()) ?? "basic ball";
     if(pokeball == "") { pokeball = "basic ball"; }
 

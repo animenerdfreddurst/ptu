@@ -1,4 +1,4 @@
-import {LATEST_VERSION} from '../../main.js'
+import SystemPaths from "../config/paths";
 
 /**
  * Extend the basic ActorSheet with some very simple modifications
@@ -10,7 +10,7 @@ export class ChangeLog extends FormApplication {
   static get defaultOptions() {
     return mergeObject(super.defaultOptions, {
       classes: ["ptu", "changelog"],
-      template: "systems/ptu/templates/forms/changelog.hbs",
+      template: `systems/${SystemPaths.systemId()}/templates/forms/changelog.hbs`,
       width: 600,
       height: 800,
       title: "Changelog - Latest News!"

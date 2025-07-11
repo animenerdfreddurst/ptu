@@ -1,4 +1,4 @@
-import { debug } from "../../main.js";
+import SystemPaths from "../config/paths";
 
 export const PTUSettingCategories = [
     {id: "general", label: "General", icon: "fas fa-cogs"},
@@ -16,7 +16,7 @@ export class PTUSettings extends FormApplication {
     static get defaultOptions() {
         return mergeObject(super.defaultOptions, {
             classes: ["ptu", "settings"],
-            template: "systems/ptu/templates/forms/settings.hbs",
+            template: `systems/${SystemPaths.systemId()}/templates/forms/settings.hbs`,
             width: 800,
             height: "auto",
             title: "PTU Settings",

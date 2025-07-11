@@ -2,6 +2,7 @@ import { debug } from '../../../../main.js';
 import Component from '../lib/component.js';
 import { GetSpeciesData } from '../../../actor/actor.js';
 import { capitalizeFirstLetter } from '../../../utils/generic-helpers.js';
+import SystemPaths from '../../../config/paths.js';
 
 export default class monStatBlockComponent extends Component {
     constructor(store, element) {
@@ -65,7 +66,7 @@ export default class monStatBlockComponent extends Component {
             stats[stat].newLevelUp = stats[stat].newLevelUp ? stats[stat].newLevelUp : 0; 
         }
 
-        content = await renderTemplate("/systems/ptu/templates/partials/levelUp/stat-block-partial.hbs", {isEvolving, evolution: this.state.evolving.into, stats, nature})
+        content = await renderTemplate(`/systems/${SystemPaths.systemId()}/templates/partials/levelUp/stat-block-partial.hbs`, {isEvolving, evolution: this.state.evolving.into, stats, nature})
 
         //level up points
         const levelUpPoints = `
