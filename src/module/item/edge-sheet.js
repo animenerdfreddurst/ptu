@@ -12,7 +12,7 @@ export class PTUEdgeSheet extends ItemSheet {
     return mergeObject(super.defaultOptions, {
       classes: ["ptu", "sheet", "item", "edge"],
       width: 750,
-      height: 550,
+      // height: 550,
       tabs: [{ navSelector: ".sheet-tabs", contentSelector: ".sheet-body", initial: "description" }]
     });
   }

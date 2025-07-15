@@ -17,7 +17,7 @@ export class PTUItemSheet extends ItemSheet {
 		return mergeObject(super.defaultOptions, {
 			classes: ['ptu', 'sheet', 'item'],
 			width: 750,
-			height: 550,
+			// height: 550,
 			tabs: [
 				{
 					navSelector: '.sheet-tabs',
