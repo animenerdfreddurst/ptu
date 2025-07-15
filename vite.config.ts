@@ -47,7 +47,7 @@ const config: UserConfig = {
             configureServer(server) {
                 // Watch for changes in templates and reload
                 const { watcher } = server
-                watcher.add(['static/templates/**/*.hbs'])
+                watcher.add(['static/templates/**/*.hbs', 'src/**/*.js'])
             },
             handleHotUpdate(ctx) {
                 // Trigger reload for template files
@@ -57,6 +57,7 @@ const config: UserConfig = {
                     })
                     return []
                 }
+                return undefined
             },
         },
     ],
