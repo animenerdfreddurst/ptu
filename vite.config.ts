@@ -1,6 +1,10 @@
-import type { UserConfig } from 'vite'
+import type { HmrContext, UserConfig } from 'vite'
 import path from 'path'
 import fs from 'fs-extra'
+
+interface HmrContextExtended extends HmrContext {
+    type: string
+}
 
 const config: UserConfig = {
     root: 'src/',
@@ -51,7 +55,8 @@ const config: UserConfig = {
                 const { watcher } = server
                 watcher.add(['static/templates/**/*.hbs'])
             },
-            handleHotUpdate(context) {
+            handleHotUpdate(ctx) {
+                const context = ctx as HmrContextExtended
                 const staticDir = path.resolve(__dirname, 'static')
                 const distDir = path.resolve(__dirname, 'dist')
 
@@ -84,10 +89,8 @@ const config: UserConfig = {
                     // context.server.ws.send({
                     // type: 'full-reload',
                     // })
-
-                    return undefined
                 }
-                return undefined
+                return undefined // let vite handle things as usual
             },
         },
     ],
