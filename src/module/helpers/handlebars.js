@@ -203,7 +203,17 @@ export function registerHandlebars() {
     Handlebars.registerHelper("isGm", function () {
       return game.user.isGM;
     })
-  
+    
+    /**
+     * use to search arrays for a specific property matching a value and return a different property
+     * ex. search owners array for a specific id matching PTUActor._id and return the actors name
+     *  {{findByProperty owners "_id" data.owner "name"}}
+     */
+    Handlebars.registerHelper("findByProperty", (array, searchProperty, searchValue, returnProperty) => {
+      const result = array.find((player) => player[searchProperty] === searchValue)
+      return result ? result[returnProperty] : null
+    })
+
     Handlebars.registerHelper("ld", function (key, value) {
       return { hash: { [key]: value } };
     })
