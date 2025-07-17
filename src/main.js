@@ -1104,11 +1104,12 @@ Hooks.on("renderTokenHUD", (app, html, data) => {
 });
 
 function changeValue(newValue = null, oldValue) {
-  console.log(`in function changeValue: newValue = ${newValue} and oldValue = ${oldValue}`)
-  console.log(typeof newValue)
+  //FIXME
+  // console.log(`in function changeValue: newValue = ${newValue} and oldValue = ${oldValue}`)
+  // console.log(typeof newValue)
   if (!newValue || newValue === undefined) return oldValue;
 
-  const operator = typeof newValue === string ? newValue.substring(0, 2) : null;
+  const operator = newValue.substring(0, 2)
   const amountStr =
     operator === "++" || operator === "--" ? newValue.substring(2) : newValue;
   const amount = parseInt(amountStr);
