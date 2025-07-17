@@ -8,9 +8,10 @@
     "build-watch": "vite build --watch"
   },
   "devDependencies": {
-    "@types/node": "^24.0.10",
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^24.0.14",
     "fs-extra": "^11.3.0",
     "prettier": "^3.6.2",
-    "vite": "^7.0.2"
+    "vite": "^7.0.4"
   }
 }
