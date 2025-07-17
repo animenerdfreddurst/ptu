@@ -249,6 +249,17 @@ export const ptu = {
   },
 };
 
+//FIXME
+//testing
+if (import.meta.hot) {
+    console.log('HMR via vite is enabled and connected');
+    import.meta.hot.accept(() => {
+        console.log('HMR update received');
+    });
+} else {
+    console.warn('HMR via Vite is NOT enabled');
+}
+
 /* -------------------------------------------- */
 /*  Foundry VTT Initialization                  */
 /* -------------------------------------------- */
@@ -1093,9 +1104,11 @@ Hooks.on("renderTokenHUD", (app, html, data) => {
 });
 
 function changeValue(newValue = null, oldValue) {
+  console.log(`in function changeValue: newValue = ${newValue} and oldValue = ${oldValue}`)
+  console.log(typeof newValue)
   if (!newValue || newValue === undefined) return oldValue;
 
-  const operator = newValue.substring(0, 2);
+  const operator = typeof newValue === string ? newValue.substring(0, 2) : null;
   const amountStr =
     operator === "++" || operator === "--" ? newValue.substring(2) : newValue;
   const amount = parseInt(amountStr);
@@ -1111,9 +1124,14 @@ function changeValue(newValue = null, oldValue) {
 Hooks.on("preUpdateActor", async (oldActor, changes, options, sender) => {
   //exp
   changes.system.level.exp = changeValue(
-    changes.system?.level?.exp,
+    changes.system?.level?.exp, 
     oldActor.system.level.exp
   );
+  //BUG duplicate of above?
+  // changes.system.level.exp = changeValue(
+  //   changes.system?.level?.exp,
+  //   oldActor.system.level.exp
+  // );
 
   //milestones
   changes.system.level.milestones = changeValue(
