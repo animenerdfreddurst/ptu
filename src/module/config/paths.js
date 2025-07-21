@@ -1,4 +1,5 @@
 //TODO look over and implement
+//FIXME remove use of path
 import path from 'path'
 
 /**
