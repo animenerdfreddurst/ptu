@@ -32,6 +32,7 @@ export default class MenuComponent extends Component {
 
         const dividerIcon = `<img class='divider-image' src='systems/ptu/assets/images/icons/Divider.png' style='border:none; width:200px;'>`
         let output = dividerIcon
+        // output += `<p>This actor is a: ${this.state.actor.type}</p>` //For debugging only
 
         switch (this.state.menuOption) {
             case 'struggle':
@@ -61,7 +62,10 @@ export default class MenuComponent extends Component {
                 const maneuverObjects = await game.packs
                     .get('ptu.maneuvers')
                     .getDocuments()
-                const sortedManeuverObjects = maneuverObjects.sort((a, b) => {
+                // sort maneuvers by name
+                const sortedManeuverObjects = maneuverObjects
+                .filter((maneuver) => this.state.actor.type === 'pokemon' ? maneuver.system.origin.includes('Pokemon') : true)
+                .sort((a, b) => {
                     const nameA = a.name.toUpperCase() // ignore case
                     const nameB = b.name.toUpperCase() // ignore case
                     if (nameA < nameB) {
