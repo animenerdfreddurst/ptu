@@ -433,7 +433,7 @@ export function LoadSystemSettings() {
         scope: "world",
         config: true,
         type: String,
-        default: "pokemon_sounds/",
+        default: "assets/sounds/pokemon_sounds/",
         filePicker: true,
         category: "other"
     });
