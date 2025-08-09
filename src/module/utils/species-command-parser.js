@@ -1,5 +1,5 @@
 import { debug, log } from '../../main.js'
-import { getRandomIntInclusive, lpad } from './generic-helpers.js'
+import { getRandomIntInclusive, getRandomNormIntInclusive, lpad } from './generic-helpers.js'
 import {
     GetOrCacheAbilities,
     GetOrCacheCapabilities,
@@ -1435,38 +1435,33 @@ Hooks.on('dropCanvasData', async (canvas, update) => {
         ).render(true)
 })
 
-export async function FinishDexDragPokemonCreation(formData, update) {
+export async function FinishDexDragPokemonCreation(formData, update) { 
     const imgSrc = game.settings.get('ptu', 'defaultPokemonImageDirectory')
-    let species_name = update['item'].name
+    let speciesName = update.item.name
 
-    let drop_coordinates_x = update['x']
-    let drop_coordinates_y = update['y']
+    let dropCoordinatesX = update.x
+    let dropCoordinatesY = update.y
 
-    let level = parseInt(formData['data.level'])
-    // .replace(",", ".") for common notation, as parseFloat expects a decimal point
-    let shiny_chance = parseFloat(
-        formData['data.shiny_chance'].replace(',', '.')
-    )
-    let stat_randomness = parseInt(formData['data.stat_randomness'])
-    let prevent_evolution = Number(formData['data.prevent_evolution'])
+    const level = getRandomNormIntInclusive(formData.levelMin, formData.levelMax)
 
-    let new_actor = await game.ptu.utils.generator.ActorGenerator.Create({
+    let newActor = await game.ptu.utils.generator.ActorGenerator.Create({
         exists: false,
-        species: species_name,
+        species: speciesName,
         exp: game.ptu.data.levelProgression[level],
         folder: game.scenes.current.name,
-        shiny_chance: shiny_chance,
-        stat_randomness: stat_randomness,
-        prevent_evolution: prevent_evolution,
-    })
+        shiny_chance: formData.shinyChance,
+        stat_randomness: formData.statRandomness,
+        prevent_evolution: formData.preventEvolution,
+        genderRatioMale: formData.genderRatio
+    })  
 
-    const protoToken = duplicate(new_actor.prototypeToken)
+    const protoToken = duplicate(newActor.prototypeToken)
 
-    let size = game.ptu.utils.species.get(new_actor.system.species)[
+    const size = game.ptu.utils.species.get(newActor.system.species)[
         'Size Class'
     ]
 
-    let size_categories = {
+    const sizes = {
         Small: { width: 1, height: 1 },
         Medium: { width: 1, height: 1 },
         Large: { width: 2, height: 2 },
@@ -1474,41 +1469,42 @@ export async function FinishDexDragPokemonCreation(formData, update) {
         Gigantic: { width: 4, height: 4 },
     }
 
-    protoToken.width = size_categories[size]['width']
-    protoToken.height = size_categories[size]['height']
+    protoToken.width = sizes[size].width
+    protoToken.height = sizes[size].height
     protoToken.actorLink = true
     protoToken.displayBars = 20
     protoToken.displayName = 40
     protoToken.bar1.attribute = 'health'
 
     protoToken.img = await GetSpeciesArt(
-        game.ptu.utils.species.get(new_actor.system.species),
+        game.ptu.utils.species.get(newActor.system.species),
         imgSrc,
         '.webp',
-        new_actor.system.shiny,
+        newActor.system.shiny,
         true,
-        new_actor.system.gender.toLowerCase().includes('female')
+        newActor.system.gender.toLowerCase().includes('female')
     )
 
-    new_actor = await new_actor.update({ prototypeToken: protoToken })
+    newActor = await newActor.update({ prototypeToken: protoToken })
 
     protoToken.x =
-        Math.floor(drop_coordinates_x / game.scenes.viewed.grid.size) *
+        Math.floor(dropCoordinatesX / game.scenes.viewed.grid.size) *
         game.scenes.viewed.grid.size
     protoToken.y =
-        Math.floor(drop_coordinates_y / game.scenes.viewed.grid.size) *
+        Math.floor(dropCoordinatesY / game.scenes.viewed.grid.size) *
         game.scenes.viewed.grid.size
 
-    const tokenData = await new_actor.getTokenDocument(protoToken)
-    let placedTokenData = await game.scenes.viewed.createEmbeddedDocuments(
+    const tokenData = await newActor.getTokenDocument(protoToken)
+    const placedTokenData = await game.scenes.viewed.createEmbeddedDocuments(
         'Token',
         [tokenData]
     )
 
-    let currentSpecies = game.ptu.utils.species.get(
-        new_actor.system.species
-    )._id
-    game.ptu.utils.species.playCry(currentSpecies)
+    //TODO add pokemon sounds
+    // const currentSpecies = game.ptu.utils.species.get(
+    //     new_actor.system.species
+    // )._id
+    // game.ptu.utils.species.playCry(currentSpecies)
 
     return placedTokenData
 }
