@@ -1,23 +1,20 @@
 {
-  "name": "ptu",
-  "version": "1.0.0",
-  "description": "CSS compiler for the ptu system",
   "scripts": {
-    "build": "gulp",
-    "compile": "gulp css",
-    "watch": "gulp",
-    "gulp": "gulp"
+    "dev": "vite serve",
+    "build": "vite build",
+    "preview": "vite preview",
+    "link-system": "node scripts/make_foundry_symlink.js",
+    "dev-setup": "npm run build && npm run link-system",
+    "build-watch": "vite build --watch"
   },
-  "browserslist": [
-    "last 3 versions"
-  ],
-  "author": "John Doe",
-  "license": "MIT",
-  "private": true,
+  "devDependencies": {
+    "@types/fs-extra": "^11.0.4",
+    "@types/node": "^24.0.14",
+    "fs-extra": "^11.3.0",
+    "prettier": "^3.6.2",
+    "vite": "^7.0.4"
+  },
   "dependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.1",
-    "gulp-sass": "^4.1.0",
-    "gulp-sourcemaps": "^2.6.5"
+    "@inquirer/prompts": "^7.8.0"
   }
 }
