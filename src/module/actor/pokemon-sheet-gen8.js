@@ -136,7 +136,8 @@ export class PTUGen8PokemonSheet extends ActorSheet {
 	_getHeaderButtons() {
 		let buttons = super._getHeaderButtons();
 
-		if (this.actor.isOwner) {
+		// charactermancer are notes should be GM only
+		if (game.user.isGM) {
 			buttons.unshift({
 				label: "Charactermancer",
 				class: "open-charactermancer",

@@ -55,7 +55,7 @@ export class PTUGen8CharacterSheet extends ActorSheet {
     _getHeaderButtons() {
         let buttons = super._getHeaderButtons()
 
-        if (this.actor.isOwner) {
+        if (game.user.isGM) {
             buttons.unshift({
                 label: 'Notes',
                 class: 'open-notes',
