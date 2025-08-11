@@ -125,9 +125,9 @@
   "primaryTokenAttribute": "health",
   "secondaryTokenAttribute": "exp",
   "url": "https://github.com/animenerdfreddurst/ptu",
-  "manifest": "",
+  "manifest": "https://github.com/animenerdfreddurst/ptu/releases/download/v0.0.1/system.json",
   "changelog": "",
-  "download": "",
+  "download": "https://github.com/animenerdfreddurst/ptu/releases/download/v0.0.1/ptu.zip",
   "initiative": "",
   "license": "LICENSE.md"
 }
