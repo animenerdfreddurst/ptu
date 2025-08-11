@@ -18,7 +18,8 @@ If you just want to use the system in your Foundry game:
 
 1. **Install from Release**:  
 Import this manifest into Foundry:  
-[Release v0.0.1](https://github.com/animenerdfreddurst/ptu/releases/tag/v0.0.1)
+[Release v0.0.1](https://github.com/animenerdfreddurst/ptu/releases/tag/v0.0.1)  
+[System.json link (for direct foundry install)](https://github.com/animenerdfreddurst/ptu/releases/download/v0.0.1/system.json)  
 
 2. **Install from Source**:  
 See build instructions below
