@@ -12,7 +12,7 @@ A modernized Pokemon Tabletop TTRPG system for FoundryVTT
 
 ## Quick Start
 
-### For Players/GMs (Just Using the System)
+### For GMs (Just Using the System)
 
 If you just want to use the system in your Foundry game:
 
