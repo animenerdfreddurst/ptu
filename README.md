@@ -30,7 +30,7 @@ See build instructions below
 #### Build from source
 When you just want the latest features.
 1. **Clone the repository**:  
-<U>Important:</U> You must clone this repo to somewhere other than your foundry systems folder. 
+**Important:** You must clone this repo to somewhere other than your foundry systems folder. 
 
     ```
     git clone https://github.com/animenerdfreddurst/ptu
@@ -52,7 +52,7 @@ Copy the contents of `dist/` into a folder named `ptu` and move this to your fou
 #### Development Setup
 For making changes and running a dev vite server. 
 1. **Clone the repository**:  
-<U>Important:</U> You must clone this repo to somewhere other than your foundry systems folder or step 3 will not work.  
+**Important:** You must clone this repo to somewhere other than your foundry systems folder or step 3 will not work.  
 
     ```
     git clone https://github.com/animenerdfreddurst/ptu
