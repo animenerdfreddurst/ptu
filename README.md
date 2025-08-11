@@ -1,6 +1,6 @@
 # PTU System - Pokemon Tabletop United
 
-(Soon to be Pokemon Carbon)
+(Eventually to be Pokemon Carbon)
 
 A modernized Pokemon Tabletop TTRPG system for FoundryVTT
 
@@ -16,28 +16,44 @@ A modernized Pokemon Tabletop TTRPG system for FoundryVTT
 
 If you just want to use the system in your Foundry game:
 
-1. **Install from Release**: Import this manifest into Foundry:
+1. **Install from Release**:  
+Import this manifest into Foundry:  
+[Release v0.0.1](ttps://github.com/animenerdfreddurst/ptu/releases/tag/v0.0.1)
 
-    ```
-    [Release manifest URL will go here when available]
-    ```
-
-2. **Install from Development**: For the latest features:
-    ```
-    [Development manifest URL will go here when available]
-    ```
+2. **Install from Source**:  
+See build instructions below
 
 ### For Developers
 
 #### Prerequisites
-
 - Node.js (version 16 or higher)
 - FoundryVTT installed locally
+#### Build from source
+When you just want the latest features.
+1. **Clone the repository**:  
+<U>Important:</U> You must clone this repo to somewhere other than your foundry systems folder. 
+
+    ```
+    git clone https://github.com/animenerdfreddurst/ptu
+    cd ptu
+    ```
+
+2. **Install dependencies**:
+    ```
+    npm install
+    ```
+3. **Build the System**
+This will build the complete system. The output will be in `dist/`.
+    ```
+    npm run build
+    ```
+4. **Add the System to Foundry VTT**  
+Copy the contents of `dist/` into a folder named `ptu` and move this to your foundry install systems folder (ex. `C:\Users\<UserName>\AppData\Local\FoundryVTT\Data\systems`). Start foundry VTT.  
 
 #### Development Setup
-
-1. **Clone the repository**:
-Important: You must clone this repo to somewhere other than your foundry systems folder or step 3 will not work.  
+For making changes and running a dev vite server. 
+1. **Clone the repository**:  
+<U>Important:</U> You must clone this repo to somewhere other than your foundry systems folder or step 3 will not work.  
 
     ```
     git clone https://github.com/animenerdfreddurst/ptu
@@ -50,24 +66,25 @@ Important: You must clone this repo to somewhere other than your foundry systems
     npm install
     ```
 
-<!-- 3. **Configure Foundry path**:  
-   Note: Skip this step if you're using the default foundry install locations  
-   Edit `scripts/make_foundry_symlink.js` to point to your Foundry VTT data directory (for your relevant platform) -->
-
 3. **Initial setup**:  
-    Builds the dist directory and symlinks it to your foundry systems folder  
+    Set up the dev environment:
 
     ```
     npm run dev-setup
     ```
-
+    This builds the system in `dist/` and creates a symlink from `dist` Foundry VTT systems folder.
 4. **Start development server**:
-    ```powershell
+    ```
     npm run dev
     ```
+    This starts the vite dev server at localhost:300001.
+
+5. **Start Foundry VTT**  
+    Access the vite dev server by going to localhost:30001 (instead of localhost:30000 for direct access to foundry). This url will direct all calls to the ptu system to the vite dev server, otherwise they will be passed to foundry.  
 
 ##### Notes
-- Use `npm run build` if you just want to build teh system and use it  
+- The dev setup utilizes vite to allow for a basic level of hot-reloading during development. CSS changes occur immediately, changes to any js files typically require a dev server restart (`r` followed by enter in the console running the dev server) and a page refresh, template changes (`*.hbs`) just require a page refresh. Changes to packs require a full restart of foundry and a page reload. Ideally this will be improved in future.
+- Use `npm run build` if you just want to build the system and use it  
 - DO NOT edit any files in `dist/`. Any edits you make here will be overwritten. To make changes edit the respective files in `src/` or `public/`.
 
 
@@ -136,7 +153,6 @@ Important: You must clone this repo to somewhere other than your foundry systems
     ```
     npm run build
     ```
-
 <!-- 2. **Test the build**:
 
     ```

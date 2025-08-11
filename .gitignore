@@ -12,6 +12,7 @@ foundry.js
 system.zip
 foundry-0.8.3.js
 dist
+release
 
 # macos
 .DS_Store
