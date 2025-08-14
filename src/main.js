@@ -1128,11 +1128,11 @@ Hooks.on("preUpdateActor", async (oldActor, changes, options, sender) => {
     changes.system?.level?.exp, 
     oldActor.system.level.exp
   );
-  //BUG duplicate of above?
-  // changes.system.level.exp = changeValue(
-  //   changes.system?.level?.exp,
-  //   oldActor.system.level.exp
-  // );
+
+  changes.system.level.trainingExp = changeValue(
+    changes.system?.level?.trainingExp,
+    oldActor.system.level.trainingExp
+  );
 
   //milestones
   changes.system.level.milestones = changeValue(

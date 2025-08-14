@@ -376,7 +376,8 @@
       "money": 0,
 
       "level": {
-        "miscexp": 0
+        "miscexp": 0,
+        "trainingExp": 0
       },
       "health": {
         "value": 42,

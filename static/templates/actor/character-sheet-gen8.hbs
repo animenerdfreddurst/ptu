@@ -132,15 +132,21 @@
                           <div class="col-sm-4">
                             <label for="system.level.miscexp">{{localize "PTU.LevelMiscExp"}}</label>
                           </div>
+                          {{!-- <div class="col-sm-4"> --}}
+                            {{!-- <label for="system.level.expbank">{{localize "PTU.LevelExpBank"}}</label> --}}
+                          {{!-- </div> --}}
                           <div class="col-sm-4">
-                            <label for="system.level.expbank">{{localize "PTU.LevelExpBank"}}</label>
+                            <label for="system.level.trainingExp">{{localize "PTU.LevelTrainingExp"}}</label>
                           </div>
                           {{else}}
                             <div class="col-sm-6">
                               <label for="system.level.miscexp">{{localize "PTU.LevelMiscExp"}}</label>
                             </div>
+                            {{!-- <div class="col-sm-6"> --}}
+                              {{!-- <label for="system.level.expbank">{{localize "PTU.LevelExpBank"}}</label> --}}
+                            {{!-- </div> --}}
                             <div class="col-sm-6">
-                              <label for="system.level.expbank">{{localize "PTU.LevelExpBank"}}</label>
+                              <label for="system.level.trainingExp">{{localize "PTU.LevelTrainingExp"}}</label>
                             </div>
                           {{/if}}
                         </div>
@@ -155,16 +161,35 @@
                             <div class="col-sm-4">
                               <input type="text" name="system.level.miscexp" value="{{data.level.miscexp}}" />
                             </div>
-                            <div class="col-sm-4">
-                              <input type="text" name="system.level.expbank" value="{{data.level.expbank}}"/>
-                            </div>
+                            {{!-- <div class="col-sm-4"> --}}
+                              {{!-- <input type="text" name="system.level.expbank" value="{{data.level.expbank}}"/> --}}
+                            {{!-- </div> --}}
+                            {{#if (isGm)}}
+                              <div class="col-sm-4">
+                                <input type="text" name="system.level.trainingExp" value="{{data.level.trainingExp}}"/>
+                              </div>
+                            {{else}}
+                              <div class="col-sm-4">
+                                <input type="text" name="system.level.trainingExp" value="{{data.level.trainingExp}}" disabled/>
+                              </div>
+                            {{/if}}
                             {{else}}
                               <div class="col-sm-6">
                                 <input type="text" name="system.level.miscexp" value="{{data.level.miscexp}}"/>
                               </div>
-                              <div class="col-sm-6">
+                              {{!-- <div class="col-sm-6"> --}}
                                 <!--input type="text" name="system.level.expbank" value="{{data.level.expbank}}"/-->
+                              {{!-- </div> --}}
+                              {{#if (isGm)}}
+                              <div class="col-sm-6">
+                                <input type="text" name="system.level.trainingExp" value="{{data.level.trainingExp}}"/>
                               </div>
+                              {{else}}
+                              <div class="col-sm-6">
+                                <input type="text" name="system.level.trainingExp" value="{{data.level.trainingExp}}" disabled/>
+                              </div>
+                              {{/if}}
+                              
                             {{/if}}
                           </div>
                         </div>

@@ -47,7 +47,7 @@ export class PTUGen8CharacterSheet extends ActorSheet {
         )
         data.data = this.actor.system
         // data['origins'] = this.actor.origins;
-
+        if (game.settings.showDebugInfo) console.log(data)
         return data
     }
 

@@ -556,16 +556,18 @@ export class PTUActor extends Actor {
     // Use Data
 
     if (dexExpEnabled) {
-      data.level.dexexp = actorData.items.filter(
-        (x) => x.type == "dexentry" && x.system.owned
-      ).length;
-      data.level.current =
-        Math.trunc((data.level.dexexp + data.level.miscexp) / 10) + 1 > 50
-          ? 50
-          : Math.trunc((data.level.dexexp + data.level.miscexp) / 10) + 1;
+        data.level.dexexp = actorData.items.filter(
+            (x) => x.type == 'dexentry' && x.system.owned
+        ).length
+        data.level.current =
+            Math.trunc((data.level.dexexp + data.level.miscexp) / 10) + 1 > 50
+                ? 50
+                : Math.trunc((data.level.dexexp + data.level.miscexp) / 10) + 1
     } else {
-      data.level.current =
-        Math.trunc(data.level.miscexp / 10) + 1 > 50 ? 50 : Math.trunc(data.level.miscexp / 10) + 1;
+        data.level.current =
+            Math.trunc(data.level.miscexp / 10) + 1 > 50
+                ? 50
+                : Math.trunc(data.level.miscexp / 10) + 1
     }
 
     data.levelUpPoints = data.level.current + data.modifiers.statPoints.total + 9;

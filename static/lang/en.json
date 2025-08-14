@@ -182,6 +182,8 @@
     "PTU.LevelExpBank" : "Exp Bank",
     "PTU.LevelDexExp" : "Dex Exp",
     "PTU.LevelMiscExp" : "Trainer Exp",
+    "PTU.LevelTrainingExp" : "Training Exp",
+
 
     "PTU.Money": "Money",
     "PTU.ItemCategories": "Bag Pouches",
