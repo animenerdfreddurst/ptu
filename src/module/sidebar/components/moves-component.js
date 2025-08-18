@@ -239,9 +239,9 @@ export default class MovesList extends Component {
                 case range.includes("interrupt"): return InterruptIcon;
                 case range.includes("shield"): return ShieldIcon;
                 case range.includes("social"): return SocialIcon;
-                case range.includes("five strike"): 
+                case range.includes("five strike"): return FiveStrikeIcon;
                 case range.includes("fivestrike"): return FiveStrikeIcon;
-                case range.includes("double strike"): 
+                case range.includes("double strike"): return DoubleStrikeIcon;
                 case range.includes("doublestrike"): return DoubleStrikeIcon;
                 case range.includes("groundsource"): return GroundsourceIcon;
                 case range.includes("smite"): return SmiteIcon;
