@@ -10487,7 +10487,7 @@ export const pokemonData = [
                 "Limber"
             ],
             "Advanced":[
-                "Sprint",
+                "Sprinter",
                 "Tangled Feet"
             ],
             "High":[
@@ -10692,7 +10692,7 @@ export const pokemonData = [
                 "Limber"
             ],
             "Advanced":[
-                "Sprint",
+                "Sprinter",
                 "Tangled Feet"
             ],
             "High":[
@@ -10887,7 +10887,7 @@ export const pokemonData = [
                 "Limber"
             ],
             "Advanced":[
-                "Sprint",
+                "Sprinter",
                 "Tangled Feet"
             ],
             "High":[
@@ -22287,7 +22287,7 @@ export const pokemonData = [
             ],
             "Advanced":[
                 "Lightning Rod",
-                "Sprint"
+                "Sprinter"
             ],
             "High":[
                 "Sequence"
@@ -22503,7 +22503,7 @@ export const pokemonData = [
             ],
             "Advanced":[
                 "Lightning Rod",
-                "Sprint"
+                "Sprinter"
             ],
             "High":[
                 "Sequence"
@@ -22751,7 +22751,7 @@ export const pokemonData = [
             ],
             "Advanced":[
                 "Lightning Rod",
-                "Sprint"
+                "Sprinter"
             ],
             "High":[
                 "Electric Surge"
@@ -77262,7 +77262,7 @@ export const pokemonData = [
                 "Lightning Rod"
             ],
             "Advanced":[
-                "Sprint",
+                "Sprinter",
                 "Static"
             ],
             "High":[
@@ -77693,7 +77693,7 @@ export const pokemonData = [
                 "Motor Drive"
             ],
             "Advanced":[
-                "Sprint",
+                "Sprinter",
                 "Run Away"
             ],
             "High":[
@@ -77901,7 +77901,7 @@ export const pokemonData = [
                 "Motor Drive"
             ],
             "Advanced":[
-                "Sprint",
+                "Sprinter",
                 "Run Away"
             ],
             "High":[
@@ -83781,7 +83781,7 @@ export const pokemonData = [
             ],
             "Advanced":[
                 "Celebrate",
-                "Sprint"
+                "Sprinter"
             ],
             "High":[
                 "Prankster"
@@ -84244,7 +84244,7 @@ export const pokemonData = [
             ],
             "Advanced":[
                 "Combo Striker",
-                "Sprint"
+                "Sprinter"
             ],
             "High":[
                 "Reckless"
@@ -84479,7 +84479,7 @@ export const pokemonData = [
             ],
             "Advanced":[
                 "Combo Striker",
-                "Sprint"
+                "Sprinter"
             ],
             "High":[
                 "Reckless"
@@ -86574,7 +86574,7 @@ export const pokemonData = [
             ],
             "Advanced":[
                 "Flame Body",
-                "Sprint"
+                "Sprinter"
             ],
             "High":[
                 "Vanguard"
@@ -86790,7 +86790,7 @@ export const pokemonData = [
             ],
             "Advanced":[
                 "Flame Body",
-                "Sprint"
+                "Sprinter"
             ],
             "High":[
                 "Vanguard"
@@ -113529,7 +113529,7 @@ export const pokemonData = [
             ],
             "Advanced":[
                 "Quick Feet",
-                "Sprint"
+                "Sprinter"
             ],
             "High":[
                 "Tough Claws"
@@ -113765,7 +113765,7 @@ export const pokemonData = [
             ],
             "Advanced":[
                 "Quick Feet",
-                "Sprint"
+                "Sprinter"
             ],
             "High":[
                 "Tough Claws"
@@ -150868,7 +150868,7 @@ export const pokemonData = [
                 "Pickup"
             ],
             "Advanced":[
-                "Sprint",
+                "Sprinter",
                 "Decoy"
             ],
             "High":[
@@ -167357,7 +167357,7 @@ export const pokemonData = [
         "Abilities":{
             "Basic":[
                 "Run Away",
-                "Sprint"
+                "Sprinter"
             ],
             "Advanced":[
                 "Last Chance",
@@ -167837,7 +167837,7 @@ export const pokemonData = [
         "Abilities":{
             "Basic":[
                 "Volt Absorb",
-                "Sprint"
+                "Sprinter"
             ],
             "Advanced":[
                 "Type Aura (Electric)",
@@ -175468,7 +175468,7 @@ export const pokemonData = [
             ],
             "Advanced":[
                 "Quick Feet",
-                "Sprint"
+                "Sprinter"
             ],
             "High":[
                 "Tough Claws"
@@ -175691,7 +175691,7 @@ export const pokemonData = [
             ],
             "Advanced":[
                 "Quick Feet",
-                "Sprint"
+                "Sprinter"
             ],
             "High":[
                 "Tough Claws"
@@ -175918,7 +175918,7 @@ export const pokemonData = [
             ],
             "Advanced":[
                 "Defiant",
-                "Sprint"
+                "Sprinter"
             ],
             "High":[
                 "Tough Claws"
@@ -179791,7 +179791,7 @@ export const pokemonData = [
             ],
             "Advanced":[
                 "Sheer Force",
-                "Sprint"
+                "Sprinter"
             ],
             "High":[
                 "No Guard"
@@ -180015,7 +180015,7 @@ export const pokemonData = [
             ],
             "Advanced":[
                 "Sheer Force",
-                "Sprint"
+                "Sprinter"
             ],
             "High":[
                 "No Guard"
@@ -181611,7 +181611,7 @@ export const pokemonData = [
         ],
         "Abilities":{
             "Basic":[
-                "Sprint",
+                "Sprinter",
                 "Hyper Cutter"
             ],
             "Advanced":[
@@ -181834,7 +181834,7 @@ export const pokemonData = [
         ],
         "Abilities":{
             "Basic":[
-                "Sprint",
+                "Sprinter",
                 "Hyper Cutter"
             ],
             "Advanced":[
@@ -190682,7 +190682,7 @@ export const pokemonData = [
                 "Inner Focus"
             ],
             "Advanced":[
-                "Sprint",
+                "Sprinter",
                 "Run Away"
             ],
             "High":[
@@ -190896,7 +190896,7 @@ export const pokemonData = [
                 "Inner Focus"
             ],
             "Advanced":[
-                "Sprint",
+                "Sprinter",
                 "Run Away"
             ],
             "High":[
@@ -191110,7 +191110,7 @@ export const pokemonData = [
                 "Inner Focus"
             ],
             "Advanced":[
-                "Sprint",
+                "Sprinter",
                 "Run Away"
             ],
             "High":[
@@ -199103,7 +199103,7 @@ export const pokemonData = [
                 "Justified"
             ],
             "Advanced":[
-                "Sprint",
+                "Sprinter",
                 "Inner Focus",
                 "Discipline"
             ],
@@ -199315,7 +199315,7 @@ export const pokemonData = [
                 "Justified"
             ],
             "Advanced":[
-                "Sprint",
+                "Sprinter",
                 "Inner Focus",
                 "Discipline"
             ],
@@ -199528,7 +199528,7 @@ export const pokemonData = [
                 "Justified"
             ],
             "Advanced":[
-                "Sprint",
+                "Sprinter",
                 "Inner Focus",
                 "Discipline"
             ],
@@ -199742,7 +199742,7 @@ export const pokemonData = [
                 "Justified"
             ],
             "Advanced":[
-                "Sprint",
+                "Sprinter",
                 "Inner Focus",
                 "Discipline"
             ],
@@ -211313,7 +211313,7 @@ export const pokemonData = [
             "Advanced":[
                 "Defiant",
                 "Mold Breaker",
-                "Sprint"
+                "Sprinter"
             ],
             "High":[
                 "Tough Claws"
@@ -211704,7 +211704,7 @@ export const pokemonData = [
             "Advanced":[
                 "Stamina",
                 "Friend Guard",
-                "Sprint"
+                "Sprinter"
             ],
             "High":[
                 "Bulletproof"
@@ -212702,7 +212702,7 @@ export const pokemonData = [
                 "Unseen Fist"
             ],
             "Advanced":[
-                "Sprint",
+                "Sprinter",
                 "Prime Fury",
                 "Aura Storm"
             ],
@@ -219286,7 +219286,7 @@ export const pokemonData = [
             "Advanced":[
                 "Sturdy",
                 "Rock Head",
-                "Sprint"
+                "Sprinter"
             ],
             "High":[
                 "Frostbite"
@@ -219492,7 +219492,7 @@ export const pokemonData = [
             "Advanced":[
                 "Pressure",
                 "Weird Power",
-                "Sprint"
+                "Sprinter"
             ],
             "High":[
                 "Fade Away"
@@ -228497,7 +228497,7 @@ export const pokemonData = [
                 "Justified"
             ],
             "Advanced":[
-                "Sprint",
+                "Sprinter",
                 "Inner Focus",
                 "Discipline"
             ],
