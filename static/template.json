@@ -477,7 +477,7 @@
     }
   },
   "Item": {
-    "types": ["feat", "edge", "ability", "move", "item", "capability", "enhancement","dexentry"],
+    "types": ["feat", "edge", "ability", "move", "item", "capability", "enhancement", "dexentry", "maneuver"],
     "templates": {
       "base": {
         "name": "",
